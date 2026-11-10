@@ -45,19 +45,45 @@ ul{margin:8px 0 0;padding-left:18px;font-size:14px}
 .tg label{display:flex;gap:4px;align-items:center;cursor:pointer}
 .warn{font-size:12px;color:var(--mute)}
 h2{font-size:16px;margin:0 0 6px}
+.badge{font-size:11px;font-weight:600;border:1px solid var(--line);border-radius:99px;padding:2px 8px;vertical-align:middle;color:var(--mute)}
+.badge.up{color:var(--up);border-color:var(--up)}.badge.down{color:var(--down);border-color:var(--down)}
+.plain{background:var(--bg);border-radius:8px;padding:10px;margin-top:10px;font-size:14px}
 #err{color:var(--down);font-size:14px}
+.hero{border:2px solid var(--acc)}.hero-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}.kpi{background:var(--bg);border-radius:8px;padding:8px 10px}.kpi span{display:block;font-size:12px;color:var(--mute)}.kpi b{display:block;font-size:20px}.kpi small{font-size:12px;color:var(--mute)}
+.gauge{position:relative;height:12px;margin:12px 0 4px}.g-track{position:absolute;inset:0;border-radius:6px;background:linear-gradient(90deg,var(--down),var(--line) 50%,var(--up))}.g-mark{position:absolute;top:-4px;width:4px;height:20px;background:var(--ink);border-radius:2px}
+.g-lab{display:flex;justify-content:space-between;font-size:11px;color:var(--mute)}.sumtext{font-size:15px;line-height:1.55;margin:10px 0 0}
+h3{font-size:14px;margin:14px 0 4px}.tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}.tbl td,.tbl th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left;vertical-align:top}.tbl th{color:var(--mute);font-weight:600;font-size:12px}
+.tbl td:first-child{width:38%}.zt tr.cur td{background:var(--bg);font-weight:600}.nv{display:inline-block;font-size:11px;font-weight:700;color:var(--down);border:1px solid var(--down);border-radius:4px;padding:0 5px;letter-spacing:.02em}
+.kind{display:inline-block;font-size:10px;font-weight:600;border-radius:4px;padding:0 5px;margin-left:4px;vertical-align:1px;border:1px solid var(--line);color:var(--mute)}.k-rt{color:var(--up);border-color:var(--up)}.k-dl{color:var(--sma20);border-color:var(--sma20)}.k-mo{color:var(--sma50);border-color:var(--sma50)}
+.pbar{display:flex;height:22px;border-radius:6px;overflow:hidden;margin:6px 0;font-size:12px;font-weight:600;color:#fff}.pbar i{font-style:normal;display:flex;align-items:center;justify-content:center}.pb-dn{background:var(--down)}.pb-nt{background:var(--mute)}.pb-up{background:var(--up)}
+.fc{border-top:1px solid var(--line);padding:10px 0}.fc-h{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline}.fc-g{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:13px;margin:4px 0}.fc-g span{color:var(--mute)}
+.sect{display:flex;flex-wrap:wrap;gap:6px;font-size:12px}.sect span{border:1px solid var(--line);border-radius:6px;padding:2px 6px}
+.dq{display:inline-block;font-size:10px;font-weight:700;border-radius:4px;padding:0 5px;border:1px solid var(--line)}.dq-ok{color:var(--up);border-color:var(--up)}.dq-warn{color:var(--sma20);border-color:var(--sma20)}.dq-fail{color:var(--down);border-color:var(--down)}.dq-info{color:var(--mute)}
+.rt{display:inline-block;font-size:11px;font-weight:700;border-radius:99px;padding:1px 8px;margin-top:3px;border:1px solid var(--line);color:var(--mute);white-space:nowrap}
+.rt-sb{background:var(--up);border-color:var(--up);color:#fff}.rt-b{color:var(--up);border-color:var(--up)}.rt-n{color:var(--mute)}.rt-br{color:var(--down);border-color:var(--down)}.rt-sbr{background:var(--down);border-color:var(--down);color:#fff}
+.simple{font-size:15px;line-height:1.55;margin-top:12px}.simple p{margin:10px 0 4px}.simple ul{font-size:14px;margin:4px 0}.simple li{margin:4px 0}
+.verdict-box{display:flex;justify-content:space-between;align-items:center;gap:8px;border-radius:10px;padding:10px 12px;border:2px solid var(--line)}.verdict-box span{font-size:13px;opacity:.85}.verdict-box b{font-size:20px}
+.verdict-box.rt-sb,.verdict-box.rt-sbr{color:#fff}.verdict-box.rt-b{border-color:var(--up);color:var(--up)}.verdict-box.rt-br{border-color:var(--down);color:var(--down)}
+.tally{display:flex;height:10px;border-radius:5px;overflow:hidden;margin:4px 0 8px}.tally i{display:block}
+.two{display:grid;grid-template-columns:1fr;gap:4px;margin-top:6px}@media(min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.nowbox{background:var(--bg);border-radius:8px;padding:8px 10px;font-size:14px;margin:6px 0}
+details summary{cursor:pointer;list-style-position:outside}details summary::marker{color:var(--mute)}.doc{font-size:13px}.doc ul{font-size:13px}
+.cell b{overflow-wrap:anywhere}@media (max-width:420px){.tbl td:first-child{width:42%}.kpi b{font-size:18px}}
+
 input[type=file]{display:none}
 .ev{display:flex;justify-content:space-between;gap:8px;font-size:14px;padding:4px 0;border-bottom:1px solid var(--line)}
 </style>
 </head>
 <body>
 <main>
-<h1>Krypto Chart-Analyse</h1>
-<p class="sub">Bitcoin, Ethereum und Brett (Base) mit Indikatoren, Rainbow Chart und US-Terminen.</p>
+<h1>Krypto Chart-Analyse <span id="badge" class="badge"></span></h1>
+<p class="sub">Krypto Intelligence Engine für Bitcoin, Ethereum und Brett (Base): Marktbericht, Zonen, Szenarien und geprüfte Wahrscheinlichkeitsprognosen.</p>
 <div class="tabs" id="tabs"></div>
+<div id="eng"></div>
 
 <section>
-<strong id="dtitle"></strong>
+<details id="dataBox"><summary><strong id="dtitle"></strong> <span class="warn">· Daten, Live-Abruf und Verbindungstest</span></summary>
 <p class="warn" style="margin:4px 0 8px">Tageskurse als CSV mit <b>date,close</b> (älteste Zeile zuerst oder neueste, wird sortiert). Mindestens 60 Tage. Beim Öffnen holt die App den Verlauf von CoinGecko und gleicht den aktuellen Kurs mit weiteren Quellen ab (Binance, Coinbase, CoinPaprika, DexScreener). Update alle 90 Sekunden. Eigene CSV und Demo-Daten (zufällig erzeugt) gehen weiterhin.</p>
 <textarea id="inp" placeholder="date,close&#10;2026-01-01,94000&#10;2026-01-02,94500" aria-label="Kursdaten"></textarea>
 <div class="row">
@@ -67,6 +93,7 @@ input[type=file]{display:none}
 <button class="alt" id="diagb">Verbindungstest</button>
 <button class="alt" id="demo">Demo-Daten</button>
 </div>
+</details>
 <div id="stat" class="warn" style="margin-top:6px"></div><div id="diag" class="warn" style="margin-top:6px"></div><div id="err" role="alert"></div>
 </section>
 
@@ -76,10 +103,11 @@ input[type=file]{display:none}
 <div id="vtext" class="warn" style="font-size:14px"></div>
 <div class="grid" id="stats"></div>
 <ul id="reasons"></ul>
+<div id="plain" class="plain"></div>
 </section>
 
 <section>
-<h2>Datenquellen und Abgleich</h2>
+<h2>Datenquellen und Kursabgleich</h2>
 <div id="src"></div>
 </section>
 
@@ -95,7 +123,7 @@ input[type=file]{display:none}
 <div class="warn" style="margin:8px 0 4px">Historische Wirkung auf diesen Coin (Tagesbewegung am Termin im Vergleich zum Normaltag):</div>
 <div class="grid" id="evs"></div>
 <div class="row"><input type="date" id="cd" style="width:auto" aria-label="Eigener Termin"><button class="alt" id="cadd">Eigenen Termin hinzufügen</button></div>
-<p class="warn">Termine 2026 laut BLS-Kalender (Jobs, CPI) und Fed-Kalender (FOMC). CPI-Termine für November und Dezember sind hier nicht enthalten, bitte bei Bedarf selbst eintragen.</p>
+<p class="warn">Termine 2026 laut BLS-Kalender (Jobs, CPI) und Fed-Kalender (FOMC). Uhrzeiten, Countdown und Ergebnisse stehen oben im Abschnitt „Termine und Marktreaktionen“.</p>
 </section>
 
 <section id="secRain">
@@ -235,13 +263,13 @@ function drawRain(a){
 
 function render(){
  KEYS.forEach(k=>{});
- $("tabs").innerHTML=KEYS.map(k=>{const r=S.res[k],v=r?(r.score>=2?"Eher bullisch":r.score<=-2?"Eher bärisch":"Neutral"):"Keine Daten";
+ $("tabs").innerHTML=KEYS.map(k=>{const r=S.res[k],er=window.KIE&&KIE.res&&KIE.res[k]&&KIE.res[k].comp&&KIE.res[k].comp.score!=null?KIE.res[k].comp.score:null,v=er!=null?(er>=60?"Stark bullisch":er>=20?"Bullisch":er>-20?"Neutral":er>-60?"Bärisch":"Stark bärisch"):r?(r.score>=4?"Stark bullisch":r.score>=2?"Bullisch":r.score<=-4?"Stark bärisch":r.score<=-2?"Bärisch":"Neutral"):"Keine Daten";
   return`<button class="tab ${k==S.cur?"on":""}" data-k="${k}">${NAMES[k]}<small>${r?fmt(r.last)+" · "+v:v}</small></button>`}).join("");
  document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{S.cur=b.dataset.k;$("err").textContent="";$("inp").value=S.raw[S.cur]||"";render()});
  $("dtitle").textContent="Kursdaten "+NAMES[S.cur];if(document.activeElement!==$("inp"))$("inp").value=S.raw[S.cur]||"";
  const a=S.res[S.cur];$("out").hidden=!a;if(!a)return;
  const bull=a.score>=2,bear=a.score<=-2;
- $("verdict").textContent=NAMES[S.cur]+": "+(bull?"eher bullisch":bear?"eher bärisch":"neutral");$("verdict").className="verdict "+(bull?"up":bear?"down":"");
+ $("verdict").textContent="Signal-Score "+NAMES[S.cur]+": "+(a.score>=4?"stark bullisch":bull?"bullisch":a.score<=-4?"stark bärisch":bear?"bärisch":"neutral");$("verdict").className="verdict "+(bull?"up":bear?"down":"");
  $("vtext").textContent="Signal-Score "+(a.score>0?"+":"")+a.score+" von ±6 · geringe statistische Aussagekraft";
  const p=a.proj[a.H-1],ch=(p.m/a.last-1)*100;
  $("stats").innerHTML=[["Letzter Kurs",fmt(a.last)],["Projektion in "+a.H+" Perioden",fmt(p.m)+" ("+(ch>0?"+":"")+pct(ch)+")"],["Spanne (Unsicherheit)",fmt(p.lo)+" – "+fmt(p.hi)],["Volatilität pro Periode",pct(a.vol*100,2)],["Unterstützung (30)",fmt(a.lo)],["Widerstand (30)",fmt(a.hi)]].map(([k,v])=>`<div class="cell"><span>${k}</span><b>${v}</b></div>`).join("");
@@ -250,6 +278,8 @@ function render(){
  const soon=up.filter(e=>(e.t-now)/864e5<=3);
  if(soon.length)why.push(`<li>Termin in den nächsten 3 Tagen: ${soon.map(e=>KN[e.k]).join(", ")}. Mit erhöhter Schwankung rechnen, Signale sind dann unzuverlässiger.</li>`);
  $("reasons").innerHTML=why.join("");
+ const tr=a.s50[a.n-1]!=null?(a.last>a.s50[a.n-1]?"aufwärts":"abwärts"):"unklar";
+ $("plain").innerHTML=`<b>Einfach erklärt:</b> Der Trend zeigt ${tr}. ${a.score>=2?"Mehrere Signale sprechen für Käufer.":a.score<=-2?"Mehrere Signale sprechen für Verkäufer.":"Die Signale sind gemischt."} Unterstützung (hier wurde zuletzt gekauft): ${fmt(a.lo)} $. Widerstand (hier wurde zuletzt verkauft): ${fmt(a.hi)} $. Fällt der Kurs deutlich unter die Unterstützung, wird es schwächer. Steigt er über den Widerstand, wird eine Erholung wahrscheinlicher. Das ist eine Orientierung, keine Anlageberatung.`;
  const T=S.tog,col=EC();
  $("tg").innerHTML=[["sma","SMA 20/50"],["bb","Bollinger"],["proj","Projektion"],["rain","Rainbow"],["FOMC","FOMC"],["CPI","CPI"],["NFP","Jobs"],["Eigene","Eigene"]].map(([k,l])=>`<label><input type="checkbox" data-t="${k}" ${T[k]?"checked":""}>${l}</label>`).join("");
  document.querySelectorAll("[data-t]").forEach(c=>c.onchange=()=>{T[c.dataset.t]=c.checked?1:0;render()});
@@ -302,14 +332,15 @@ function renderSrc(){const s=S.src[S.cur],el=$("src");
   return`<div class="ev"><span>${o.n}</span><span>${o.p?fmt(o.p)+" $ ("+(dv>0?"+":"")+pct(dv,2)+")":"nicht erreichbar"}</span></div>`}).join("");
  const msg=n<1?["down","Keine Quelle erreichbar, Kurs ist veraltet."]:n<2?["down","Nur eine Quelle erreichbar, der Kurs ist nicht abgesichert."]:off?["down","Quellen weichen um mehr als "+tol+" % ab. Kurs mit Vorsicht nutzen."]:["up","Quellen stimmen überein (Abweichung unter "+tol+" %)."];
  el.innerHTML=(s.med?`<div style="font-size:14px;margin-bottom:6px">Verwendeter Kurs (Median aus ${n} Quellen): <b>${fmt(s.med)} $</b></div>`:"")+rows+`<div class="${msg[0]}" style="font-size:13px;margin-top:6px">${msg[1]}</div><div class="warn" style="margin-top:4px">Kursverlauf: ${S.hsrc[S.cur]||"unbekannt"}.${S.cur=="BRETT"?" Brett wird über die Base-Vertragsadresse gesucht, damit keine andere Brett-Version verwechselt wird.":""}</div>`}
-const stamp=()=>{$("stat").textContent="Stand "+new Date().toLocaleTimeString("de-DE")+" · Aktualisierung alle 90 Sekunden"};
+const stamp=()=>{setBadge(1,"Aktuell");$("stat").textContent="Stand "+new Date().toLocaleTimeString("de-DE")+" · Aktualisierung alle 90 Sekunden"};
 async function loadAll(){const st=$("stat");st.textContent="Lade Live-Daten…";const bad=[];
  for(const k of KEYS){try{const D=await loadHist(k);S.data[k]=D;const P=await prices(k);S.src[k]=P;if(P.med)setLast(k,P.med);S.res[k]=analyze(D.c,D.t);
-  S.raw[k]="date,close\n"+D.t.map((x,i)=>new Date(x).toISOString().slice(0,10)+","+D.c[i]).join("\n")}catch(e){bad.push(NAMES[k]+": "+(e.message||"Abruf fehlgeschlagen"))}
+  S.raw[k]="date,close\n"+D.t.map((x,i)=>new Date(x).toISOString().slice(0,10)+","+D.c[i]).join("\n");try{localStorage.setItem("kcd_"+k,JSON.stringify({t:D.t,c:D.c,ts:Date.now()}))}catch(x){}}catch(e){bad.push(NAMES[k]+": "+(e.message||"Abruf fehlgeschlagen"))}
   render();await new Promise(r=>setTimeout(r,1200))}
  if(Object.keys(S.data).length&&!WS)startWS();
  if(S.data.BRETT&&!KW)startKW();
- if(bad.length)st.textContent="Nicht geladen: "+bad.join(" | ")+". Eigene CSV geht weiterhin.";else stamp()}
+ if(bad.length)setBadge(0,"Offline");
+ if(bad.length)st.textContent="Nicht geladen: "+bad.join(" | ")+"."+(Object.keys(S.data).length?" Angezeigt werden die zuletzt gespeicherten Daten.":" Eigene CSV geht weiterhin.");else stamp()}
 async function tick(){if(document.hidden||!Object.keys(S.data).length)return;
  for(const k of KEYS){if(!S.data[k])continue;try{const P=await prices(k);S.src[k]=P;if(P.med){setLast(k,P.med);S.res[k]=analyze(S.data[k].c,S.data[k].t)}}catch(e){}}
  render();stamp()}
@@ -329,14 +360,702 @@ async function diag(){const d=$("diag");d.textContent="Teste Verbindungen…";co
  d.innerHTML="Adresse: "+location.protocol+"//"+(location.host||"lokal")+" · eingebettet: "+emb+" · online: "+(navigator.onLine?"ja":"nein")+"<br>"+L.join("<br>")+"<br><b>"+hint+"</b>"}
 
 let KW=null;
-function refreshLive(){const n=Date.now();if(n-wsT<3000)return;wsT=n;KEYS.forEach(q=>{if(S.data[q])S.res[q]=analyze(S.data[q].c,S.data[q].t)});render();$("stat").textContent="Echtzeit-Ticker (Coinbase für Bitcoin und Ethereum, KuCoin für Brett) · "+new Date().toLocaleTimeString("de-DE")}
+function refreshLive(){const n=Date.now();if(n-wsT<3000)return;wsT=n;setBadge(1,"Live");KEYS.forEach(q=>{if(S.data[q])S.res[q]=analyze(S.data[q].c,S.data[q].t)});render();$("stat").textContent="Echtzeit-Ticker (Coinbase für Bitcoin und Ethereum, KuCoin für Brett) · "+new Date().toLocaleTimeString("de-DE")}
 async function startKW(){try{if(typeof WebSocket=="undefined")return;const r=await fetch("https://api.kucoin.com/api/v1/bullet-public",{method:"POST"}),j=await r.json(),sv=j.data.instanceServers[0];let pi=null;
  KW=new WebSocket(sv.endpoint+"?token="+j.data.token);
  KW.onopen=()=>{KW.send(JSON.stringify({id:Date.now(),type:"subscribe",topic:"/market/ticker:BRETT-USDT",privateChannel:false,response:true}));pi=setInterval(()=>{try{KW.send(JSON.stringify({id:Date.now(),type:"ping"}))}catch(x){}},Math.max(5000,(sv.pingInterval||18000)-2000))};
  KW.onmessage=e=>{try{const m=JSON.parse(e.data);if(m.type!="message"||!m.data||!m.data.price||!S.data.BRETT)return;setLast("BRETT",+m.data.price);refreshLive()}catch(x){}};
  KW.onclose=()=>{clearInterval(pi);KW=null;setTimeout(()=>{if(!KW&&S.data.BRETT)startKW()},5000)};KW.onerror=()=>{try{KW.close()}catch(x){}}}catch(e){KW=null}}
 $("diagb").onclick=diag;
-loadAll();
+function setBadge(on,t){const b=$("badge");b.textContent=t;b.className="badge "+(on?"up":"down")}
+try{KEYS.forEach(k=>{const j=JSON.parse(localStorage.getItem("kcd_"+k)||"null");if(j&&j.c&&j.c.length>=60&&j.t&&j.t.length==j.c.length){S.data[k]={t:j.t,c:j.c};S.res[k]=analyze(j.c,j.t);S.hsrc[k]="Zwischenspeicher vom "+new Date(j.ts).toLocaleString("de-DE")}})}catch(e){}
+setBadge(0,"Lädt");
+</script>
+<script>
+/* KIE-Bibliothek: reine Rechenfunktionen ohne Netz und ohne DOM.
+   Alle Indikatoren sind kausal: der Wert an Index i nutzt nur Daten bis einschließlich i. */
+const KL=(()=>{
+const fin=x=>x!=null&&isFinite(x);
+const mean=a=>{let s=0;for(const v of a)s+=v;return a.length?s/a.length:null};
+const sdp=a=>{const m=mean(a);let s=0;for(const v of a)s+=(v-m)**2;return a.length?Math.sqrt(s/a.length):null};
+const sds=a=>{if(a.length<2)return null;const m=mean(a);let s=0;for(const v of a)s+=(v-m)**2;return Math.sqrt(s/(a.length-1))};
+const clip=(x,a,b)=>Math.max(a,Math.min(b,x));
+function quantile(arr,q){const a=arr.filter(fin).slice().sort((x,y)=>x-y);if(!a.length)return null;const p=(a.length-1)*q,lo=Math.floor(p),hi=Math.ceil(p);return a[lo]+(a[hi]-a[lo])*(p-lo)}
+function firstNN(a){for(let i=0;i<a.length;i++)if(a[i]!=null)return i;return a.length}
+function sma(a,n){const o=new Array(a.length).fill(null);for(let i=n-1;i<a.length;i++){let s=0,ok=true;for(let j=i-n+1;j<=i;j++){if(a[j]==null){ok=false;break}s+=a[j]}if(ok)o[i]=s/n}return o}
+function smooth(a,n,alpha){const o=new Array(a.length).fill(null),f=firstNN(a);if(a.length-f<n)return o;let s=0;for(let i=f;i<f+n;i++)s+=a[i];let p=s/n;o[f+n-1]=p;for(let i=f+n;i<a.length;i++){p=alpha*a[i]+(1-alpha)*p;o[i]=p}return o}
+const ema=(a,n)=>smooth(a,n,2/(n+1));
+const rma=(a,n)=>smooth(a,n,1/n);
+function rollMax(a,n){const o=new Array(a.length).fill(null);for(let i=n-1;i<a.length;i++){let m=-Infinity;for(let j=i-n+1;j<=i;j++)m=Math.max(m,a[j]);o[i]=m}return o}
+function rollMin(a,n){const o=new Array(a.length).fill(null);for(let i=n-1;i<a.length;i++){let m=Infinity;for(let j=i-n+1;j<=i;j++)m=Math.min(m,a[j]);o[i]=m}return o}
+function rsi(c,n=14){const g=c.map((v,i)=>i?Math.max(v-c[i-1],0):null),l=c.map((v,i)=>i?Math.max(c[i-1]-v,0):null);const G=rma(g,n),Ls=rma(l,n);return c.map((_,i)=>G[i]==null?null:(Ls[i]===0?100:100-100/(1+G[i]/Ls[i])))}
+function macd(c,f=12,s=26,g=9){const a=ema(c,f),b=ema(c,s),m=c.map((_,i)=>a[i]==null||b[i]==null?null:a[i]-b[i]),sg=ema(m,g);return{m,s:sg,h:m.map((v,i)=>v==null||sg[i]==null?null:v-sg[i])}}
+function boll(c,n=20,k=2){const m=sma(c,n);return c.map((_,i)=>{if(m[i]==null)return null;const s=sdp(c.slice(i-n+1,i+1));return{m:m[i],u:m[i]+k*s,l:m[i]-k*s,w:(2*k*s)/m[i],b:s?(c[i]-(m[i]-k*s))/(2*k*s):0.5}})}
+function stochRsi(c,n=14,sn=14,kn=3,dn=3){const r=rsi(c,n),st=r.map((v,i)=>{if(i<sn-1)return null;const w=r.slice(i-sn+1,i+1);if(w.some(x=>x==null))return null;const mx=Math.max(...w),mn=Math.min(...w);return mx===mn?50:(v-mn)/(mx-mn)*100});const K=sma(st,kn);return{k:K,d:sma(K,dn)}}
+function willr(h,l,c,n=14){const H=rollMax(h,n),Lo=rollMin(l,n);return c.map((v,i)=>H[i]==null?null:(H[i]===Lo[i]?-50:(H[i]-v)/(H[i]-Lo[i])*-100))}
+function roc(c,n=10){return c.map((v,i)=>i<n?null:(v/c[i-n]-1)*100)}
+function tsi(c,r=25,s=13,g=7){const m=c.map((v,i)=>i?v-c[i-1]:null),a=m.map(v=>v==null?null:Math.abs(v));const ds=ema(ema(m,r),s),da=ema(ema(a,r),s);const t=c.map((_,i)=>ds[i]==null||!da[i]?null:100*ds[i]/da[i]);return{t,s:ema(t,g)}}
+function trueRange(h,l,c){return h.map((v,i)=>i?Math.max(v-l[i],Math.abs(v-c[i-1]),Math.abs(l[i]-c[i-1])):v-l[i])}
+function atr(h,l,c,n=14){return rma(trueRange(h,l,c),n)}
+function dmi(h,l,c,n=14){const pd=h.map((v,i)=>{if(!i)return null;const u=v-h[i-1],d=l[i-1]-l[i];return u>d&&u>0?u:0}),md=h.map((v,i)=>{if(!i)return null;const u=v-h[i-1],d=l[i-1]-l[i];return d>u&&d>0?d:0});
+ const tr=trueRange(h,l,c).map((v,i)=>i?v:null),T=rma(tr,n),P=rma(pd,n),M=rma(md,n);
+ const pdi=c.map((_,i)=>T[i]?100*P[i]/T[i]:null),mdi=c.map((_,i)=>T[i]?100*M[i]/T[i]:null);
+ const dx=c.map((_,i)=>pdi[i]==null?null:(pdi[i]+mdi[i]===0?0:100*Math.abs(pdi[i]-mdi[i])/(pdi[i]+mdi[i])));return{pdi,mdi,adx:rma(dx,n)}}
+function ichimoku(h,l,c,a=9,b=26,d=52,off=25){const H9=rollMax(h,a),L9=rollMin(l,a),H26=rollMax(h,b),L26=rollMin(l,b),H52=rollMax(h,d),L52=rollMin(l,d);
+ const conv=c.map((_,i)=>H9[i]==null?null:(H9[i]+L9[i])/2),base=c.map((_,i)=>H26[i]==null?null:(H26[i]+L26[i])/2);
+ const sa=c.map((_,i)=>conv[i]==null||base[i]==null?null:(conv[i]+base[i])/2),sb=c.map((_,i)=>H52[i]==null?null:(H52[i]+L52[i])/2);
+ const A=c.map((_,i)=>i-off>=0?sa[i-off]:null),B=c.map((_,i)=>i-off>=0?sb[i-off]:null);return{conv,base,A,B}}
+function keltner(h,l,c,n=20,an=10,k=2){const m=ema(c,n),a=atr(h,l,c,an);return c.map((_,i)=>m[i]==null||a[i]==null?null:{m:m[i],u:m[i]+k*a[i],l:m[i]-k*a[i]})}
+function donchian(h,l,n=20){const H=rollMax(h,n),Lo=rollMin(l,n);return h.map((_,i)=>H[i]==null?null:{u:H[i],l:Lo[i],m:(H[i]+Lo[i])/2})}
+function obv(c,v){const o=[0];for(let i=1;i<c.length;i++)o.push(o[i-1]+(c[i]>c[i-1]?v[i]:c[i]<c[i-1]?-v[i]:0));return o}
+function avwap(h,l,c,v,from){const o=new Array(c.length).fill(null);let pv=0,vv=0;for(let i=from;i<c.length;i++){const tp=(h[i]+l[i]+c[i])/3;pv+=tp*v[i];vv+=v[i];o[i]=vv?pv/vv:null}return o}
+function sessionVwap(t,h,l,c,v){const o=[];let pv=0,vv=0,day=null;for(let i=0;i<c.length;i++){const d=Math.floor(t[i]/864e5);if(d!==day){day=d;pv=0;vv=0}const tp=(h[i]+l[i]+c[i])/3;pv+=tp*v[i];vv+=v[i];o.push(vv?pv/vv:c[i])}return o}
+function volProfile(h,l,v,nb=50,va=0.7){const lo=Math.min(...l),hi=Math.max(...h);if(!(hi>lo))return null;const w=(hi-lo)/nb,b=new Array(nb).fill(0);
+ for(let i=0;i<h.length;i++){const a=l[i],z=h[i];if(!(v[i]>0))continue;if(z<=a){b[clip(Math.floor((a-lo)/w),0,nb-1)]+=v[i];continue}
+  const s=clip(Math.floor((a-lo)/w),0,nb-1),e=clip(Math.floor((z-lo)/w),0,nb-1);for(let k=s;k<=e;k++){const bl=lo+k*w,bh=bl+w,ov=Math.min(z,bh)-Math.max(a,bl);if(ov>0)b[k]+=v[i]*ov/(z-a)}}
+ const tot=b.reduce((x,y)=>x+y,0);if(!tot)return null;let poc=0;for(let k=1;k<nb;k++)if(b[k]>b[poc])poc=k;
+ let up=poc,dn=poc,acc=b[poc];while(acc<va*tot&&(up<nb-1||dn>0)){const nu=up<nb-1?b[up+1]:-1,nd=dn>0?b[dn-1]:-1;if(nu>=nd){up++;acc+=b[up]}else{dn--;acc+=b[dn]}}
+ const m=tot/nb,hvn=[];for(let k=1;k<nb-1;k++)if(b[k]>b[k-1]&&b[k]>=b[k+1]&&b[k]>1.2*m&&k!==poc)hvn.push(lo+(k+.5)*w);
+ return{lo,hi,w,bins:b,poc:lo+(poc+.5)*w,vah:lo+(up+1)*w,val:lo+dn*w,hvn}}
+function swings(h,l,k=3){const o=[];for(let i=k;i<h.length-k;i++){let sh=true,sl=true;for(let j=1;j<=k;j++){if(!(h[i]>h[i-j]&&h[i]>=h[i+j]))sh=false;if(!(l[i]<l[i-j]&&l[i]<=l[i+j]))sl=false}if(sh)o.push({i,p:h[i],t:"H",conf:i+k});if(sl)o.push({i,p:l[i],t:"L",conf:i+k})}return o}
+function structure(h,l,c,k=3){const sw=swings(h,l,k),ev=[];let lh=null,ll=null,trend=null,si=0;const seq=[];
+ for(let j=0;j<c.length;j++){while(si<sw.length&&sw[si].conf<=j){const s=sw[si++];if(s.t==="H"){s.lab=lh?(s.p>lh.p?"HH":"LH"):"H";lh={...s,br:false}}else{s.lab=ll?(s.p>ll.p?"HL":"LL"):"L";ll={...s,br:false}}seq.push(s)}
+  if(lh&&!lh.br&&c[j]>lh.p){ev.push({j,type:trend==="bear"?"CHOCH":"BOS",dir:"up",level:lh.p});trend="bull";lh.br=true}
+  if(ll&&!ll.br&&c[j]<ll.p){ev.push({j,type:trend==="bull"?"CHOCH":"BOS",dir:"down",level:ll.p});trend="bear";ll.br=true}}
+ return{trend,ev,seq,lastH:lh,lastL:ll}}
+function divergence(price,osc,sw,type,last,maxAge=20){const s=sw.filter(x=>x.t===type&&osc[x.i]!=null&&x.conf<=last);if(s.length<2)return null;const b=s[s.length-1],a=s[s.length-2];if(last-b.i>maxAge||b.i-a.i<5)return null;
+ if(type==="H"&&b.p>a.p&&osc[b.i]<osc[a.i])return{kind:"bärisch",i1:a.i,i2:b.i};if(type==="L"&&b.p<a.p&&osc[b.i]>osc[a.i])return{kind:"bullisch",i1:a.i,i2:b.i};return null}
+const logret=c=>c.map((v,i)=>i?Math.log(v/c[i-1]):null);
+function ewmaVar(r,lam=0.94,seedN=30){const o=new Array(r.length).fill(null),f=firstNN(r);if(r.length-f<seedN)return o;let v=mean(r.slice(f,f+seedN).map(x=>x*x));o[f+seedN-1]=v;for(let i=f+seedN;i<r.length;i++){v=lam*v+(1-lam)*r[i]*r[i];o[i]=v}return o}
+function maxDD(c){let pk=c[0],dd=0,pi=0,ti=0,bp=0;for(let i=0;i<c.length;i++){if(c[i]>pk){pk=c[i];bp=i}const d=c[i]/pk-1;if(d<dd){dd=d;ti=i;pi=bp}}return{dd,pi,ti}}
+function varEs(rets,q=0.05){const r=rets.filter(fin);const v=quantile(r,q);const tail=r.filter(x=>x<=v);return{var:-v,es:tail.length?-mean(tail):null}}
+function rng(seed){let a=seed>>>0;return()=>{a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function hashSeed(s){let h=2166136261;for(const ch of String(s)){h^=ch.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
+/* Gefilterte historische Simulation: standardisierte Residuen, EWMA-Volatilität, ohne angenommene Drift */
+function monteCarlo(c,steps,n,seed,lam=0.94){const r=logret(c),V=ewmaVar(r,lam);const z=[];for(let i=1;i<r.length;i++)if(V[i-1]!=null&&r[i]!=null&&V[i-1]>0)z.push(r[i]/Math.sqrt(V[i-1]));
+ if(z.length<60)return null;const zm=mean(z),zs=sdp(z),zz=z.map(x=>(x-zm)/zs);const last=r.length-1;let v0=lam*V[last]+(1-lam)*r[last]*r[last];const R=rng(seed);
+ const term=new Float64Array(n),mn=new Float64Array(n),mx=new Float64Array(n);for(let p=0;p<n;p++){let v=v0,s=0,lo=0,hi=0;for(let k=0;k<steps;k++){const x=zz[Math.floor(R()*zz.length)]*Math.sqrt(v);v=lam*v+(1-lam)*x*x;s+=x;if(s<lo)lo=s;if(s>hi)hi=s}term[p]=s;mn[p]=lo;mx[p]=hi}
+ const P0=c[c.length-1];const qT=q=>P0*Math.exp(quantile(Array.from(term),q));
+ return{P0,steps,n,q:qT,touchDown:L=>{const t=Math.log(L/P0);let k=0;for(const x of mn)if(x<=t)k++;return k/n},touchUp:L=>{const t=Math.log(L/P0);let k=0;for(const x of mx)if(x>=t)k++;return k/n},minQ:q=>P0*Math.exp(quantile(Array.from(mn),q)),maxQ:q=>P0*Math.exp(quantile(Array.from(mx),q)),probBelow:L=>{const t=Math.log(L/P0);let k=0;for(const x of term)if(x<=t)k++;return k/n}}}
+/* Gaußsches Hidden-Markov-Modell mit 2 Zuständen; gemeldet wird die gefilterte (nicht geglättete) Wahrscheinlichkeit */
+function hmm2(x,it=60){x=x.filter(fin);const T=x.length;if(T<100)return null;const m0=mean(x),s0=sdp(x);let mu=[m0,m0],vr=[(s0*0.6)**2,(s0*1.6)**2],A=[[0.97,0.03],[0.05,0.95]],pi=[0.5,0.5];
+ const pdf=(v,k)=>Math.exp(-((v-mu[k])**2)/(2*vr[k]))/Math.sqrt(2*Math.PI*vr[k])+1e-300;let al,ll=0;
+ for(let r=0;r<it;r++){al=[];const sc=[];let a=[pi[0]*pdf(x[0],0),pi[1]*pdf(x[0],1)],s=a[0]+a[1];a=[a[0]/s,a[1]/s];al.push(a);sc.push(s);
+  for(let t=1;t<T;t++){const p=al[t-1];let b=[(p[0]*A[0][0]+p[1]*A[1][0])*pdf(x[t],0),(p[0]*A[0][1]+p[1]*A[1][1])*pdf(x[t],1)];s=b[0]+b[1];b=[b[0]/s,b[1]/s];al.push(b);sc.push(s)}
+  ll=sc.reduce((q,v)=>q+Math.log(v),0);const be=new Array(T);be[T-1]=[1,1];for(let t=T-2;t>=0;t--){const n0=pdf(x[t+1],0)*be[t+1][0],n1=pdf(x[t+1],1)*be[t+1][1];let b=[A[0][0]*n0+A[0][1]*n1,A[1][0]*n0+A[1][1]*n1];const s2=b[0]+b[1];be[t]=[b[0]/s2,b[1]/s2]}
+  const g=al.map((a,t)=>{const u=[a[0]*be[t][0],a[1]*be[t][1]],s2=u[0]+u[1];return[u[0]/s2,u[1]/s2]});const xi=[[0,0],[0,0]];
+  for(let t=0;t<T-1;t++){const e=[[0,0],[0,0]];let s2=0;for(let i=0;i<2;i++)for(let j=0;j<2;j++){e[i][j]=al[t][i]*A[i][j]*pdf(x[t+1],j)*be[t+1][j];s2+=e[i][j]}for(let i=0;i<2;i++)for(let j=0;j<2;j++)xi[i][j]+=e[i][j]/s2}
+  for(let i=0;i<2;i++){const gs=g.slice(0,T-1).reduce((q,v)=>q+v[i],0);A[i]=[xi[i][0]/gs,xi[i][1]/gs];const gt=g.reduce((q,v)=>q+v[i],0);mu[i]=g.reduce((q,v,t)=>q+v[i]*x[t],0)/gt;vr[i]=Math.max(g.reduce((q,v,t)=>q+v[i]*(x[t]-mu[i])**2,0)/gt,1e-10)}pi=g[0]}
+ const hi=vr[1]>vr[0]?1:0;return{pHigh:al[T-1][hi],volLow:Math.sqrt(vr[1-hi]),volHigh:Math.sqrt(vr[hi]),muLow:mu[1-hi],muHigh:mu[hi],stay:A[hi][hi],ll}}
+/* Multinomiale logistische Regression (Softmax) mit L2-Regularisierung */
+function softmaxFit(X,y,K=3,lam=0.02,it=250,lr=0.5){const n=X.length,d=X[0].length;const W=Array.from({length:K},()=>new Float64Array(d+1));
+ for(let r=0;r<it;r++){const G=Array.from({length:K},()=>new Float64Array(d+1));for(let i=0;i<n;i++){const p=softmaxP(W,X[i]);for(let k=0;k<K;k++){const e=p[k]-(y[i]===k?1:0);G[k][d]+=e;for(let j=0;j<d;j++)G[k][j]+=e*X[i][j]}}
+  for(let k=0;k<K;k++){for(let j=0;j<d;j++)W[k][j]-=lr*(G[k][j]/n+lam*W[k][j]);W[k][d]-=lr*G[k][d]/n}}return W}
+function softmaxP(W,x){const d=x.length,z=W.map(w=>{let s=w[d];for(let j=0;j<d;j++)s+=w[j]*x[j];return s});const m=Math.max(...z),e=z.map(v=>Math.exp(v-m)),s=e.reduce((a,b)=>a+b,0);return e.map(v=>v/s)}
+function standardizer(X){const d=X[0].length,mu=[],sg=[];for(let j=0;j<d;j++){const col=X.map(r=>r[j]);mu.push(mean(col));sg.push(sdp(col)||1)}return{mu,sg,f:r=>r.map((v,j)=>clip((v-mu[j])/sg[j],-6,6))}}
+const brier=(p,y)=>p.reduce((s,v,k)=>s+(v-(y===k?1:0))**2,0);
+function baseRates(y,K=3){const c=new Array(K).fill(1);for(const v of y)c[v]++;const s=c.reduce((a,b)=>a+b,0);return c.map(v=>v/s)}
+/* Walk-Forward-Validierung mit Purge (Abstand h zwischen Training und Test) */
+function walkForward(rows,labels,h,opt={}){const minTrain=opt.minTrain||250,block=opt.block||30,maxTrain=opt.maxTrain||1500,it=opt.it||200;
+ const idx=[];for(let t=0;t<rows.length;t++)if(rows[t]&&labels[t]!=null)idx.push(t);if(idx.length<minTrain+2*block)return{ok:false,reason:"zu wenig Daten ("+idx.length+" Beobachtungen)"};
+ const oos=[];let minGap=Infinity;for(let s=minTrain;s<idx.length;s+=block){const ts=idx[s];const tr=idx.filter(t=>t<=ts-h).slice(-maxTrain);if(tr.length<minTrain*0.8)continue;minGap=Math.min(minGap,ts-tr[tr.length-1]);
+  const st=standardizer(tr.map(t=>rows[t])),X=tr.map(t=>st.f(rows[t])),Y=tr.map(t=>labels[t]);const W=softmaxFit(X,Y,3,0.02,it),br=baseRates(Y);
+  for(let q=s;q<Math.min(s+block,idx.length);q++){const t=idx[q];oos.push({t,lr:softmaxP(W,st.f(rows[t])),base:br,y:labels[t]})}}
+ if(oos.length<2*block)return{ok:false,reason:"zu wenig Testdaten"};
+ const half=Math.floor(oos.length/2),A=oos.slice(0,half),B=oos.slice(half),ws=[0,.25,.5,.75,1];const mix=(o,w)=>o.lr.map((v,k)=>w*v+(1-w)*o.base[k]);
+ const bs=(arr,w)=>mean(arr.map(o=>brier(mix(o,w),o.y)));let w=0,best=Infinity;for(const c of ws){const b=bs(A,c);if(b<best-1e-12){best=b;w=c}}
+ const bsB=bs(B,w),bsBase=bs(B,0),bss=1-bsB/bsBase;const q3=Math.floor(oos.length*0.75),drift=bs(oos.slice(q3),w)/bs(oos.slice(0,q3),w);
+ const pred=oos.map(o=>({t:o.t,p:mix(o,w),y:o.y}));const conf=[[0,0,0],[0,0,0],[0,0,0]];for(const o of pred){const a=o.p.indexOf(Math.max(...o.p));conf[o.y][a]++}
+ const prec=[0,1,2].map(k=>{const s=conf[0][k]+conf[1][k]+conf[2][k];return s?conf[k][k]/s:null}),rec=[0,1,2].map(k=>{const s=conf[k][0]+conf[k][1]+conf[k][2];return s?conf[k][k]/s:null});
+ const cal=[0,1,2,3,4].map(b=>{const g=pred.filter(o=>Math.min(4,Math.floor(o.p[2]*5))===b);return{bin:b,n:g.length,pred:g.length?mean(g.map(o=>o.p[2])):null,obs:g.length?mean(g.map(o=>o.y===2?1:0)):null}});
+ const trA=idx.filter(t=>t<=rows.length-1-h).slice(-maxTrain);const st=standardizer(trA.map(t=>rows[t])),W=softmaxFit(trA.map(t=>st.f(rows[t])),trA.map(t=>labels[t]),3,0.02,it),br=baseRates(trA.map(t=>labels[t]));
+ let lastRow=null;for(let t=rows.length-1;t>=0;t--)if(rows[t]){lastRow=t;break}
+ const live=lastRow==null?null:(()=>{const p=softmaxP(W,st.f(rows[lastRow]));return p.map((v,k)=>w*v+(1-w)*br[k])})();
+ const imp=W[0].slice(0,-1).map((_,j)=>{const col=[W[0][j],W[1][j],W[2][j]],m=mean(col);return Math.max(...col.map(v=>Math.abs(v-m)))});
+ return{ok:true,minGap,h,w,bsB,bsBase,bss,drift,nOOS:oos.length,nB:B.length,pred,conf,prec,rec,cal,live,liveT:lastRow,imp,base:br}}
+/* Unterstützungs-/Widerstandszonen aus mehreren Faktoren zusammenfassen */
+function buildZones(cands,price,atrV,tolPct=0.004){const tol=Math.max(0.35*atrV,tolPct*price);const cs=cands.filter(x=>fin(x.p)&&x.p>0).sort((a,b)=>a.p-b.p);const Z=[];
+ for(const c of cs){const z=Z[Z.length-1];if(z&&c.p-z.hi<=tol&&c.p-z.lo<=3*tol){z.m.push(c);z.hi=Math.max(z.hi,c.p)}else Z.push({lo:c.p,hi:c.p,m:[c]})}
+ for(const z of Z){const kinds=new Set(z.m.map(m=>m.kind));z.raw=z.m.reduce((s,m)=>s+m.w,0)*(1+0.15*(kinds.size-1));z.kinds=[...kinds];if(z.hi-z.lo<0.3*tol){const mid=(z.hi+z.lo)/2;z.lo=mid-0.15*tol;z.hi=mid+0.15*tol}z.mid=(z.lo+z.hi)/2}
+ const mx=Math.max(...Z.map(z=>z.raw),1);for(const z of Z){z.str=Math.round(100*z.raw/mx);z.lab=z.str>=60?"stark":z.str>=30?"mittel":"schwach"}return Z}
+function reactions(z,h,l,c,side){let n=0;for(let i=0;i<c.length;i++){if(side==="S"&&l[i]<=z.hi&&l[i]>=z.lo*0.995&&c[i]>z.hi)n++;if(side==="R"&&h[i]>=z.lo&&h[i]<=z.hi*1.005&&c[i]<z.lo)n++}return n}
+/* Composite Score: Gruppen-Mittelwerte vermeiden Doppelzählung, fehlende Gruppen werden ausgeschlossen statt als 0 gezählt */
+function composite(groups){const av=groups.filter(g=>g.sig.length);const tw=groups.reduce((s,g)=>s+g.w,0),aw=av.reduce((s,g)=>s+g.w,0);if(!av.length)return{score:null,coverage:0,groups:[]};
+ const gs=av.map(g=>({...g,s:mean(g.sig.map(x=>x.s))}));const sc=gs.reduce((s,g)=>s+g.w*g.s,0)/aw;const disp=Math.sqrt(gs.reduce((s,g)=>s+g.w*(g.s-sc)**2,0)/aw);
+ const conflicts=gs.filter(g=>Math.abs(g.s)>0.25&&Math.sign(g.s)!==Math.sign(sc)&&Math.abs(sc)>0.05);return{score:Math.round(100*sc),coverage:aw/tw,dispersion:disp,groups:gs,missing:groups.filter(g=>!g.sig.length).map(g=>g.name),conflicts}}
+function backtest(c,pred,fee=0.0015){const P=pred.filter(o=>o.t<c.length-1).sort((a,b)=>a.t-b.t);if(P.length<30)return null;let pos=0,eq=1,bh=1;const r=[],eqs=[1],trades=[];let cur=null;
+ for(const o of P){const want=o.p[2]>o.p[0]?1:0,ret=c[o.t+1]/c[o.t]-1;let cost=0;if(want!==pos){cost=fee;if(want){cur={in:o.t,ret:1}}else if(cur){trades.push(cur.ret*(1-fee)-1);cur=null}pos=want}
+  const d=pos*ret-cost;if(cur)cur.ret*=(1+ret);r.push(d);eq*=1+d;eqs.push(eq);bh*=1+ret}
+ if(cur)trades.push(cur.ret*(1-fee)-1);const m=mean(r),s=sds(r)||0,neg=r.filter(x=>x<0),ds=Math.sqrt(mean(neg.map(x=>x*x))||0);const yrs=r.length/365,cagr=eq>0?eq**(1/yrs)-1:-1,mdd=maxDD(eqs).dd;
+ const wins=trades.filter(x=>x>0),loss=trades.filter(x=>x<=0);return{n:r.length,eq,bh,cagr,sharpe:s?m/s*Math.sqrt(365):null,sortino:ds?m/ds*Math.sqrt(365):null,calmar:mdd<0?cagr/Math.abs(mdd):null,mdd,trades:trades.length,win:trades.length?wins.length/trades.length:null,pf:loss.length&&loss.reduce((a,b)=>a+b,0)?wins.reduce((a,b)=>a+b,0)/Math.abs(loss.reduce((a,b)=>a+b,0)):null,exposure:mean(P.map(o=>o.p[2]>o.p[0]?1:0))}}
+function bsDelta(S,K,T,iv,call){if(!(T>0&&iv>0))return null;const d1=(Math.log(S/K)+0.5*iv*iv*T)/(iv*Math.sqrt(T));const N=x=>0.5*(1+erf(x/Math.SQRT2));return call?N(d1):N(d1)-1}
+function erf(x){const s=Math.sign(x);x=Math.abs(x);const t=1/(1+0.3275911*x);const y=1-((((1.061405429*t-1.453152027)*t+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x);return s*y}
+return{fin,mean,sdp,sds,clip,quantile,sma,ema,rma,rollMax,rollMin,rsi,macd,boll,stochRsi,willr,roc,tsi,trueRange,atr,dmi,ichimoku,keltner,donchian,obv,avwap,sessionVwap,volProfile,swings,structure,divergence,logret,ewmaVar,maxDD,varEs,rng,hashSeed,monteCarlo,hmm2,softmaxFit,softmaxP,standardizer,brier,baseRates,walkForward,buildZones,reactions,composite,backtest,bsDelta,erf}})();
+if(typeof module!=="undefined")module.exports=KL;
+
+</script>
+<script>
+/* KIE-App: Datenanbindung, Analyse-Pipeline, Marktbericht und Darstellung. Baut auf der bestehenden App auf, ohne deren Funktionen zu ersetzen. */
+(()=>{
+const K=KL,E={data:{},mkt:{},res:{},glob:null,log:[],busy:false,ts:null};window.KIE=E;
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const num=(v,d=2)=>v==null||!isFinite(v)?"–":v.toLocaleString("de-DE",{minimumFractionDigits:d,maximumFractionDigits:d});
+const usd=v=>v==null||!isFinite(v)?"–":fmt(v)+"\u00a0$";
+const pc=(v,d=1)=>v==null||!isFinite(v)?"–":(v>0?"+":"")+num(v*100,d)+" %";
+const big=v=>v==null||!isFinite(v)?"–":Math.abs(v)>=1e12?num(v/1e12,2)+" Bio. $":Math.abs(v)>=1e9?num(v/1e9,2)+" Mrd. $":Math.abs(v)>=1e6?num(v/1e6,1)+" Mio. $":num(v,0)+" $";
+const NV={GN:"Benötigt Glassnode oder CryptoQuant (kostenpflichtiger API-Schlüssel und eigener Server)",CGL:"Benötigt CoinGlass-API (kostenpflichtig, nicht direkt im Browser nutzbar)",MAC:"Keine kostenlose, im Browser abrufbare Quelle (FRED und Börsenkurse brauchen einen eigenen Server mit API-Schlüssel)",ETF:"ETF-Flüsse nur über kostenpflichtige Anbieter oder eigenen Server",SOC:"Benötigt kostenpflichtigen Social-Daten-Anbieter (z. B. LunarCrush, Santiment)",NEWS:"Kein zuverlässiger kostenloser Nachrichten-Feed mit Browser-Zugriff",ML:"Nicht umgesetzt: im Browser nicht sinnvoll trainierbar; bei rund 1000 Tageswerten hohes Risiko der Überanpassung",CAL:"Kein bestätigter Termin hinterlegt",COIN:"Für diesen Coin nicht verfügbar",SRC:"Quelle nicht erreichbar"};
+const SYM={BTC:{bn:"BTCUSDT",cb:"BTC-USD",kr:"XBTUSD",okx:"BTC-USDT-SWAP",der:"BTC",cm:"btc"},ETH:{bn:"ETHUSDT",cb:"ETH-USD",kr:"ETHUSD",okx:"ETH-USDT-SWAP",der:"ETH",cm:"eth"},BRETT:{bn:"BRETTUSDT",okx:"BRETT-USDT-SWAP"}};
+const STABLE=new Set("usdt usdc dai fdusd usde tusd usdd pyusd usds busd frax usd1 rlusd eurc usdg gusd lusd crvusd susde susds bsc-usd usdx usdb usdy buidl xaut paxg ustb usd0 usdtb".split(" "));
+/* ---------- Netz mit Latenzmessung ---------- */
+async function kget(url,name){const t0=performance.now();try{const r=await Promise.race([fetch(url),new Promise((_,x)=>setTimeout(()=>x(new Error("Zeitüberschreitung")),15000))]);if(!r.ok)throw new Error(r.status==429?"Abruflimit erreicht (429)":"HTTP "+r.status);const j=await r.json();E.log.push({name,ok:true,ms:Math.round(performance.now()-t0),ts:Date.now()});return j}catch(e){E.log.push({name,ok:false,ms:Math.round(performance.now()-t0),err:e.message||"Fehler",ts:Date.now()});throw e}}
+const safe=async(f)=>{try{return await f()}catch(e){return null}};
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+/* ---------- Kursdaten (OHLCV) ---------- */
+const bnRow=r=>({t:r[0],o:+r[1],h:+r[2],l:+r[3],c:+r[4],v:+r[5],tb:+r[9],ct:r[6]});
+const toCols=rows=>{rows=rows.filter(r=>r.c>0&&r.h>0&&r.l>0).sort((a,b)=>a.t-b.t);const u=[];for(const r of rows)if(!u.length||u[u.length-1].t!==r.t)u.push(r);const o={};for(const k of["t","o","h","l","c","v","tb","ct"])o[k]=u.map(r=>r[k]==null?null:r[k]);o.n=u.length;return o};
+let brettPair=null;async function ohlc(k,iv){const s=SYM[k];
+ if(k!=="BRETT"){try{const d=await kget(`https://data-api.binance.vision/api/v3/klines?symbol=${s.bn}&interval=${iv}&limit=1000`,"Binance Spot "+iv);return{...toCols(d.map(bnRow)),src:"Binance Spot",taker:true}}catch(e){}
+  const g=iv==="1d"?86400:3600,d=await kget(`https://api.exchange.coinbase.com/products/${s.cb}/candles?granularity=${g}`,"Coinbase Kerzen "+iv);return{...toCols(d.map(r=>({t:r[0]*1000,o:+r[3],h:+r[2],l:+r[1],c:+r[4],v:+r[5],tb:null}))),src:"Coinbase (Ersatz, ohne Käufer/Verkäufer-Aufteilung)",taker:false}}
+ if(!brettPair)brettPair=kget("https://api.dexscreener.com/latest/dex/tokens/0x532f27101965dd16442e59d40670faf5ebb142e4","DexScreener").catch(e=>{brettPair=null;throw e});const pair=await brettPair;const ps=(pair.pairs||[]).filter(p=>p.chainId==="base"&&p.baseToken&&p.baseToken.address.toLowerCase()==="0x532f27101965dd16442e59d40670faf5ebb142e4").sort((a,b)=>((b.liquidity&&b.liquidity.usd)||0)-((a.liquidity&&a.liquidity.usd)||0));
+ if(!ps.length)throw new Error("Kein Brett-Pool gefunden");E.mkt.BRETT=E.mkt.BRETT||{};E.mkt.BRETT.dex=ps[0];E.mkt.BRETT.dexAll=ps;
+ const tf=iv==="1d"?"day":"hour",d=await kget(`https://api.geckoterminal.com/api/v2/networks/base/pools/${ps[0].pairAddress}/ohlcv/${tf}?limit=1000&currency=usd`,"GeckoTerminal "+tf);
+ return{...toCols(d.data.attributes.ohlcv_list.map(r=>({t:r[0]*1000,o:+r[1],h:+r[2],l:+r[3],c:+r[4],v:+r[5],tb:null}))),src:"GeckoTerminal (größter Base-Pool)",taker:false}}
+/* ---------- Derivate ---------- */
+async function derivs(k){const s=SYM[k],F="https://fapi.binance.com",M={};
+ const [pi,fr,oih,oid,ls,fk,tk]=await Promise.all([safe(()=>kget(`${F}/fapi/v1/premiumIndex?symbol=${s.bn}`,"Binance Futures Funding")),safe(()=>kget(`${F}/fapi/v1/fundingRate?symbol=${s.bn}&limit=90`,"Binance Funding-Verlauf")),safe(()=>kget(`${F}/futures/data/openInterestHist?symbol=${s.bn}&period=1h&limit=168`,"Binance Open Interest 1h")),safe(()=>kget(`${F}/futures/data/openInterestHist?symbol=${s.bn}&period=1d&limit=30`,"Binance Open Interest 1d")),safe(()=>kget(`${F}/futures/data/globalLongShortAccountRatio?symbol=${s.bn}&period=1h&limit=24`,"Binance Long/Short")),safe(()=>kget(`${F}/fapi/v1/klines?symbol=${s.bn}&interval=1h&limit=168`,"Binance Futures Kerzen")),safe(()=>kget(`${F}/fapi/v1/ticker/price?symbol=${s.bn}`,"Binance Futures Preis"))]);
+ if(pi&&pi.markPrice){M.bnFunding=+pi.lastFundingRate;M.mark=+pi.markPrice;M.index=+pi.indexPrice}
+ if(Array.isArray(fr)&&fr.length)M.fundHist=fr.map(x=>({t:+x.fundingTime,r:+x.fundingRate}));
+ if(Array.isArray(oih)&&oih.length)M.oiH=oih.map(x=>({t:+x.timestamp,oi:+x.sumOpenInterest,usd:+x.sumOpenInterestValue}));
+ if(Array.isArray(oid)&&oid.length)M.oiD=oid.map(x=>({t:+x.timestamp,oi:+x.sumOpenInterest,usd:+x.sumOpenInterestValue}));
+ if(Array.isArray(ls)&&ls.length)M.bnLS=ls.map(x=>({t:+x.timestamp,long:+x.longAccount,ratio:+x.longShortRatio}));
+ if(Array.isArray(fk)&&fk.length)M.fut=toCols(fk.map(bnRow));
+ if(tk&&tk.price)M.perp=+tk.price;
+ const [bt,ba,ok]=await Promise.all([safe(()=>kget(`https://api.bybit.com/v5/market/tickers?category=linear&symbol=${s.bn}`,"Bybit Ticker")),safe(()=>kget(`https://api.bybit.com/v5/market/account-ratio?category=linear&symbol=${s.bn}&period=1h&limit=1`,"Bybit Long/Short")),safe(()=>kget(`https://www.okx.com/api/v5/public/funding-rate?instId=${s.okx}`,"OKX Funding"))]);
+ const bl=bt&&bt.result&&bt.result.list&&bt.result.list[0];if(bl&&bl.fundingRate!=null){M.byFunding=+bl.fundingRate;M.byOIusd=+bl.openInterestValue}
+ const br=ba&&ba.result&&ba.result.list&&ba.result.list[0];if(br&&br.buyRatio!=null)M.byLong=+br.buyRatio;
+ const od=ok&&ok.data&&ok.data[0];if(od&&od.fundingRate!=null)M.okFunding=+od.fundingRate;
+ return M}
+async function options(k){const c=SYM[k].der;if(!c)return null;const [op,fu]=await Promise.all([safe(()=>kget(`https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=${c}&kind=option`,"Deribit Optionen")),safe(()=>kget(`https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=${c}&kind=future`,"Deribit Futures"))]);
+ const MON={JAN:0,FEB:1,MAR:2,APR:3,MAY:4,JUN:5,JUL:6,AUG:7,SEP:8,OCT:9,NOV:10,DEC:11};const exp=s=>{const m=/^(\d{1,2})([A-Z]{3})(\d{2})$/.exec(s);return m?Date.UTC(2000+ +m[3],MON[m[2]],+m[1],8):null};const now=Date.now(),O={};
+ if(op&&Array.isArray(op.result)&&op.result.length){const rows=op.result.map(x=>{const p=x.instrument_name.split("-");return{e:exp(p[1]),K:+p[2],call:p[3]==="C",oi:+x.open_interest||0,iv:+x.mark_iv/100,S:+x.underlying_price}}).filter(x=>x.e&&x.e>now&&x.K>0);
+  const pOI=rows.filter(x=>!x.call).reduce((s,x)=>s+x.oi,0),cOI=rows.filter(x=>x.call).reduce((s,x)=>s+x.oi,0);if(cOI>0)O.pcr=pOI/cOI;
+  const exps=[...new Set(rows.map(x=>x.e))].sort((a,b)=>a-b),pick=exps.find(e=>(e-now)/864e5>=7)||exps[0];
+  if(pick){const r=rows.filter(x=>x.e===pick&&x.iv>0&&x.S>0),T=(pick-now)/(365*864e5);O.exp=pick;
+   const S=r.length?r[0].S:null;if(S){const atm=r.slice().sort((a,b)=>Math.abs(a.K-S)-Math.abs(b.K-S)).slice(0,4);O.atmIV=K.mean(atm.map(x=>x.iv));
+    const near=(arr,tgt)=>{let b=null,bd=9;for(const x of arr){const d=K.bsDelta(S,x.K,T,x.iv,x.call);if(d==null)continue;const dd=Math.abs(d-tgt);if(dd<bd){bd=dd;b=x}}return bd<0.1?b:null};
+    const c25=near(r.filter(x=>x.call),0.25),p25=near(r.filter(x=>!x.call),-0.25);if(c25&&p25)O.skew=p25.iv-c25.iv}}}
+ if(fu&&Array.isArray(fu.result)){const f=fu.result.map(x=>({e:exp(x.instrument_name.split("-")[1]),mark:+x.mark_price,idx:+x.estimated_delivery_price,name:x.instrument_name})).filter(x=>x.e&&(x.e-now)/864e5>=14&&x.mark>0&&x.idx>0).sort((a,b)=>a.e-b.e)[0];
+  if(f){const d=(f.e-now)/864e5;O.basis=(f.mark/f.idx-1)*365/d;O.basisName=f.name}}
+ return O}
+async function book(k){const s=SYM[k];if(!s.cb)return null;const B={ex:{}};
+ const parse=(bids,asks)=>({b:bids.map(x=>[+x[0],+x[1]]).filter(x=>x[0]>0&&x[1]>0),a:asks.map(x=>[+x[0],+x[1]]).filter(x=>x[0]>0&&x[1]>0)});
+ const [bn,cb,kr]=await Promise.all([safe(()=>kget(`https://data-api.binance.vision/api/v3/depth?symbol=${s.bn}&limit=1000`,"Binance Orderbuch")),safe(()=>kget(`https://api.exchange.coinbase.com/products/${s.cb}/book?level=2`,"Coinbase Orderbuch")),safe(()=>kget(`https://api.kraken.com/0/public/Depth?pair=${s.kr}&count=500`,"Kraken Orderbuch"))]);
+ if(bn&&bn.bids)B.ex.Binance=parse(bn.bids,bn.asks);if(cb&&cb.bids)B.ex.Coinbase=parse(cb.bids,cb.asks);
+ if(kr&&kr.result){const v=Object.values(kr.result)[0];if(v&&v.bids)B.ex.Kraken=parse(v.bids,v.asks)}return Object.keys(B.ex).length?B:null}
+async function onchain(k){const a=SYM[k].cm;if(!a)return null;const metrics=["CapMrktCurUSD","CapMVRVCur","SplyCur","FlowInExNtv","FlowOutExNtv","SplyExNtv"],out={};
+ for(const m of metrics){const j=await safe(()=>kget(`https://community-api.coinmetrics.io/v4/timeseries/asset-metrics?assets=${a}&metrics=${m}&frequency=1d&start_time=2013-01-01&page_size=10000`,"Coin Metrics "+m));
+  if(j&&Array.isArray(j.data)&&j.data.length)out[m]=j.data.map(x=>({t:Date.parse(x.time),v:+x[m]})).filter(x=>isFinite(x.v));await wait(250)}return out}
+async function globalData(){const G={},CG="https://api.coingecko.com/api/v3";
+ const g=await safe(()=>kget(CG+"/global","CoinGecko Gesamtmarkt"));if(g&&g.data)G.global=g.data;await wait(1500);
+ const m=await safe(()=>kget(CG+"/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&price_change_percentage=24h,7d,30d","CoinGecko Top 100"));if(Array.isArray(m))G.top=m;await wait(1500);
+ const c=await safe(()=>kget(CG+"/coins/categories","CoinGecko Sektoren"));if(Array.isArray(c))G.cats=c;
+ const [st,dx,fg,cot]=await Promise.all([safe(()=>kget("https://stablecoins.llama.fi/stablecoincharts/all","DefiLlama Stablecoins")),safe(()=>kget("https://api.llama.fi/overview/dexs?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true","DefiLlama DEX-Volumen")),safe(()=>kget("https://api.alternative.me/fng/?limit=60","Fear & Greed Index")),safe(()=>kget("https://publicreporting.cftc.gov/resource/gpe5-46if.json?$where="+encodeURIComponent("market_and_exchange_names like 'BITCOIN - CHICAGO MERCANTILE%'")+"&$order=report_date_as_yyyy_mm_dd%20DESC&$limit=8","CFTC CME-Positionierung"))]);
+ if(Array.isArray(st)&&st.length)G.stable=st.map(x=>({t:+x.date*1000,v:x.totalCirculatingUSD&&+x.totalCirculatingUSD.peggedUSD})).filter(x=>x.v>0);
+ if(dx&&dx.total24h)G.dex24=+dx.total24h;
+ if(fg&&Array.isArray(fg.data))G.fng=fg.data.map(x=>({t:+x.timestamp*1000,v:+x.value,c:x.value_classification}));
+ if(Array.isArray(cot)&&cot.length){const f=(r,re)=>{const key=Object.keys(r).find(k=>re.test(k));return key?+r[key]:null};G.cot=cot.map(r=>({d:(r.report_date_as_yyyy_mm_dd||"").slice(0,10),lev:f(r,/^lev_money_positions_long/)-f(r,/^lev_money_positions_short/),am:f(r,/^asset_mgr_positions_long/)-f(r,/^asset_mgr_positions_short/),oi:f(r,/^open_interest_all$/)})).filter(x=>isFinite(x.lev)&&isFinite(x.am))}
+ return G}
+/* ---------- Merkmale und Ziele für die Prognose ---------- */
+function features(D){const c=D.c,h=D.h,l=D.l,v=D.v,r=K.logret(c),V=K.ewmaVar(r),e50=K.ema(c,50),e200=K.ema(c,200),R=K.rsi(c),M=K.macd(c),A=K.atr(h,l,c),DM=K.dmi(h,l,c),B=K.boll(c),lv=v.map(x=>x>0?Math.log(x):null);
+ const sd20=c.map((_,i)=>i<20?null:K.sdp(r.slice(i-19,i+1))),sd100=c.map((_,i)=>i<100?null:K.sdp(r.slice(i-99,i+1)));
+ return c.map((_,i)=>{if(i<210||V[i]==null||!(V[i]>0))return null;const s=Math.sqrt(V[i]);const lvw=lv.slice(i-29,i+1);const vz=lvw.some(x=>x==null)?0:(lv[i]-K.mean(lvw))/(K.sdp(lvw)||1);
+  const row=[r[i]/s,Math.log(c[i]/c[i-5])/(s*Math.sqrt(5)),Math.log(c[i]/c[i-20])/(s*Math.sqrt(20)),e50[i]==null?null:Math.log(c[i]/e50[i])/s,e200[i]==null?null:Math.log(c[i]/e200[i])/s,R[i]==null?null:(R[i]-50)/50,M.h[i]==null||!A[i]?null:M.h[i]/A[i],DM.adx[i]==null?null:DM.adx[i]/50*Math.sign(DM.pdi[i]-DM.mdi[i]),sd20[i]&&sd100[i]?Math.log(sd20[i]/sd100[i]):null,B[i]?B[i].b-0.5:null,vz];
+  return row.every(K.fin)?row:null})}
+const FEAT=["Rendite letzte Periode","Momentum 5 Perioden","Momentum 20 Perioden","Abstand EMA 50","Abstand EMA 200","RSI","MACD-Histogramm","ADX mit Richtung","Volatilitätsverhältnis","Bollinger %b","Volumen-Abweichung"];
+function labels(c,h){const r=K.logret(c),V=K.ewmaVar(r);return c.map((_,t)=>{if(t+h>=c.length||V[t]==null)return null;const ret=Math.log(c[t+h]/c[t]),tau=0.5*Math.sqrt(V[t]*h);return ret>tau?2:ret<-tau?0:1})}
+/* ---------- Analyse je Coin ---------- */
+function analyzeCoin(k){const D=E.data[k]&&E.data[k].d,H=E.data[k]&&E.data[k].h,M=E.mkt[k]||{};if(!D||D.n<120)return null;const A={k,errors:[]};const P=(S.src[k]&&S.src[k].med)||D.c[D.n-1];A.price=P;
+ const c=D.c,h=D.h,l=D.l,v=D.v,n=D.n,last=n-1;
+ try{A.ma20=K.sma(c,20)[last];A.sma50=K.sma(c,50)[last];const e50=K.ema(c,50),e200=K.ema(c,200);A.ema50=e50[last];A.ema200=e200[last];A.ema50slope=e50[last-10]?(e50[last]/e50[last-10]-1):null;
+  A.hi30=Math.max(...h.slice(-30));A.lo30=Math.min(...l.slice(-30));const R=K.rsi(c);A.rsi=R[last];const Mc=K.macd(c);A.macd=Mc.m[last];A.macds=Mc.s[last];A.macdh=Mc.h[last];A.mom10=c[last]/c[last-10]-1;
+  const B=K.boll(c);A.bb=B[last];const SR=K.stochRsi(c);A.srk=SR.k[last];A.srd=SR.d[last];A.roc=K.roc(c)[last];A.wr=K.willr(h,l,c)[last];const T=K.tsi(c);A.tsi=T.t[last];A.tsis=T.s[last];
+  const at=K.atr(h,l,c);A.atr=at[last];const dm=K.dmi(h,l,c);A.adx=dm.adx[last];A.pdi=dm.pdi[last];A.mdi=dm.mdi[last];const I=K.ichimoku(h,l,c);A.ichA=I.A[last];A.ichB=I.B[last];A.tenkan=I.conv[last];A.kijun=I.base[last];
+  A.kc=K.keltner(h,l,c)[last];A.dc=K.donchian(h,l)[last];const ob=K.obv(c,v);A.obvSlope=ob[last]-ob[last-20];A.obvTrend=ob[last]>K.mean(ob.slice(-20))?1:-1;
+  const sw=K.swings(h,l,3);A.swings=sw;const st=K.structure(h,l,c,3);A.struct=st;A.divRsiH=K.divergence(c,R,sw,"H",last);A.divRsiL=K.divergence(c,R,sw,"L",last);A.divMacdH=K.divergence(c,Mc.m,sw,"H",last);A.divMacdL=K.divergence(c,Mc.m,sw,"L",last);
+  const i90=Math.max(0,n-90),lo90=i90+l.slice(i90).indexOf(Math.min(...l.slice(i90))),hi90=i90+h.slice(i90).indexOf(Math.max(...h.slice(i90)));A.avwapLow=K.avwap(h,l,c,v,lo90)[last];A.avwapHigh=K.avwap(h,l,c,v,hi90)[last];A.avwapLowD=D.t[lo90];A.avwapHighD=D.t[hi90];
+  const ytd=D.t.findIndex(t=>new Date(t).getUTCFullYear()===new Date(D.t[last]).getUTCFullYear());A.avwapYtd=ytd>=0?K.avwap(h,l,c,v,ytd)[last]:null;
+  A.vp30=H&&H.n>200?K.volProfile(H.h.slice(-720),H.l.slice(-720),H.v.slice(-720),60):null;A.vp90=K.volProfile(h.slice(-90),l.slice(-90),v.slice(-90),50);A.vp365=K.volProfile(h.slice(-365),l.slice(-365),v.slice(-365),60);
+  const r=K.logret(c);A.r=r;const rr=r.slice(1);A.hv30=K.sds(rr.slice(-30))*Math.sqrt(365);A.hv90=K.sds(rr.slice(-90))*Math.sqrt(365);
+  if(H&&H.n>170){const hr=K.logret(H.c).slice(-168);A.rv7=Math.sqrt(K.mean(hr.map(x=>x*x))*8760)}
+  const sr=c.slice(1).map((x,i)=>x/c[i]-1).slice(-365);const ve=K.varEs(sr,0.05),v1=K.varEs(sr,0.01);A.var95=ve.var;A.es95=ve.es;A.var99=v1.var;A.mdd=K.maxDD(c.slice(-365));
+  const V=K.ewmaVar(r);A.ewmaVol=Math.sqrt(V[last]);A.bbw=A.bb&&A.bb.w;A.bbwPct=(()=>{const w=B.slice(-180).filter(Boolean).map(x=>x.w);return w.length?w.filter(x=>x<=A.bbw).length/w.length:null})();
+  A.ret24=H&&H.n>25?H.c[H.n-1]/H.c[H.n-25]-1:c[last]/c[last-1]-1;A.ret7=c[last]/c[last-7]-1;A.ret30=c[last]/c[last-30]-1;
+  A.hmm=K.hmm2(rr.slice(-730));
+  A.regime=A.adx>=25?(A.pdi>A.mdi?"Aufwärtstrend":"Abwärtstrend"):"Seitwärts / kein klarer Trend";
+  const above=P>A.ema200,rising=A.ema50slope>0.005,falling=A.ema50slope<-0.005;A.phase=above?(rising?"Aufwärtsphase (Markup)":"Verteilungsphase (Distribution)"):(falling?"Abwärtsphase (Markdown)":"Bodenbildung (Akkumulation)");
+  const zr=r.slice(-91,-1).filter(K.fin),zv=v.slice(-91,-1).filter(x=>x>0).map(Math.log);A.anom=[];const rz=(r[last]-K.mean(zr))/(K.sdp(zr)||1);if(Math.abs(rz)>3)A.anom.push("Ungewöhnliche Tagesbewegung ("+num(rz,1)+" Standardabweichungen)");
+  if(v[last]>0){const vz=(Math.log(v[last])-K.mean(zv))/(K.sdp(zv)||1);if(vz>3)A.anom.push("Ungewöhnlich hohes Volumen ("+num(vz,1)+" Standardabweichungen)")}
+  if(H&&H.n>100){const hr=K.logret(H.c),hv=K.ewmaVar(hr);const z=hr[H.n-1]/Math.sqrt(hv[H.n-2]||1);if(Math.abs(z)>4)A.anom.push("Starke Stundenbewegung ("+num(z,1)+" Standardabweichungen)")}
+ }catch(e){A.errors.push("Indikatoren: "+e.message)}
+ /* Orderflow */
+ try{if(H&&D.taker){const d=H.c.map((_,i)=>H.tb[i]==null?null:2*H.tb[i]-H.v[i]);const w=(m)=>{const s=d.slice(-m),vv=H.v.slice(-m);return s.some(x=>x==null)?null:{delta:s.reduce((a,b)=>a+b,0),vol:vv.reduce((a,b)=>a+b,0)}};A.cvd24=w(24);A.cvd7=w(168);let cum=0;A.cvdSpot=d.slice(-168).map(x=>cum+=x);A.cvdT=H.t.slice(-168);A.vdLast=d[H.n-1]}
+  if(M.fut&&M.fut.n>24){const d=M.fut.c.map((_,i)=>2*M.fut.tb[i]-M.fut.v[i]);let cum=0;A.cvdFut=d.map(x=>cum+=x);A.cvdFutT=M.fut.t;const s=d.slice(-24),vv=M.fut.v.slice(-24);A.fcvd24={delta:s.reduce((a,b)=>a+b,0),vol:vv.reduce((a,b)=>a+b,0)}}
+  if(H){const sv=K.sessionVwap(H.t,H.h,H.l,H.c,H.v);A.vwap=sv[H.n-1]}
+  if(k==="BRETT"&&M.dex&&M.dex.txns&&M.dex.txns.h24){const t=M.dex.txns.h24;A.dexBuys=t.buys;A.dexSells=t.sells}
+ }catch(e){A.errors.push("Orderflow: "+e.message)}
+ /* Positionierung */
+ try{const f=[M.bnFunding,M.byFunding,M.okFunding].filter(K.fin);A.funding=f.length?K.mean(f):null;A.fundingN=f.length;
+  if(M.oiH&&M.oiH.length>25){const o=M.oiH;A.oi=o[o.length-1].usd;A.oiD24=o[o.length-1].oi/o[o.length-25].oi-1}
+  if(M.oiD&&M.oiD.length>7){const o=M.oiD;A.oiD7=o[o.length-1].oi/o[o.length-8].oi-1;const vals=o.map(x=>x.oi);A.oiPct=vals.filter(x=>x<=vals[vals.length-1]).length/vals.length}
+  const longs=[];if(M.bnLS&&M.bnLS.length)longs.push(M.bnLS[M.bnLS.length-1].long);if(K.fin(M.byLong))longs.push(M.byLong);if(longs.length){A.longShare=K.mean(longs);A.lsRatio=A.longShare/(1-A.longShare);A.lsN=longs.length}
+  const bnSp=S.src[k]&&S.src[k].out.find(o=>o.n==="Binance"&&o.p);if(K.fin(M.perp)&&bnSp)A.premium=M.perp/bnSp.p-1;else if(K.fin(M.mark)&&K.fin(M.index))A.premium=M.mark/M.index-1;
+  if(M.opt){A.pcr=M.opt.pcr;A.atmIV=M.opt.atmIV;A.skew=M.opt.skew;A.basis=M.opt.basis;A.basisName=M.opt.basisName}
+  const s=S.src[k]&&S.src[k].out;if(s){const cb=s.find(o=>o.n==="Coinbase"&&o.p),bn=s.find(o=>o.n==="Binance"&&o.p);if(cb&&bn)A.cbPremium=cb.p/bn.p-1}
+ }catch(e){A.errors.push("Positionierung: "+e.message)}
+ /* Orderbuch und Mikrostruktur */
+ try{if(M.book){const X={},P0=P;let bid1=0,ask1=0,tot1=0;for(const[nm,b] of Object.entries(M.book.ex)){if(!b.b.length||!b.a.length)continue;const bb=b.b[0][0],aa=b.a[0][0],mid=(bb+aa)/2;
+   const dep=(side,pct)=>side.filter(x=>Math.abs(x[0]/mid-1)<=pct).reduce((s,x)=>s+x[0]*x[1],0);const slip=(side,usdAmt)=>{let rem=usdAmt,cost=0,qty=0;for(const[p,q] of side){const val=p*q;const take=Math.min(rem,val);cost+=take;qty+=take/p;rem-=take;if(rem<=0)break}return rem>0?null:(cost/qty)/mid-1};
+   const e={spread:(aa-bb)/mid,bid1:dep(b.b,0.01),ask1:dep(b.a,0.01),bid2:dep(b.b,0.02),ask2:dep(b.a,0.02),buy100k:slip(b.a,1e5),buy1m:slip(b.a,1e6),sell100k:slip(b.b,1e5),sell1m:slip(b.b,1e6),levels:b.b.length+b.a.length};e.imb=(e.bid1-e.ask1)/((e.bid1+e.ask1)||1);X[nm]=e;bid1+=e.bid1;ask1+=e.ask1}
+  A.book=X;A.bookImb=bid1+ask1?(bid1-ask1)/(bid1+ask1):null;A.liq1=bid1+ask1;
+  const bnB=M.book.ex.Binance||Object.values(M.book.ex)[0];if(bnB){const bw=P0*0.0025,walls=(side,dir)=>{const m=new Map();for(const[p,q] of side){if(Math.abs(p/P0-1)>0.05)continue;const b=Math.floor(p/bw);m.set(b,(m.get(b)||0)+p*q)}const arr=[...m.entries()].map(([b,u])=>({p:(b+.5)*bw,usd:u}));const mu=K.mean(arr.map(x=>x.usd)),sg=K.sdp(arr.map(x=>x.usd));return arr.filter(x=>x.usd>mu+2*sg).sort((a,b)=>b.usd-a.usd).slice(0,3)};A.wallsB=walls(bnB.b);A.wallsA=walls(bnB.a)}}
+ }catch(e){A.errors.push("Orderbuch: "+e.message)}
+ /* On-Chain */
+ try{const oc=M.chain;if(oc&&oc.CapMrktCurUSD&&oc.CapMVRVCur){const mc=new Map(oc.CapMrktCurUSD.map(x=>[x.t,x.v])),rows=oc.CapMVRVCur.filter(x=>mc.has(x.t)&&x.v>0).map(x=>({t:x.t,mc:mc.get(x.t),mvrv:x.v,rc:mc.get(x.t)/x.v}));
+   if(rows.length>365){const L0=rows[rows.length-1],sdMc=K.sdp(rows.map(x=>x.mc));A.mvrv=L0.mvrv;A.realCap=L0.rc;A.mvrvZ=(L0.mc-L0.rc)/sdMc;A.nupl=(L0.mc-L0.rc)/L0.mc;A.chainDate=L0.t;
+    if(oc.SplyCur){const sp=oc.SplyCur[oc.SplyCur.length-1];if(sp)A.realPrice=L0.rc/sp.v}
+    if(oc.FlowInExNtv&&oc.FlowOutExNtv){const fi=oc.FlowInExNtv.slice(-7),fo=oc.FlowOutExNtv.slice(-7);if(fi.length===7&&fo.length===7)A.netflow7=fi.reduce((s,x)=>s+x.v,0)-fo.reduce((s,x)=>s+x.v,0)}
+    if(oc.SplyExNtv){const s1=oc.SplyExNtv;A.exReserve=s1[s1.length-1].v;A.exReserveD30=s1.length>31?s1[s1.length-1].v/s1[s1.length-31].v-1:null}}}
+  if(k==="BTC"&&E.glob&&E.glob.stable&&E.glob.stable.length&&E.glob.top){const b=E.glob.top.find(x=>x.id==="bitcoin");if(b)A.ssr=b.market_cap/E.glob.stable[E.glob.stable.length-1].v}
+ }catch(e){A.errors.push("On-Chain: "+e.message)}
+ /* Zonen */
+ try{zones(A,D,H,M)}catch(e){A.errors.push("Zonen: "+e.message)}
+ try{liqEstimate(A,H)}catch(e){A.errors.push("Liquidationsschätzung: "+e.message)}
+ try{compositeFor(A,k)}catch(e){A.errors.push("Composite: "+e.message)}
+ try{forecast(A,D,H,k)}catch(e){A.errors.push("Prognose: "+e.message)}
+ try{scenarios(A,D)}catch(e){A.errors.push("Szenarien: "+e.message)}
+ try{quality(A,D,H,k)}catch(e){A.errors.push("Datenqualität: "+e.message)}
+ return A}
+function zones(A,D,H,M){const P=A.price,c=[],add=(p,w,kind,label)=>{if(K.fin(p)&&p>0&&Math.abs(p/P-1)<0.6)c.push({p,w,kind,label})};
+ const sw=(Hh,Ll,k,from,w,lab)=>{for(const s of K.swings(Hh,Ll,k))if(s.i>=from)add(s.p,w,"Swing",(s.t==="H"?"Swing-Hoch ":"Swing-Tief ")+lab)};
+ if(H&&H.n>48){sw(H.h,H.l,4,H.n-24,1,"24h");sw(H.h,H.l,5,H.n-168,1.5,"7 Tage")}
+ const n=D.n;sw(D.h,D.l,3,n-30,2,"30 Tage");sw(D.h,D.l,3,n-90,2.5,"90 Tage");sw(D.h,D.l,5,n-365,3,"1 Jahr");
+ for(const[vp,lab,w] of[[A.vp30,"30 Tage (Stunden)",2.5],[A.vp90,"90 Tage",2],[A.vp365,"1 Jahr",2]])if(vp){add(vp.poc,w,"Volumenprofil","POC "+lab);add(vp.vah,w*0.6,"Volumenprofil","VAH "+lab);add(vp.val,w*0.6,"Volumenprofil","VAL "+lab);for(const x of vp.hvn.slice(0,6))add(x,w*0.4,"Volumenprofil","Hohes Volumen "+lab)}
+ add(A.ema50,1.5,"Gleitender Durchschnitt","EMA 50");add(A.ema200,2,"Gleitender Durchschnitt","EMA 200");add(A.sma50,1,"Gleitender Durchschnitt","SMA 50");
+ add(A.avwapLow,1.5,"VWAP","Anchored VWAP ab 90-Tage-Tief");add(A.avwapHigh,1.5,"VWAP","Anchored VWAP ab 90-Tage-Hoch");add(A.avwapYtd,1,"VWAP","VWAP seit Jahresbeginn");
+ if(H&&H.n>48){const pdH=Math.max(...H.h.slice(-48,-24)),pdL=Math.min(...H.l.slice(-48,-24));add(pdH,1,"Vortag","Vortageshoch");add(pdL,1,"Vortag","Vortagestief")}
+ add(Math.max(...D.h.slice(-14,-7)),1,"Vorwoche","Vorwochenhoch");add(Math.min(...D.l.slice(-14,-7)),1,"Vorwoche","Vorwochentief");
+ for(const w of(A.wallsB||[]))add(w.p,1,"Orderbuch","Kaufwand "+big(w.usd));for(const w of(A.wallsA||[]))add(w.p,1,"Orderbuch","Verkaufswand "+big(w.usd));
+ const Z=K.buildZones(c,P,A.atr||P*0.02);for(const z of Z){const side=z.mid<P?"S":"R";z.react=K.reactions(z,D.h.slice(-365),D.l.slice(-365),D.c.slice(-365),side);z.raw+=Math.min(z.react,6)*0.5}
+ const mx=Math.max(...Z.map(z=>z.raw),1);for(const z of Z){z.str=Math.round(100*z.raw/mx);z.lab=z.str>=60?"stark":z.str>=30?"mittel":"schwach"}
+ A.zonesAll=Z;const sup=Z.filter(z=>z.hi<P).sort((a,b)=>b.mid-a.mid),res=Z.filter(z=>z.lo>P).sort((a,b)=>a.mid-b.mid),inside=Z.filter(z=>z.lo<=P&&z.hi>=P);
+ const pick=arr=>{const s=arr.filter(z=>z.str>=20);return(s.length>=3?s:arr).slice(0,3)};A.sup=pick(sup);A.res=pick(res);A.inZone=inside[0]||null;
+ A.demand=sup.slice().sort((a,b)=>b.str-a.str)[0]||null;A.supply=res.slice().sort((a,b)=>b.str-a.str)[0]||null;
+ const st=A.struct;A.structLow=st&&st.lastL?st.lastL.p:null;A.structHigh=st&&st.lastH?st.lastH.p:null;
+ const shortZ=sup.filter(z=>P-z.mid<=2*(A.atr||0)).sort((a,b)=>b.str-a.str)[0]||A.sup[0]||null;A.holdShort=shortZ;
+ const midZ=sup.filter(z=>z.m.some(m=>/EMA 50|SMA 50|EMA 200|VAL 90|POC 90/.test(m.label))&&z.mid>P*0.8).sort((a,b)=>b.str-a.str)[0]||A.sup[1]||null;A.holdMid=midZ}
+function liqEstimate(A,H){if(!H||H.n<200)return;const n=H.n,from=n-720<0?0:n-720,P=A.price,mm=0.005,LV=[10,25,50,100];const sufMin=new Array(n+1).fill(Infinity),sufMax=new Array(n+1).fill(-Infinity);
+ for(let i=n-1;i>=0;i--){sufMin[i]=Math.min(H.l[i],sufMin[i+1]);sufMax[i]=Math.max(H.h[i],sufMax[i+1])}const bw=P*0.005,lb=new Map(),sb=new Map();
+ for(let i=from;i<n-1;i++){const tp=(H.h[i]+H.l[i]+H.c[i])/3,w=H.v[i]*tp;for(const L of LV){const ll=tp*(1-1/L+mm),sl=tp*(1+1/L-mm);if(sufMin[i+1]>ll&&Math.abs(ll/P-1)<0.25){const b=Math.floor(ll/bw);lb.set(b,(lb.get(b)||0)+w)}if(sufMax[i+1]<sl&&Math.abs(sl/P-1)<0.25){const b=Math.floor(sl/bw);sb.set(b,(sb.get(b)||0)+w)}}}
+ const arr=m=>[...m.entries()].map(([b,u])=>({p:(b+.5)*bw,w:u}));A.liqL=arr(lb).filter(x=>x.p<P);A.liqS=arr(sb).filter(x=>x.p>P);const mx=Math.max(...A.liqL.map(x=>x.w),...A.liqS.map(x=>x.w),1);
+ for(const x of[...A.liqL,...A.liqS])x.r=x.w/mx;A.liqLtop=A.liqL.slice().sort((a,b)=>b.w-a.w).slice(0,3).sort((a,b)=>b.p-a.p);A.liqStop=A.liqS.slice().sort((a,b)=>b.w-a.w).slice(0,3).sort((a,b)=>a.p-b.p)}
+function compositeFor(A,k){const g=(name,w)=>({name,w,sig:[]}),T=g("Trend",0.30),Mo=g("Momentum",0.20),O=g("Orderflow",0.15),Po=g("Positionierung",0.15),Se=g("Stimmung",0.10),Va=g("Bewertung",0.10);const P=A.price,put=(G,s,lab)=>{if(K.fin(s))G.sig.push({s:K.clip(s,-1,1),lab})};
+ if(A.ema50)put(T,P>A.ema50?1:-1,"Kurs vs. EMA 50");if(A.ema200)put(T,P>A.ema200?1:-1,"Kurs vs. EMA 200");if(A.ema50&&A.ema200)put(T,A.ema50>A.ema200?1:-1,"EMA 50 vs. EMA 200");
+ if(K.fin(A.adx))put(T,(A.pdi-A.mdi)/((A.pdi+A.mdi)||1)*Math.min(A.adx/25,1)*2,"ADX/DMI");if(K.fin(A.ichA)&&K.fin(A.ichB))put(T,P>Math.max(A.ichA,A.ichB)?1:P<Math.min(A.ichA,A.ichB)?-1:0,"Ichimoku-Wolke");
+ if(A.struct&&A.struct.trend)put(T,A.struct.trend==="bull"?1:-1,"Marktstruktur");
+ if(K.fin(A.macdh)&&A.atr)put(Mo,Math.tanh(A.macdh/(0.2*A.atr)),"MACD-Histogramm");if(K.fin(A.roc)&&A.ewmaVol)put(Mo,Math.tanh(A.roc/100/(A.ewmaVol*Math.sqrt(10))),"ROC");if(K.fin(A.tsi))put(Mo,A.tsi/40,"TSI");if(K.fin(A.srk))put(Mo,(A.srk-50)/50,"Stochastic RSI");if(K.fin(A.rsi))put(Mo,(A.rsi-50)/25,"RSI-Richtung");
+ if(A.divRsiH||A.divMacdH)put(Mo,-1,"Bärische Divergenz");if(A.divRsiL||A.divMacdL)put(Mo,1,"Bullische Divergenz");
+ if(A.cvd24&&A.cvd24.vol)put(O,A.cvd24.delta/A.cvd24.vol*8,"Spot-CVD 24h");if(A.cvd7&&A.cvd7.vol)put(O,A.cvd7.delta/A.cvd7.vol*8,"Spot-CVD 7 Tage");if(A.fcvd24&&A.fcvd24.vol)put(O,A.fcvd24.delta/A.fcvd24.vol*8,"Futures-CVD 24h");
+ put(O,A.obvTrend,"OBV-Trend");if(K.fin(A.bookImb))put(O,A.bookImb*2,"Orderbuch-Ungleichgewicht ±1 %");if(K.fin(A.dexBuys)&&A.dexBuys+A.dexSells>0)put(O,(A.dexBuys-A.dexSells)/(A.dexBuys+A.dexSells)*3,"DEX Käufe vs. Verkäufe");
+ if(K.fin(A.funding))put(Po,-Math.tanh(A.funding/0.0003),"Funding (konträr)");if(K.fin(A.longShare))put(Po,-(A.longShare-0.5)*4,"Long/Short-Verhältnis (konträr)");if(K.fin(A.premium))put(Po,-Math.tanh(A.premium/0.002),"Perp-Prämie (konträr)");
+ if(K.fin(A.skew))put(Po,-Math.tanh(A.skew/0.05),"Options-Skew");if(K.fin(A.cbPremium))put(Po,Math.tanh(A.cbPremium/0.001),"Coinbase-Prämie");
+ const fg=E.glob&&E.glob.fng&&E.glob.fng[0];if(fg)put(Se,(50-fg.v)/40,"Fear & Greed (konträr)");
+ if(K.fin(A.mvrvZ))put(Va,1-A.mvrvZ/3.5,"MVRV Z-Score");if(K.fin(A.rsi))put(Va,A.rsi>75?-1:A.rsi<25?1:0,"RSI-Überhitzung");if(A.bb)put(Va,A.bb.b>1?-1:A.bb.b<0?1:0,"Bollinger-Extrem");
+ A.comp=K.composite([T,Mo,O,Po,Se,Va]);A.compLab=A.comp.score==null?"–":A.comp.score>=25?"bullisch":A.comp.score<=-25?"bärisch":"neutral";
+ const R=[],dp=A.ret24,doi=A.oiD24,cv=A.cvd24&&A.cvd24.vol?A.cvd24.delta/A.cvd24.vol:null,f=A.funding;const ok=[dp,doi,cv].every(K.fin);
+ if(ok&&dp>0&&doi>0&&cv>0)R.push(["up","Steigender Kurs, steigendes Open Interest und positives Spot-CVD: möglicher gesunder Aufwärtstrend."]);
+ if(K.fin(dp)&&K.fin(cv)&&K.fin(f)&&dp>0&&cv<-0.03&&f>0.0002)R.push(["down","Steigender Kurs bei deutlich negativem Spot-CVD und hohem Funding: mögliches Überhitzungssignal."]);
+ if(K.fin(dp)&&K.fin(f)&&K.fin(doi)&&dp<0&&f<0&&doi<0)R.push(["up","Fallender Kurs, negatives Funding und sinkendes Open Interest: möglicher Abschluss einer Long-Bereinigung."]);
+ if(ok&&doi<0&&dp>0&&cv>0)R.push(["up","Sinkendes Open Interest bei steigendem Kurs und positivem Spot-CVD: möglicher nachhaltiger, spotgetriebener Erholungsimpuls."]);
+ if(K.fin(dp)&&K.fin(doi)&&K.fin(f)&&dp<0&&doi>0&&f>0)R.push(["down","Fallender Kurs bei steigendem Open Interest und positivem Funding: neue Longs gegen den Trend, Risiko von Long-Liquidationen."]);
+ if(K.fin(dp)&&K.fin(doi)&&K.fin(f)&&dp<0&&doi>0&&f<0)R.push(["up","Fallender Kurs mit steigendem Open Interest und negativem Funding: aggressive Shorts, Short-Squeeze-Potenzial."]);
+ if(!ok)R.push(["","Kombinationsregeln nur eingeschränkt prüfbar: Kurs, Open Interest oder Spot-CVD fehlen."]);A.rules=R}
+function forecast(A,D,H,k){A.fc=[];const seed=K.hashSeed(k+new Date().toISOString().slice(0,13));const mcD=K.monteCarlo(D.c,30,4000,seed);const mcH=H&&H.n>300?K.monteCarlo(H.c,24,4000,seed+1):null;A.mcD=mcD;A.mcH=mcH;
+ const fD=features(D),fH=H&&H.n>400?features(H):null;
+ const HZ=[["1 Stunde",1,"h"],["4 Stunden",4,"h"],["24 Stunden",1,"d"],["7 Tage",7,"d"],["30 Tage",30,"d"]];
+ for(const[lab,h,tf] of HZ){const o={lab,h,tf};const ser=tf==="h"?H:D,F=tf==="h"?fH:fD,mc=tf==="h"?mcH:mcD;
+  if(!ser||!F){o.nv=tf==="h"?"Keine Stundendaten":"Zu wenige Daten";A.fc.push(o);continue}
+  const y=labels(ser.c,h),wf=K.walkForward(F,y,h,tf==="h"?{minTrain:300,block:72,it:150}:{minTrain:250,block:45,it:150});o.wf=wf;
+  if(!wf.ok){o.nv=wf.reason;A.fc.push(o);continue}
+  o.p=wf.bss>0?wf.live:wf.base;o.usedBase=!(wf.bss>0);const r=K.logret(ser.c),V=K.ewmaVar(r);o.tau=0.5*Math.sqrt(V[V.length-1]*h);
+  if(mc){o.q10=mcQ(ser.c,h,0.10,seed,tf);o.q50=mcQ(ser.c,h,0.50,seed,tf);o.q90=mcQ(ser.c,h,0.90,seed,tf);o.q05=mcQ(ser.c,h,0.05,seed,tf);o.q95=mcQ(ser.c,h,0.95,seed,tf)}
+  const P=A.price,sup=(A.zonesAll||[]).filter(z=>z.hi<P&&(o.q05==null||z.mid>=o.q05)).sort((a,b)=>b.str-a.str)[0]||A.sup&&A.sup[0],res=(A.zonesAll||[]).filter(z=>z.lo>P&&(o.q95==null||z.mid<=o.q95)).sort((a,b)=>b.str-a.str)[0]||A.res&&A.res[0];o.sup=sup;o.res=res;
+  if(tf==="h"){const dm=K.dmi(H.h,H.l,H.c),j=H.n-1;o.regime=dm.adx[j]>=25?(dm.pdi[j]>dm.mdi[j]?"Aufwärtstrend":"Abwärtstrend"):"Seitwärts"}else o.regime=A.regime.replace(" / kein klarer Trend","");
+  if(A.hmm)o.regime+=A.hmm.pHigh>0.5?", hohe Volatilität":", ruhige Volatilität";
+  const effN=wf.nB/Math.max(1,h),skill=wf.bss>0?Math.min(1,0.5+5*wf.bss):0.3;o.conf=Math.round(100*K.clip(skill*Math.min(1,effN/150)*(A.comp?0.6+0.4*A.comp.coverage:0.6),0,0.95));
+  A.fc.push(o)}}
+const mcCache=new Map();function mcQ(c,h,q,seed,tf){const key=(tf||"")+"|"+c.length+"|"+c[0]+"|"+c[c.length-2]+"|"+c[c.length-1]+"|"+h+"|"+seed;let m=mcCache.get(key);if(!m){m=K.monteCarlo(c,h,4000,seed+h);mcCache.set(key,m)}return m?m.q(q):null}
+function scenarios(A,D){const P=A.price,mc=A.mcD;if(!mc)return;const sup=A.sup||[],res=A.res||[];const tgt=(z,f)=>z?z.mid:P*f;
+ const s1=tgt(sup[0],0.95),s2=tgt(sup[1],0.88),ext=Math.min(mc.minQ(0.02),sup[2]?sup[2].lo:Infinity);const r1=tgt(res[0],1.05),r2=tgt(res[1],1.12),extU=Math.max(mc.maxQ(0.98),res[2]?res[2].hi:-Infinity);
+ const liqL=(A.liqLtop||[]).map(x=>usd(x.p)).join(", "),liqS=(A.liqStop||[]).map(x=>usd(x.p)).join(", ");
+ A.down=[{lab:"Normale Korrektur",lo:sup[0]?sup[0].lo:s1,hi:sup[0]?sup[0].hi:s1,p:mc.touchDown(s1),why:"Rücksetzer in die erste Unterstützungszone"+(sup[0]?" ("+sup[0].m.map(m=>m.label).slice(0,3).join(", ")+")":"")+". Auslöser: Abprall am nächsten Widerstand, abnehmendes Kaufvolumen."},
+  {lab:"Stärkerer Abverkauf",lo:sup[1]?sup[1].lo:s2,hi:sup[1]?sup[1].hi:s2,p:mc.touchDown(s2),why:"Bruch der ersten Unterstützung auf Tagesschlussbasis mit steigendem Verkaufsvolumen (negatives CVD)."+(K.fin(A.funding)&&A.funding>0?" Positives Funding zeigt Long-Überhang, der Druck verstärken kann.":"")},
+  {lab:"Extremer Liquidations-Squeeze nach unten",lo:ext,hi:sup[2]?sup[2].hi:ext*1.02,p:mc.touchDown(ext*1.0001),why:"Kaskade von Long-Liquidationen"+(liqL?" (geschätzte Cluster: "+liqL+")":"")+", ausgelöst etwa durch einen Makro-Schock oder Panikverkäufe. Untergrenze: 2-%-Quantil der simulierten Kurspfade."}];
+ A.up=[{lab:"Moderater Anstieg",lo:res[0]?res[0].lo:r1,hi:res[0]?res[0].hi:r1,p:mc.touchUp(r1),why:"Anstieg bis in die erste Widerstandszone"+(res[0]?" ("+res[0].m.map(m=>m.label).slice(0,3).join(", ")+")":"")+". Auslöser: Halten der kurzfristigen Haltezone, positives Spot-CVD."},
+  {lab:"Starker Ausbruch",lo:res[1]?res[1].lo:r2,hi:res[1]?res[1].hi:r2,p:mc.touchUp(r2),why:"Tagesschluss über dem ersten Widerstand mit steigendem Volumen; bestätigt durch steigendes Open Interest und positives Spot-CVD."},
+  {lab:"Extremer Short-Squeeze",lo:res[2]?res[2].lo:extU*0.98,hi:extU,p:mc.touchUp(extU*0.9999),why:"Zwangsschließung von Short-Positionen"+(liqS?" (geschätzte Cluster: "+liqS+")":"")+", typischerweise bei negativem Funding und überraschend guten Nachrichten. Obergrenze: 98-%-Quantil der simulierten Pfade."}];
+ A.bigDrop={BTC:0.15,ETH:0.2,BRETT:0.35}[A.k];A.pBigDrop=mc.touchDown(P*(1-A.bigDrop))}
+function quality(A,D,H,k){const q=[],now=Date.now();const ageH=H?(now-H.t[H.n-1])/36e5:null,ageD=(now-D.t[D.n-1])/864e5;
+ q.push(["Aktualität",ageH!=null?(ageH<=2?"ok":"warn"):(ageD<=2?"ok":"warn"),ageH!=null?"Letzte Stundenkerze vor "+num(ageH,1)+" h":"Letzte Tageskerze vor "+num(ageD,1)+" Tagen"]);
+ const gaps=(t,step)=>{let g=0;for(let i=1;i<t.length;i++)if(t[i]-t[i-1]>step*1.5)g++;return g};const gd=gaps(D.t,864e5),gh=H?gaps(H.t,36e5):0;q.push(["Fehlende Daten",gd+gh===0?"ok":"warn",gd+" Lücken in Tagesdaten, "+gh+" in Stundendaten"]);
+ let bad=0;for(let i=0;i<D.n;i++)if(D.h[i]<Math.max(D.o[i],D.c[i])*0.9999||D.l[i]>Math.min(D.o[i],D.c[i])*1.0001)bad++;const r=K.logret(D.c),V=K.ewmaVar(r);let out=0;for(let i=1;i<D.n;i++)if(V[i-1]&&Math.abs(r[i])/Math.sqrt(V[i-1])>8)out++;
+ q.push(["Ausreißer",bad+out===0?"ok":"warn",bad+" unplausible Kerzen (Hoch/Tief), "+out+" Renditen über 8 Standardabweichungen"]);
+ const s=S.src[k];if(s&&s.med){const dev=s.out.filter(o=>o.p).map(o=>Math.abs(o.p/s.med-1));const mx=dev.length?Math.max(...dev):null;q.push(["Börsen-Konsistenz",mx==null?"warn":mx<(k==="BRETT"?0.05:0.01)?"ok":"warn",dev.length+" Quellen, größte Abweichung vom Median "+pc(mx,2).replace("+","")])}else q.push(["Börsen-Konsistenz","warn","Kein Mehrquellen-Abgleich verfügbar"]);
+ const lastP=D.c[D.n-1];if(s&&s.med)q.push(["Querprüfung Verlauf vs. Live",Math.abs(lastP/s.med-1)<(k==="BRETT"?0.08:0.03)?"ok":"warn","Letzte Kerze "+usd(lastP)+", Live-Median "+usd(s.med)]);
+ q.push(["Normalisierung","info",D.src.includes("Binance")?"Binance notiert in USDT; USDT wird als 1 USD behandelt (Abgleich mit Coinbase in USD siehe Börsen-Konsistenz)":"Werte in USD"]);
+ let la="ok",cut=D.n-40;try{const a1=K.rsi(D.c.slice(0,cut)),a2=K.rsi(D.c);const b1=K.dmi(D.h.slice(0,cut),D.l.slice(0,cut),D.c.slice(0,cut)).adx,b2=K.dmi(D.h,D.l,D.c).adx;const m1=K.macd(D.c.slice(0,cut)).h,m2=K.macd(D.c).h;for(let i=0;i<cut;i++){for(const[x,y] of[[a1,a2],[b1,b2],[m1,m2]])if((x[i]==null)!==(y[i]==null)||(x[i]!=null&&Math.abs(x[i]-y[i])>1e-9))la="fail"}}catch(e){la="fail"}
+ q.push(["Look-ahead-Prüfung",la==="ok"?"ok":"fail",la==="ok"?"RSI, ADX und MACD sind auf gekürzten Daten identisch (keine Zukunftsdaten)":"Abweichung gefunden"]);
+ const gp=(A.fc||[]).filter(f=>f.wf&&f.wf.ok);q.push(["Data-Leakage-Prüfung",gp.every(f=>f.wf.minGap>=f.h)?"ok":"fail","Walk-Forward mit Abstand ≥ Prognosehorizont zwischen Training und Test; Standardisierung nur auf Trainingsdaten ("+gp.length+" Modelle geprüft)"]);
+ q.push(["Survivorship Bias","info","Altcoin-Season-Index und Marktbreite nutzen die heutigen Top 100; verschwundene Coins fehlen darin"]);A.q=q}
+/* ---------- Prognose-Tracking (Vorwärtstest) ---------- */
+const TK="kie_track_v1";function trackLoad(){try{return JSON.parse(localStorage.getItem(TK)||"[]")}catch(e){return[]}}function trackSave(a){try{localStorage.setItem(TK,JSON.stringify(a.slice(-400)))}catch(e){}}
+function track(A){if(!A.fc)return;const T=trackLoad(),now=Date.now();for(const f of A.fc){if(!f.p)continue;const hMs=f.h*(f.tf==="h"?36e5:864e5);if(T.some(x=>x.k===A.k&&x.lab===f.lab&&now-x.ts<hMs/2))continue;T.push({k:A.k,lab:f.lab,h:hMs,ts:now,p0:A.price,p:f.p.map(v=>+v.toFixed(4)),tau:f.tau})}
+ const D=E.data[A.k];for(const x of T){if(x.y!=null||now<x.ts+x.h)continue;const ser=x.h<=864e5&&D.h?D.h:D.d;let j=ser.t.findIndex(t=>t>=x.ts+x.h);if(j<0)continue;const ret=Math.log(ser.c[j]/x.p0);x.y=ret>x.tau?2:ret<-x.tau?0:1}trackSave(T)}
+function trackStats(k){const T=trackLoad().filter(x=>x.k===k&&x.y!=null);if(!T.length)return null;return{n:T.length,hit:K.mean(T.map(x=>x.p.indexOf(Math.max(...x.p))===x.y?1:0)),brier:K.mean(T.map(x=>K.brier(x.p,x.y))),open:trackLoad().filter(x=>x.k===k&&x.y==null).length}}
+/* ---------- Gesamtmarkt ---------- */
+function globalCalc(){const G=E.glob||{},o={};if(G.global){o.total=G.global.total_market_cap.usd;o.btcDom=G.global.market_cap_percentage.btc/100;o.ethDom=G.global.market_cap_percentage.eth/100;o.mcap24=G.global.market_cap_change_percentage_24h_usd/100;o.vol=G.global.total_volume&&G.global.total_volume.usd;
+  o.total2=o.total*(1-o.btcDom);o.total3=o.total*(1-o.btcDom-o.ethDom)}
+ if(G.top){const t=G.top.filter(x=>!STABLE.has((x.symbol||"").toLowerCase()));const ch=x=>x.price_change_percentage_24h_in_currency;o.adv=t.filter(x=>ch(x)>0).length;o.dec=t.filter(x=>ch(x)<0).length;
+  const b=G.top.find(x=>x.id==="bitcoin"),e=G.top.find(x=>x.id==="ethereum");const p30=x=>x.price_change_percentage_30d_in_currency;if(b&&K.fin(p30(b))){const alts=t.filter(x=>x.id!=="bitcoin").slice(0,50).filter(x=>K.fin(p30(x)));o.altSeason=alts.length?Math.round(100*alts.filter(x=>p30(x)>p30(b)).length/alts.length):null}
+  if(b&&e)o.ethbtc=e.current_price/b.current_price;if(b&&e&&K.fin(p30(b))&&K.fin(p30(e)))o.ethbtc30=(1+p30(e)/100)/(1+p30(b)/100)-1}
+ if(G.stable&&G.stable.length>31){const s=G.stable;o.stable=s[s.length-1].v;o.stable30=s[s.length-1].v/s[s.length-31].v-1}
+ if(G.cats){o.sectors=G.cats.filter(c=>c.market_cap>5e9&&K.fin(c.market_cap_change_24h)).sort((a,b)=>b.market_cap_change_24h-a.market_cap_change_24h)}
+ if(G.dex24&&o.vol)o.dexRatio=G.dex24/Math.max(o.vol-G.dex24,1);if(G.fng)o.fng=G.fng[0],o.fng7=G.fng[7];if(G.cot)o.cot=G.cot;
+ const b=E.res.BTC&&E.res.BTC.comp.score,e=E.res.ETH&&E.res.ETH.comp.score;if(K.fin(b)||K.fin(e)){const parts=[[b,0.65],[e,0.35]].filter(x=>K.fin(x[0]));o.overall=Math.round(parts.reduce((s,x)=>s+x[0]*x[1],0)/parts.reduce((s,x)=>s+x[1],0))}
+ E.g=o;return o}
+/* ---------- Ablauf ---------- */
+async function loadEngine(){if(E.busy)return;E.busy=true;E.log=[];brettPair=null;setEng("Lade erweiterte Marktdaten…");
+ const snap={data:E.data,mkt:E.mkt,glob:E.glob,res:E.res,ts:E.ts,cached:E.cached};let fresh=0;const ND={},NM={};
+ try{for(const k of KEYS){setEng("Lade Kursverläufe: "+NAMES[k]+"…");E.mkt[k]={};const [d,h]=await Promise.all([safe(()=>ohlc(k,"1d")),safe(()=>ohlc(k,"1h"))]);if(d||h){ND[k]={d,h};fresh++}else if(snap.data[k])ND[k]=snap.data[k];
+   setEng("Lade Derivate und Orderbuch: "+NAMES[k]+"…");E.mkt[k]=Object.assign(E.mkt[k],await safe(()=>derivs(k))||{});const [op,bk]=await Promise.all([safe(()=>options(k)),safe(()=>book(k))]);E.mkt[k].opt=op;E.mkt[k].book=bk;
+   if(k!=="BRETT"){setEng("Lade On-Chain-Daten: "+NAMES[k]+"…");E.mkt[k].chain=await safe(()=>onchain(k))}}
+  if(!fresh&&snap.ts){Object.assign(E,snap);E.cached=true;setEng("Keine neuen Daten erreichbar. Angezeigt wird der zwischengespeicherte Stand.");E.busy=false;lastKey=null;render();return}
+  E.data=ND;E.res={};setEng("Lade Gesamtmarkt und Stimmung…");E.glob=await safe(globalData)||{};
+  buildEvents();for(const k of KEYS){setEng("Berechne Analyse und Prognosemodelle: "+NAMES[k]+"…");await wait(30);const A=safe2(()=>analyzeCoin(k));if(A){E.res[k]=A;try{track(A)}catch(e){}}}
+  buildEvents();globalCalc();E.ts=Date.now();E.cached=false;saveCache();setEng("")}catch(e){setEng("Fehler in der erweiterten Analyse: "+e.message)}E.busy=false;render()}
+const CK="kie_cache_v1";
+function saveCache(){try{const r6=a=>a&&a.map(v=>v==null?null:+(+v).toPrecision(7));const pack=D=>D&&{t:D.t,o:r6(D.o),h:r6(D.h),l:r6(D.l),c:r6(D.c),v:r6(D.v),tb:r6(D.tb),n:D.n,src:D.src,taker:D.taker};
+ const data={},mkt={};for(const k of KEYS){if(E.data[k])data[k]={d:pack(E.data[k].d),h:pack(E.data[k].h)};const m=E.mkt[k];if(m){const{book,chain,...rest}=m;mkt[k]=rest;if(chain&&chain.CapMrktCurUSD&&chain.CapMVRVCur)mkt[k].chain={CapMrktCurUSD:chain.CapMrktCurUSD,CapMVRVCur:chain.CapMVRVCur,SplyCur:chain.SplyCur&&chain.SplyCur.slice(-2)}}}
+ const{top,...g}=E.glob||{};localStorage.setItem(CK,JSON.stringify({ts:E.ts,data,mkt,glob:{...g,top:(top||[]).map(x=>({id:x.id,symbol:x.symbol,current_price:x.current_price,market_cap:x.market_cap,price_change_percentage_24h_in_currency:x.price_change_percentage_24h_in_currency,price_change_percentage_30d_in_currency:x.price_change_percentage_30d_in_currency}))}}))}catch(e){try{localStorage.removeItem(CK)}catch(x){}}}
+function loadCache(){try{const j=JSON.parse(localStorage.getItem(CK)||"null");if(!j||!j.data)return false;E.data=j.data;E.mkt=j.mkt||{};E.glob=j.glob||{};buildEvents();for(const k of KEYS){const A=safe2(()=>analyzeCoin(k));if(A)E.res[k]=A}globalCalc();E.ts=j.ts;E.cached=true;return true}catch(e){return false}}
+E.loadCache=loadCache;
+function safe2(f){try{return f()}catch(e){console.error(e);return null}}
+function refreshFast(){for(const k of KEYS){const A=E.res[k];if(!A||!S.src[k]||!S.src[k].med)continue;A.price=S.src[k].med}}
+const setEng=t=>{const el=$("engStat");if(el)el.textContent=t};E.load=loadEngine;E.analyzeCoin=analyzeCoin;E.globalCalc=globalCalc;
+/* ---------- Darstellung ---------- */
+const cls=s=>s==null?"":s>0?"up":s<0?"down":"";
+const nvSpan=r=>`<span class="nv" title="${esc(r)}">NICHT VERFÜGBAR</span>`;
+const kind=t=>`<span class="kind k-${t==="Echtzeit"?"rt":t==="Verzögert"?"dl":t==="Historisch"?"hi":"mo"}">${t}</span>`;
+function zoneTxt(z){return z?`${usd(z.lo)} – ${usd(z.hi)} <span class="warn">(${z.lab}, Stärke ${z.str}; ${esc(z.m.map(m=>m.label).slice(0,4).join(", "))}${z.m.length>4?" …":""}${z.react?"; "+z.react+" frühere Reaktionen":""})</span>`:"–"}
+function bar3(p){const w=p.map(v=>Math.round(v*100));const d=100-w[0]-w[1]-w[2];w[1]+=d;return`<div class="pbar" role="img" aria-label="Bärisch ${w[0]} %, neutral ${w[1]} %, bullisch ${w[2]} %"><i class="pb-dn" style="width:${w[0]}%">${w[0]>=12?w[0]+" %":""}</i><i class="pb-nt" style="width:${w[1]}%">${w[1]>=12?w[1]+" %":""}</i><i class="pb-up" style="width:${w[2]}%">${w[2]>=12?w[2]+" %":""}</i></div>`}
+function gauge(s){if(s==null)return nvSpan("Keine Daten");const x=(s+100)/2;return`<div class="gauge"><div class="g-track"></div><div class="g-mark" style="left:calc(${x}% - 2px)"></div></div><div class="g-lab"><span>−100 bärisch</span><span>0</span><span>+100 bullisch</span></div>`}
+let lastKey=null,lastT=0;function engRender(force){const box=$("eng");if(!box)return;const k=S.cur,A=E.res[k],G=E.g||{};const key=k+"|"+E.ts+"|"+E.busy;
+ if(!force&&A&&key===lastKey&&Date.now()-lastT<600000){const hp=$("heroPrice");if(hp)hp.textContent=usd(A.price);return}lastKey=key;lastT=Date.now();
+ const open=new Set([...box.querySelectorAll("details[open]")].map(d=>d.dataset.id));const y=window.scrollY;
+ if(!A){box.innerHTML=`<section><h2>Live Crypto Market Intelligence Report</h2><div class="warn" id="engStat2">${E.busy?"Wird berechnet…":"Noch keine erweiterten Daten. Tippe auf „Live aktualisieren“. Die erweiterte Analyse braucht echte Kursdaten mit Hoch, Tief und Volumen (eigene CSV oder Demo-Daten reichen dafür nicht)."}</div></section>`;return}
+ const P=A.price,c=A.comp,h=[];const ageMin=E.ts?Math.round((Date.now()-E.ts)/6e4):null;
+ /* Kopf: Bericht */
+ const fng=G.fng;const ovl=G.overall;const ovlab=ovl==null?"–":RT(ovl/100)[0];
+ const tStr=A.adx==null?"–":A.adx<20?"schwach":A.adx<25?"im Aufbau":A.adx<40?"stark":"sehr stark";
+ const press=A.cvd24&&A.cvd24.vol?A.cvd24.delta/A.cvd24.vol:null;
+ const over=[];if(K.fin(A.rsi)&&A.rsi>70)over.push("RSI überkauft");if(K.fin(A.rsi)&&A.rsi<30)over.push("RSI überverkauft");if(A.bb&&A.bb.b>1)over.push("über dem oberen Bollinger-Band");if(A.bb&&A.bb.b<0)over.push("unter dem unteren Bollinger-Band");if(K.fin(A.mvrvZ))over.push("MVRV Z "+num(A.mvrvZ,2)+(A.mvrvZ>6?" (historisch überhitzt)":A.mvrvZ<0?" (historisch unterbewertet)":" (neutraler Bereich)"));if(K.fin(A.funding)&&A.funding>0.0005)over.push("Funding sehr hoch");
+ const futS=[K.fin(A.funding)?"Funding "+num(A.funding*100,4)+" %":null,K.fin(A.longShare)?"Long-Anteil "+num(A.longShare*100,1)+" %":null,K.fin(A.oiD24)?"Open Interest 24h "+pc(A.oiD24):null].filter(Boolean);
+ const rows=indRows(A,G),sum=simpleReport(A,G,rows);
+ h.push(`<section class="hero"><div class="hero-h"><h2>Live Crypto Market Intelligence Report</h2><span class="warn">${NAMES[k]} · ${E.cached?'<span class="down">Zwischenspeicher, </span>':''}Stand ${E.ts?new Date(E.ts).toLocaleString("de-DE",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"}):"–"}${ageMin>15?" (vor "+ageMin+" Min.)":""}</span></div>
+ <div class="kpis"><div class="kpi"><span>Kurs</span><b id="heroPrice">${usd(P)}</b><small class="${cls(A.ret24)}">${pc(A.ret24)} in 24 h</small></div><div class="kpi"><span>Composite Score</span><b class="${cls(c.score)}">${c.score==null?"–":(c.score>0?"+":"")+c.score}</b><small>${RT(c.score/100)?RT(c.score/100)[0]:"–"} · Datenabdeckung ${Math.round(c.coverage*100)} %</small></div>
+ <div class="kpi"><span>Gesamtmarkt (BTC + ETH)</span><b class="${cls(ovl)}">${ovlab}</b><small>${ovl==null?"–":"Score "+(ovl>0?"+":"")+ovl}</small></div><div class="kpi"><span>Angst und Gier</span><b>${fng?fng.v:"–"}</b><small>${fng?esc(fng.c):nvSpan(NV.SRC)}</small></div></div>
+ ${gauge(c.score)}${sum}<div class="warn" id="engStat"></div></section>`);
+ /* A. Marktstimmung */
+ const bt=E.res.BTC,et=E.res.ETH;
+ h.push(`<section><h2>A. Aktuelle Marktstimmung</h2><div class="grid">
+ ${cell("Bitcoin-Stimmung",bt?bt.compLab+" ("+(bt.comp.score>0?"+":"")+bt.comp.score+")":"–",bt?"Composite Score":"")}${cell("Ethereum-Stimmung",et?et.compLab+" ("+(et.comp.score>0?"+":"")+et.comp.score+")":"–",et?"Composite Score":"")}
+ ${cell("Trendstärke (ADX)",K.fin(A.adx)?num(A.adx,1)+" · "+tStr:"–",A.regime)}${cell("Kauf- vs. Verkaufsdruck 24 h",press==null?(K.fin(A.dexBuys)?A.dexBuys+" Käufe / "+A.dexSells+" Verkäufe":nvSpan(A.k==="BRETT"?"Keine Taker-Daten für Brett":NV.SRC)):pc(press,1),press==null?(K.fin(A.dexBuys)?"DEX-Transaktionen 24 h":""):"Spot-CVD in % des Volumens")}
+ ${cell("Spotmarkt",K.fin(A.bookImb)?"Orderbuch "+pc(A.bookImb,1):"–",A.cvd7&&A.cvd7.vol?"CVD 7 Tage "+pc(A.cvd7.delta/A.cvd7.vol,1):"")}${cell("Futures",futS.length?futS.join(" · "):nvSpan(NV.SRC),A.premium!=null?"Perp-Prämie "+pc(A.premium,3):"")}
+ ${cell("Institutionelle Kapitalbewegungen",G.cot&&G.cot.length&&k==="BTC"?"CME Asset Manager netto "+num(G.cot[0].am,0)+" Kontrakte":(K.fin(A.cbPremium)?"Coinbase-Prämie "+pc(A.cbPremium,3):nvSpan(NV.ETF)),G.cot&&G.cot.length>1&&k==="BTC"?"Veränderung zur Vorwoche "+num(G.cot[0].am-G.cot[1].am,0):(K.fin(A.cbPremium)?"Preisunterschied Coinbase zu Binance":""))}
+ ${cell("Überhitzung / Unterbewertung",over.length?over.join(", "):"keine Extreme",A.phase)}</div></section>`);
+ /* Composite */
+ h.push(`<section><h2>Composite Score und Signalverarbeitung</h2><div class="warn">Gruppen werden gemittelt, damit stark korrelierte Indikatoren nicht doppelt zählen. Fehlende Gruppen werden ausgeschlossen, nicht als neutral gewertet.</div>
+ <table class="tbl"><tr><th>Gruppe</th><th>Gewicht</th><th>Bewertung</th><th>Einzelwerte</th></tr>${c.groups.map(g=>`<tr><td>${g.name}</td><td>${Math.round(g.w*100)} %</td><td>${rtB(g.s)}<div class="warn">${(g.s>0?"+":"")+num(g.s*100,0)}</div></td><td class="warn">${g.sig.map(s=>esc(s.lab)+" "+(s.s>0?"+":"")+num(s.s,2)).join(" · ")}</td></tr>`).join("")}${(c.missing||[]).map(m=>`<tr><td>${m}</td><td colspan="3">${nvSpan("Keine Daten für diese Gruppe")}</td></tr>`).join("")}</table>
+ ${c.conflicts&&c.conflicts.length?`<p class="down" style="font-size:14px">Widersprüchliche Signale: ${c.conflicts.map(g=>g.name+" zeigt "+(g.s>0?"bullisch":"bärisch")).join(", ")}, entgegen dem Gesamtbild.</p>`:`<p class="warn">Keine starken Widersprüche zwischen den Gruppen.</p>`}
+ <h3>Kombinationsregeln</h3><ul>${A.rules.length?A.rules.map(r=>`<li class="${r[0]}">${r[1]}</li>`).join(""):"<li>Keine der Kombinationsregeln trifft aktuell zu.</li>"}</ul>
+ <p class="warn">Signal-Score (−6 bis +6) aus der Basis-Analyse: ${S.res[k]?(S.res[k].score>0?"+":"")+S.res[k].score:"–"}.</p></section>`);
+ /* B. Zonen */
+ h.push(`<section><h2>B. Unterstützung und Widerstand</h2><canvas id="cz" height="260" aria-label="Kurs mit Unterstützungs- und Widerstandszonen"></canvas><div class="leg"><span><i style="background:var(--up)"></i>Unterstützung</span><span><i style="background:var(--down)"></i>Widerstand</span><span><i style="background:var(--acc)"></i>POC 90 Tage</span></div>
+ <table class="tbl zt">${[["Dritter Widerstand",A.res[2]],["Zweiter Widerstand",A.res[1]],["Wichtigster Widerstand",A.res[0]]].map(([l,z])=>`<tr><td class="down">${l}</td><td>${zoneTxt(z)}</td></tr>`).join("")}
+ <tr class="cur"><td>Aktueller Kurs</td><td><b>${usd(P)}</b>${A.inZone?` <span class="warn">(liegt in einer Zone: ${usd(A.inZone.lo)} – ${usd(A.inZone.hi)})</span>`:""}</td></tr>
+ ${[["Wichtigste Unterstützung",A.sup[0]],["Zweite Unterstützung",A.sup[1]],["Dritte Unterstützung",A.sup[2]]].map(([l,z])=>`<tr><td class="up">${l}</td><td>${zoneTxt(z)}</td></tr>`).join("")}</table>
+ <div class="grid">${cell("Stärkste Nachfragezone",A.demand?usd(A.demand.lo)+" – "+usd(A.demand.hi):"–",A.demand?"Stärke "+A.demand.str:"")}${cell("Stärkste Angebotszone",A.supply?usd(A.supply.lo)+" – "+usd(A.supply.hi):"–",A.supply?"Stärke "+A.supply.str:"")}
+ ${cell("Volume Profile POC (90 Tage)",usd(A.vp90&&A.vp90.poc),"30 Tage (Stunden): "+usd(A.vp30&&A.vp30.poc)+" · 1 Jahr: "+usd(A.vp365&&A.vp365.poc))}${cell("Value Area (90 Tage)",A.vp90?usd(A.vp90.val)+" – "+usd(A.vp90.vah):"–","VAL bis VAH, 70 % des Volumens")}</div>
+ <p class="warn">Berücksichtigt: Swing-Hochs/-Tiefs aus 24 h, 7, 30, 90 Tagen und 1 Jahr, Volumenprofile, EMA 50/200, SMA 50, Anchored VWAPs, Vortag/Vorwoche${A.wallsB?", Orderbuch-Wände (Binance)":""} und historische Reaktionen. Nahe Niveaus (Abstand unter 0,35 ATR) werden zu Zonen zusammengefasst; Stärke 0–100 relativ zur stärksten Zone.</p></section>`);
+ /* C. Haltezonen */
+ const up=A.struct&&A.struct.trend==="bull";
+ h.push(`<section><h2>C. Welcher Kursbereich muss halten?</h2><p style="font-size:14px">${up?`Die Marktstruktur auf Tagesbasis ist aufwärts gerichtet (höhere Hochs und Tiefs). Damit der Aufwärtstrend intakt bleibt, sollten diese Bereiche halten:`:`Die Marktstruktur auf Tagesbasis ist ${A.struct&&A.struct.trend==="bear"?"abwärts gerichtet (tiefere Hochs und Tiefs). Ein Aufwärtstrend besteht derzeit nicht":"noch ohne klare Richtung"}. Für eine Stabilisierung müssen diese Bereiche halten, für eine Trendwende braucht es den Ausbruch:`}</p>
+ <table class="tbl"><tr><td>Kurzfristige Haltezone</td><td>${zoneTxt(A.holdShort)}<div class="warn">Nächste belastbare Zone innerhalb von etwa 2 ATR (${usd(2*A.atr)}). Hier haben Käufer zuletzt verteidigt.</div></td></tr>
+ <tr><td>Mittelfristige Haltezone</td><td>${zoneTxt(A.holdMid)}<div class="warn">Zone mit gleitenden Durchschnitten oder dem 90-Tage-Volumenschwerpunkt; viele Marktteilnehmer orientieren sich daran.</div></td></tr>
+ <tr><td>Kritische Unterstützung</td><td>${A.sup[1]?zoneTxt(A.sup[1]):zoneTxt(A.sup[0])}<div class="warn">Wird diese Zone aufgegeben, liegt die nächste Nachfrage deutlich tiefer.</div></td></tr>
+ <tr><td class="down">Struktur verschlechtert sich unter</td><td><b>${usd(A.structLow)}</b><div class="warn">Letztes bestätigtes Swing-Tief (Tagesbasis). Ein Tagesschluss darunter erzeugt ein tieferes Tief${up?" und damit einen Strukturbruch (CHOCH)":" und setzt den Abwärtstrend fort (BOS)"}.</div></td></tr>
+ <tr><td class="up">Bullischer Ausbruch bestätigt über</td><td><b>${usd(A.structHigh)}</b><div class="warn">Letztes bestätigtes Swing-Hoch. Ein Tagesschluss darüber ${up?"setzt den Aufwärtstrend fort (BOS)":"bricht die Abwärtsstruktur (CHOCH) und wäre das erste Signal einer Trendwende"}.</div></td></tr></table>
+ ${A.struct&&A.struct.ev.length?`<p class="warn">Letztes Strukturereignis: ${A.struct.ev.slice(-1).map(e=>e.type+" "+(e.dir==="up"?"aufwärts":"abwärts")+" bei "+usd(e.level)+" am "+new Date(E.data[k].d.t[e.j]).toLocaleDateString("de-DE")).join("")}.</p>`:""}</section>`);
+ /* D. Risiko */
+ const negDiv=[A.divRsiH?"RSI":null,A.divMacdH?"MACD":null].filter(Boolean);const fcvd=A.fcvd24&&A.fcvd24.vol?A.fcvd24.delta/A.fcvd24.vol:null;
+ const lev=K.fin(A.longShare)||K.fin(A.funding)?((A.longShare>0.6||A.funding>0.0003)?"Ja, erhöht: ":"Nein, nicht auffällig: ")+[K.fin(A.longShare)?"Long-Anteil "+num(A.longShare*100,1)+" %":null,K.fin(A.funding)?"Funding "+num(A.funding*100,4)+" %":null].filter(Boolean).join(", "):nvSpan(NV.SRC);
+ const oiTxt=K.fin(A.oiPct)?("Open Interest liegt beim "+Math.round(A.oiPct*100)+". Perzentil der letzten 30 Tage"+(K.fin(A.oiD7)?", 7 Tage "+pc(A.oiD7)+" bei Kurs "+pc(A.ret7):"")+(A.oiPct>0.85&&A.ret7<0?" – auffällig hoch im Verhältnis zur Kursentwicklung.":".")):nvSpan(NV.SRC);
+ h.push(`<section><h2>D. Absturz- und Korrekturrisiko</h2><table class="tbl">
+ <tr><td>Fall bei Bruch der ersten Unterstützung</td><td>${A.sup[0]&&A.sup[1]?"Bis etwa "+usd(A.sup[1].mid)+" ("+pc(A.sup[1].mid/P-1)+")":"–"}</td></tr><tr><td>Nächste relevante Nachfragezone</td><td>${zoneTxt(A.sup[1]||A.sup[0])}</td></tr>
+ <tr><td>Liquidationsbereiche (Long)</td><td>${(A.liqLtop||[]).length?A.liqLtop.map(x=>usd(x.p)).join(", ")+' <span class="kind k-mo">Modellschätzung</span>':nvSpan(NV.CGL)}</td></tr><tr><td>Übermäßig gehebelte Longs?</td><td>${lev}</td></tr><tr><td>Open Interest auffällig?</td><td>${oiTxt}</td></tr>
+ <tr><td>Negative Divergenzen</td><td>${negDiv.length?'<span class="down">Ja: '+negDiv.join(" und ")+"</span>":"Keine aktuelle bärische Divergenz"}</td></tr><tr><td>Nimmt der Verkaufsdruck zu?</td><td>${press==null&&fcvd==null?nvSpan(NV.SRC):[press!=null?"Spot-CVD 24 h "+pc(press,1):null,fcvd!=null?"Futures-CVD 24 h "+pc(fcvd,1):null].filter(Boolean).join(", ")+((press||0)+(fcvd||0)<0?" → ja, Verkäufer dominieren":" → nein")}</td></tr>
+ <tr><td>Wahrscheinlichkeit größerer Korrektur</td><td>${K.fin(A.pBigDrop)?"<b>"+Math.round(A.pBigDrop*100)+" %</b> für mindestens −"+Math.round(A.bigDrop*100)+" % innerhalb von 30 Tagen":"–"}</td></tr></table>
+ ${scenTable(A.down,"down")}</section>`);
+ /* E. Aufwärtspotenzial */
+ const shortsq=K.fin(A.funding)?(A.funding<0&&K.fin(A.oiD24)&&A.oiD24>0?"Erhöht: negatives Funding bei steigendem Open Interest":A.funding<0?"Leicht erhöht: negatives Funding":"Gering: Funding positiv, wenige Shorts unter Druck"):nvSpan(NV.SRC);
+ h.push(`<section><h2>E. Aufwärtspotenzial</h2><table class="tbl"><tr><td>Nächstes Kursziel</td><td>${zoneTxt(A.res[0])}</td></tr><tr><td>Zu überwindender Widerstand</td><td>${A.res[0]?usd(A.res[0].hi)+" (Oberkante), danach "+zoneTxt(A.res[1]):"–"}</td></tr>
+ <tr><td>Short-Liquidationen</td><td>${(A.liqStop||[]).length?A.liqStop.map(x=>usd(x.p)).join(", ")+' <span class="kind k-mo">Modellschätzung</span>':nvSpan(NV.CGL)}</td></tr><tr><td>Genug Spot-Kaufdruck?</td><td>${press==null?nvSpan(NV.SRC):press>0.02?"Ja, Spot-CVD positiv ("+pc(press,1)+")":"Nein, Spot-CVD "+pc(press,1)}</td></tr>
+ <tr><td>Bestätigen Volumen und CVD?</td><td>${press==null?"–":(A.ret24>0&&press>0?"Ja, Kurs und CVD steigen gemeinsam":A.ret24>0?"Nein, der Anstieg ist nicht durch Spot-Käufe gedeckt":"Kein Anstieg in den letzten 24 h")}</td></tr><tr><td>Short-Squeeze-Potenzial</td><td>${shortsq}</td></tr></table>${scenTable(A.up,"up")}</section>`);
+ /* F. Prognose */
+ h.push(`<section><h2>F. Prognose für verschiedene Zeiträume</h2><p class="warn">Wahrscheinlichkeitsmodell, keine sichere Vorhersage. Klassen je Zeitraum: <b>bärisch</b> = Rendite unter −τ, <b>neutral</b> = zwischen −τ und +τ, <b>bullisch</b> = über +τ; τ = halbe erwartete Schwankung im Zeitraum (EWMA-Volatilität). Die drei Werte schließen sich gegenseitig aus und ergeben 100 %.</p>
+ ${A.fc.map(f=>f.nv?`<div class="fc"><div class="fc-h"><b>${f.lab}</b>${nvSpan(f.nv)}</div></div>`:`<div class="fc"><div class="fc-h"><b>${f.lab}</b><span class="warn">τ = ±${num(f.tau*100,2)} % · Confidence ${f.conf}/100</span></div>${bar3(f.p)}
+ <div class="fc-g"><span>Erwarteter Bereich (80 %)</span><b>${usd(f.q10)} – ${usd(f.q90)}</b><span>Unterstützung</span><b>${f.sup?usd(f.sup.mid):"–"}</b><span>Widerstand</span><b>${f.res?usd(f.res.mid):"–"}</b><span>Marktregime</span><b>${esc(f.regime)}</b></div>
+ <div class="warn">Validierung: ${f.wf.nOOS} Tests außerhalb der Trainingsdaten, Brier-Skill ${f.wf.bss>0?"+":""}${num(f.wf.bss*100,1)} % gegenüber Basisrate${f.usedBase?" – das Modell schlägt die Basisrate nicht, angezeigt wird daher die Basisrate (historische Häufigkeit)":", Modellgewicht "+Math.round(f.wf.w*100)+" %"}${f.wf.drift>1.15?' · <span class="down">Modellverschlechterung erkannt</span>':""}.</div></div>`).join("")}</section>`);
+ /* Liquidations-Heatmap */
+ h.push(`<section><h2>Liquidations-Heatmap ${kind("Modellschätzung")}</h2><canvas id="cl" height="220" aria-label="Geschätzte Liquidationsniveaus"></canvas><p class="warn">Schätzung aus echten Kurs- und Volumendaten. Annahme, dass Positionen in den letzten 30 Tagen volumengewichtet zum jeweiligen Stundenkurs mit 10-, 25-, 50- und 100-fachem Hebel eröffnet wurden (0,5 % Wartungsmarge). Bereits erreichte Liquidationspreise werden entfernt. Fließt nicht in den Composite Score ein.</p></section>`);
+ /* OI & Funding */
+ const M=E.mkt[k]||{};
+ h.push(`<section><h2>Open Interest und Funding</h2>${M.oiH?`<canvas id="co" height="160" aria-label="Open Interest 7 Tage"></canvas>`:""}<div class="grid">
+ ${cell("Open Interest (Binance)",K.fin(A.oi)?big(A.oi):nvSpan(NV.SRC),K.fin(A.oiD24)?"24 h "+pc(A.oiD24)+(K.fin(A.oiD7)?" · 7 Tage "+pc(A.oiD7):""):"")}${cell("Funding Ø "+(A.fundingN||0)+" Börsen",K.fin(A.funding)?num(A.funding*100,4)+" %":nvSpan(NV.SRC),[K.fin(M.bnFunding)?"Binance "+num(M.bnFunding*100,4):null,K.fin(M.byFunding)?"Bybit "+num(M.byFunding*100,4):null,K.fin(M.okFunding)?"OKX "+num(M.okFunding*100,4):null].filter(Boolean).join(" · ")+(K.fin(A.funding)?" · annualisiert ca. "+num(A.funding*3*365*100,1)+" %":""))}
+ ${cell("Long/Short-Verhältnis (Binance + Bybit)",K.fin(A.lsRatio)?num(A.lsRatio,2):nvSpan(NV.SRC),K.fin(A.longShare)?"Long-Konten "+num(A.longShare*100,1)+" % ("+A.lsN+" Börsen)":"")}${cell("Perpetual vs. Spot",K.fin(A.premium)?pc(A.premium,3):nvSpan(NV.SRC),"Prämie des Futures-Kurses")}
+ ${cell("Futures Basis (annualisiert)",K.fin(A.basis)?pc(A.basis,1):nvSpan(SYM[k].der?NV.SRC:NV.COIN),A.basisName?"Deribit "+esc(A.basisName):"")}${cell("Put/Call-Verhältnis",K.fin(A.pcr)?num(A.pcr,2):nvSpan(SYM[k].der?NV.SRC:NV.COIN),"nach Open Interest, Deribit")}
+ ${cell("Implizite Volatilität (ATM)",K.fin(A.atmIV)?num(A.atmIV*100,1)+" %":nvSpan(SYM[k].der?NV.SRC:NV.COIN),M.opt&&M.opt.exp?"Verfall "+new Date(M.opt.exp).toLocaleDateString("de-DE"):"")}${cell("25-Delta-Skew",K.fin(A.skew)?(A.skew>0?"+":"")+num(A.skew*100,1)+" Vol.-Punkte":nvSpan(SYM[k].der?NV.SRC:NV.COIN),"Put-IV minus Call-IV; positiv = Absicherung gefragt")}
+ ${k==="BTC"?cell("CME-Positionierung (CFTC)",G.cot&&G.cot.length?"Hedgefonds netto "+num(G.cot[0].lev,0):nvSpan(NV.SRC),G.cot&&G.cot.length?"Asset Manager netto "+num(G.cot[0].am,0)+" · Bericht "+esc(G.cot[0].d)+" (wöchentlich, verzögert)":""):""}</div></section>`);
+ /* CVD */
+ h.push(`<section><h2>Spot- und Futures-CVD</h2>${A.cvdSpot||A.cvdFut?`<canvas id="cc" height="180" aria-label="Kumuliertes Volumen-Delta 7 Tage"></canvas><div class="leg"><span><i style="background:var(--up)"></i>Spot (Binance)</span><span><i style="background:var(--sma50)"></i>Futures (Binance)</span></div>`:""}<div class="grid">
+ ${cell("Spot-CVD 24 h",A.cvd24?pc(A.cvd24.delta/A.cvd24.vol,1):nvSpan(k==="BRETT"?"Keine Taker-Daten für Brett (DEX)":NV.SRC),A.cvd24?num(A.cvd24.delta,0)+" Coins netto":"")}${cell("Futures-CVD 24 h",A.fcvd24?pc(A.fcvd24.delta/A.fcvd24.vol,1):nvSpan(NV.SRC),A.fcvd24?num(A.fcvd24.delta,0)+" Coins netto":"")}
+ ${cell("Volumen-Delta letzte Stunde",K.fin(A.vdLast)?num(A.vdLast,1):nvSpan(NV.SRC),"Käufer- minus Verkäufervolumen")}${cell("VWAP (Tag, UTC)",usd(A.vwap),A.vwap?(P>A.vwap?"Kurs darüber":"Kurs darunter"):"")}</div>
+ <h3>Orderbuch und Liquidität</h3>${A.book?`<table class="tbl"><tr><th>Börse</th><th>Spread</th><th>Tiefe ±1 %</th><th>Ungleichgewicht</th><th>Slippage 1 Mio. $ Kauf / Verkauf</th></tr>${Object.entries(A.book).map(([n,e])=>`<tr><td>${n}</td><td>${num(e.spread*1e4,2)} bp</td><td>${big(e.bid1+e.ask1)}</td><td class="${cls(e.imb)}">${pc(e.imb,1)}</td><td>${e.buy1m==null?"Buch zu dünn":num(e.buy1m*1e4,1)+" bp"} / ${e.sell1m==null?"Buch zu dünn":num(-e.sell1m*1e4,1)+" bp"}</td></tr>`).join("")}</table>
+ <div class="grid">${cell("Liquidität mehrerer Börsen ±1 %",big(A.liq1),Object.keys(A.book).join(", "))}${cell("Liquiditätswände (Binance)",(A.wallsB||[]).map(w=>usd(w.p)).join(", ")||"keine","Kauf · Verkauf: "+((A.wallsA||[]).map(w=>usd(w.p)).join(", ")||"keine"))}</div><p class="warn">Market Impact = Slippage einer Market-Order über das sichtbare Orderbuch; versteckte Orders sind nicht enthalten. Coinbase liefert nur die besten 50 Preisstufen.</p>`:(k==="BRETT"&&M.dex?`<div class="grid">${cell("DEX-Liquidität (größter Pool)",big(M.dex.liquidity&&M.dex.liquidity.usd),esc(M.dex.dexId||""))}${cell("DEX-Volumen 24 h",big(M.dex.volume&&M.dex.volume.h24),(M.dexAll||[]).length+" Pools auf Base")}</div>`:nvSpan(NV.SRC))}</section>`);
+ /* On-Chain */
+ const chainAv=k!=="BRETT";
+ h.push(`<section><h2>On-Chain-Analyse</h2>${chainAv?`<div class="grid">
+ ${cell("MVRV Z-Score",K.fin(A.mvrvZ)?num(A.mvrvZ,2):nvSpan(NV.SRC),K.fin(A.mvrv)?"MVRV "+num(A.mvrv,2)+" · Coin Metrics, Stand "+new Date(A.chainDate).toLocaleDateString("de-DE"):"")}${cell("NUPL",K.fin(A.nupl)?num(A.nupl,3):nvSpan(NV.SRC),"Unrealisierter Gewinn/Verlust")}
+ ${cell("Realized Cap",K.fin(A.realCap)?big(A.realCap):nvSpan(NV.SRC),"aus Marktwert ÷ MVRV")}${cell("Realized Price",K.fin(A.realPrice)?usd(A.realPrice):nvSpan(NV.SRC),"durchschnittlicher Einstand")}
+ ${cell("Exchange Netflow 7 Tage",K.fin(A.netflow7)?num(A.netflow7,0)+" "+k:nvSpan(NV.GN),"")}${cell("Exchange Reserves",K.fin(A.exReserve)?num(A.exReserve,0)+" "+k:nvSpan(NV.GN),K.fin(A.exReserveD30)?"30 Tage "+pc(A.exReserveD30):"")}
+ ${k==="BTC"?cell("Stablecoin Supply Ratio",K.fin(A.ssr)?num(A.ssr,2):nvSpan(NV.SRC),"BTC-Marktwert ÷ Stablecoin-Marktwert"):""}${cell("SOPR, HODL Waves, LTH/STH, CDD",nvSpan(NV.GN),"")}</div>`:nvSpan("On-Chain-Kennzahlen dieser Art gibt es für Brett nicht kostenlos")}</section>`);
+ /* Makro */
+ h.push(`<section><h2>Makroökonomische Lage und Marktbreite</h2><div class="grid">
+ ${cell("Bitcoin-Dominanz",K.fin(G.btcDom)?num(G.btcDom*100,1)+" %":nvSpan(NV.SRC),"ETH "+(K.fin(G.ethDom)?num(G.ethDom*100,1)+" %":"–"))}${cell("Gesamt-Marktwert (TOTAL)",big(G.total),K.fin(G.mcap24)?"24 h "+pc(G.mcap24):"")}
+ ${cell("TOTAL2 / TOTAL3",big(G.total2),"ohne BTC · ohne BTC und ETH: "+big(G.total3))}${cell("ETH/BTC",K.fin(G.ethbtc)?num(G.ethbtc,5):nvSpan(NV.SRC),K.fin(G.ethbtc30)?"30 Tage "+pc(G.ethbtc30):"")}
+ ${cell("Stablecoin-Marktwert",big(G.stable),K.fin(G.stable30)?"30 Tage "+pc(G.stable30):"")}${cell("Advance/Decline (Top 100)",K.fin(G.adv)?G.adv+" / "+G.dec:nvSpan(NV.SRC),"steigend / fallend in 24 h, ohne Stablecoins")}
+ ${cell("Altcoin Season Index",K.fin(G.altSeason)?G.altSeason+" / 100":nvSpan(NV.SRC),"Anteil der Top 50 besser als BTC über 30 Tage (30-Tage-Variante)")}${cell("CEX/DEX-Verhältnis",K.fin(G.dexRatio)?"DEX = "+num(G.dexRatio*100,1)+" % des CEX-Volumens":nvSpan(NV.SRC),"Näherung aus DefiLlama und CoinGecko")}
+ ${cell("Relative Stärke vs. BTC (30 Tage)",k==="BTC"?"Referenz":K.fin(A.ret30)&&E.res.BTC?pc((1+A.ret30)/(1+E.res.BTC.ret30)-1):"–","")}${cell("DXY, US-Renditen 2J/10J, Realzinsen, Fed Funds, FedWatch, M2, Global Liquidity, VIX, Nasdaq 100",nvSpan(NV.MAC),"")}</div>
+ ${G.sectors&&G.sectors.length?`<h3>Sektorrotation (24 h, Sektoren über 5 Mrd. $)</h3><div class="sect">${G.sectors.slice(0,4).map(s=>`<span class="up">${esc(s.name)} ${pc(s.market_cap_change_24h/100)}</span>`).join("")}${G.sectors.slice(-4).reverse().map(s=>`<span class="down">${esc(s.name)} ${pc(s.market_cap_change_24h/100)}</span>`).join("")}</div>`:""}</section>`);
+ /* ETF */
+ /* Events */
+ h.push(`<section>${eventsHtml(k)}</section>`);
+ /* Alle Indikatoren */
+ h.push(`<section><details><summary><h2 style="display:inline">Alle Indikatoren (${indCount(A,G)})</h2></summary>${indTable(A,G)}</details></section>`);
+ /* Backtest */
+ const f24=A.fc.find(f=>f.lab==="24 Stunden"),bt2=f24&&f24.wf&&f24.wf.ok?K.backtest(E.data[k].d.c,f24.wf.pred):null,ts2=trackStats(k);
+ h.push(`<section><details><summary><h2 style="display:inline">Backtesting und Modellvalidierung</h2></summary>${bt2?`<p class="warn">Strategie: kaufen, wenn das 24-h-Modell bullisch wahrscheinlicher als bärisch einschätzt, sonst Kasse. Nur Prognosen außerhalb der Trainingsdaten (Walk-Forward). Kosten 0,15 % pro Seitenwechsel (Gebühr 0,1 % + Slippage 0,05 %).</p><div class="grid">
+ ${cell("Strategie gesamt",pc(bt2.eq-1),"Kaufen und halten: "+pc(bt2.bh-1)+" · "+bt2.n+" Tage")}${cell("Sharpe / Sortino",num(bt2.sharpe,2)+" / "+num(bt2.sortino,2),"annualisiert")}${cell("Calmar Ratio",num(bt2.calmar,2),"Max. Drawdown "+pc(bt2.mdd))}${cell("Trefferquote / Profit Factor",bt2.win==null?"–":num(bt2.win*100,0)+" % / "+num(bt2.pf,2),bt2.trades+" Trades, investiert "+num(bt2.exposure*100,0)+" % der Zeit")}</div>`:nvSpan("Zu wenig Daten für einen Backtest")}
+ ${f24&&f24.wf&&f24.wf.ok?`<h3>Klassifikation 24 h (außerhalb der Trainingsdaten)</h3><table class="tbl"><tr><th>Tatsächlich ↓ / Prognose →</th><th>bärisch</th><th>neutral</th><th>bullisch</th></tr>${["bärisch","neutral","bullisch"].map((n,i)=>`<tr><td>${n}</td>${f24.wf.conf[i].map(v=>`<td>${v}</td>`).join("")}</tr>`).join("")}</table>
+ <div class="grid">${cell("Precision bärisch / neutral / bullisch",f24.wf.prec.map(v=>v==null?"–":num(v*100,0)+" %").join(" / "),"")}${cell("Recall bärisch / neutral / bullisch",f24.wf.rec.map(v=>v==null?"–":num(v*100,0)+" %").join(" / "),"")}
+ ${cell("Brier Score Modell / Basisrate",num(f24.wf.bsB,4)+" / "+num(f24.wf.bsBase,4),"niedriger ist besser; zweite Hälfte der Tests")}${cell("Modell-Drift",f24.wf.drift>1.15?"erkannt":"keine",num(f24.wf.drift,2)+"-fache Fehlerrate im letzten Viertel")}</div>
+ <h3>Kalibrierung (bullisch, 24 h)</h3><table class="tbl"><tr><th>Prognose</th><th>Anzahl</th><th>Ø Prognose</th><th>Tatsächlich</th></tr>${f24.wf.cal.filter(b=>b.n).map(b=>`<tr><td>${b.bin*20}–${b.bin*20+20} %</td><td>${b.n}</td><td>${num(b.pred*100,0)} %</td><td>${num(b.obs*100,0)} %</td></tr>`).join("")}</table>
+ <h3>Feature Importance (24-h-Modell)</h3><div class="warn">Betrag der standardisierten Koeffizienten: ${f24.wf.imp.map((v,j)=>[v,FEAT[j]]).sort((a,b)=>b[0]-a[0]).slice(0,6).map(x=>x[1]+" "+num(x[0],2)).join(" · ")}</div>`:""}
+ <h3>Vorwärtstest (gespeicherte Live-Prognosen)</h3><p class="warn">${ts2?ts2.n+" ausgewertete Prognosen: Trefferquote "+num(ts2.hit*100,0)+" %, Brier "+num(ts2.brier,3)+"; "+ts2.open+" noch offen.":"Die App speichert jede Prognose auf diesem Gerät und wertet sie nach Ablauf des Zeitraums aus. Noch keine ausgewerteten Prognosen."}</p>
+ <p class="warn">Modelle: multinomiale logistische Regression (Softmax, L2), Bayes-Basisrate mit Dirichlet-Glättung, Ensemble beider mit Gewicht aus der ersten Testhälfte, Monte-Carlo-Simulation (gefilterte historische Simulation, 4000 Pfade), Hidden-Markov-Modell mit 2 Zuständen, lineare Regression für die Trendprojektion.</p></details></section>`);
+ /* Datenqualität */
+ const lat=srcSummary();
+ h.push(`<section><details><summary><h2 style="display:inline">Datenqualität und Aktualität</h2></summary><table class="tbl">${A.q.map(q=>`<tr><td>${q[0]}</td><td><span class="dq dq-${q[1]}">${q[1]==="ok"?"OK":q[1]==="fail"?"FEHLER":q[1]==="warn"?"PRÜFEN":"INFO"}</span> ${esc(q[2])}</td></tr>`).join("")}</table>
+ <h3>Quellen und Latenz (letzter Abruf)</h3><table class="tbl">${lat}</table>${A.errors.length?`<p class="down">Interne Hinweise: ${esc(A.errors.join(" | "))}</p>`:""}
+ <div class="row"><button class="alt" id="selftest">Selbsttest ausführen</button></div><div id="stOut" class="warn"></div></details></section>`);
+ /* API & Methodik */
+ h.push(`<section><details><summary><h2 style="display:inline">API-Zugänge und Methodik</h2></summary><div class="doc">${DOC}</div></details></section>`);
+ box.innerHTML=h.join("");box.querySelectorAll(".nv").forEach(x=>{const c=x.closest(".cell,tr,.fc,li,.kpi,p");(c||x).remove()});box.querySelectorAll(".grid").forEach(g=>{if(!g.children.length)g.remove()});box.querySelectorAll("table").forEach(t=>{if(!t.querySelector("td"))t.remove()});box.querySelectorAll("section").forEach(x=>{if([...x.children].every(c=>/^H[23]$/.test(c.tagName)||(c.classList&&c.classList.contains("warn")&&!c.id)))x.remove()});box.querySelectorAll("details").forEach((d,i)=>{d.dataset.id="d"+i;if(open.has("d"+i))d.open=true});if(Math.abs(window.scrollY-y)>2)window.scrollTo(0,y);const st=$("selftest");if(st)st.onclick=selfTest;
+ try{drawZones(A)}catch(e){}try{drawLiq(A)}catch(e){}try{drawOI(A)}catch(e){}try{drawCVD(A)}catch(e){}}
+const cell=(l,v,s)=>`<div class="cell"><span>${l}</span><b>${v}</b>${s?`<span>${s}</span>`:""}</div>`;
+function scenTable(arr,side){if(!arr)return"";return`<h3>${side==="down"?"Szenarien nach unten":"Szenarien nach oben"} (innerhalb von 30 Tagen)</h3><table class="tbl"><tr><th>Szenario</th><th>Kursbereich</th><th>Wahrsch.</th></tr>${arr.map(s=>`<tr><td><b>${s.lab}</b><div class="warn">${esc(s.why)}</div></td><td>${usd(Math.min(s.lo,s.hi))} – ${usd(Math.max(s.lo,s.hi))}</td><td><b>${Math.round(s.p*100)} %</b></td></tr>`).join("")}</table><p class="warn">Wahrscheinlichkeit, dass der Bereich innerhalb von 30 Tagen mindestens einmal erreicht wird (Monte-Carlo, 4000 Pfade, ohne angenommene Drift). Die Szenarien bauen aufeinander auf und summieren sich daher nicht zu 100 %.</p>`}
+function srcSummary(){const m=new Map();for(const x of E.log){const o=m.get(x.name)||{ok:0,fail:0,ms:[],err:null};x.ok?o.ok++:o.fail++;o.ms.push(x.ms);if(!x.ok)o.err=x.err;m.set(x.name,o)}
+ return[...m.entries()].map(([n,o])=>`<tr><td>${esc(n)}</td><td><span class="dq dq-${o.fail&&!o.ok?"fail":o.fail?"warn":"ok"}">${o.fail&&!o.ok?"FEHLER":o.fail?"TEILWEISE":"OK"}</span> ${Math.round(K.quantile(o.ms,0.5))} ms${o.err?" · "+esc(o.err):""}</td></tr>`).join("")||"<tr><td>Noch keine Abrufe</td></tr>"}
+/* ---------- Indikator-Tabelle ---------- */
+const RT=s=>s==null||!isFinite(s)?null:s>=0.6?["Stark bullisch","sb"]:s>=0.2?["Bullisch","b"]:s>-0.2?["Neutral","n"]:s>-0.6?["Bärisch","br"]:["Stark bärisch","sbr"];
+const rtB=s=>{const r=RT(s);return r?`<span class="rt rt-${r[1]}">${r[0]}</span>`:""};
+function indRows(A,G){const k=A.k,M=E.mkt[k]||{},P=A.price,X=(n,r)=>({n,nv:r||"keine Daten"}),R=(n,v,t,src,s)=>({n,v,t,src,s:K.fin(s)?K.clip(s,-1,1):(s===0?0:null)}),hasD=!!SYM[k].der,Dsrc=E.data[k].d.src,sg=A.ewmaVol||0.03,cl=K.clip,th=Math.tanh;
+ const vs=(x,L)=>K.fin(x)&&x>0?th(2*Math.log(P/x)/(sg*Math.sqrt(L))):null,fin=K.fin,base=S.res[k],ab=k!=="BTC";
+ const rsiS=r=>!fin(r)?null:r>80?-0.7:r>70?-0.3:r<20?0.7:r<30?0.3:(r-50)/40;
+ const structS=A.struct&&A.struct.seq.length>=2?(()=>{const lh=[...A.struct.seq].reverse().find(s=>s.t==="H"),ll=[...A.struct.seq].reverse().find(s=>s.t==="L");const u=(lh&&lh.lab==="HH"?1:lh&&lh.lab==="LH"?-1:0)+(ll&&ll.lab==="HL"?1:ll&&ll.lab==="LL"?-1:0);return u*0.4})():null;
+ const lastEv=A.struct&&A.struct.ev.length?A.struct.ev[A.struct.ev.length-1]:null;
+ const oiS=fin(A.oiD24)&&fin(A.ret24)?(A.oiD24>0?(A.ret24>0?0.5:-0.5):(A.ret24>0?0.2:-0.2)):null;
+ const liqNear=(arr)=>(arr||[]).filter(x=>Math.abs(x.p/P-1)<0.05).reduce((s,x)=>s+x.w,0),lS=liqNear(A.liqS),lL=liqNear(A.liqL),liqS=lS+lL>0?(lS-lL)/(lS+lL)*0.5:null;
+ const nuplS=!fin(A.nupl)?null:A.nupl<0?0.8:A.nupl<0.25?0.4:A.nupl<0.5?0:A.nupl<0.75?-0.4:-0.8;
+ const kcS=A.kc?(P>A.kc.u?0.6:P<A.kc.l?-0.6:(P-A.kc.m)/(A.kc.u-A.kc.m)*0.4):null,dcS=A.dc?(P>=A.dc.u*0.998?0.7:P<=A.dc.l*1.002?-0.7:((P-A.dc.l)/(A.dc.u-A.dc.l)-0.5)*0.6):null;
+ const pos30=(P-A.lo30)/((A.hi30-A.lo30)||1),srS=P>A.hi30?0.8:P<A.lo30?-0.8:(pos30-0.5)*0.8;
+ const avS=fin(A.avwapLow)&&fin(A.avwapHigh)?(P>A.avwapLow&&P>A.avwapHigh?0.6:P<A.avwapLow&&P<A.avwapHigh?-0.6:0):null;
+ const ichS=fin(A.ichA)&&fin(A.ichB)?(P>Math.max(A.ichA,A.ichB)?0.8:P<Math.min(A.ichA,A.ichB)?-0.8:0):null;
+ const dmiS=fin(A.adx)?(A.pdi-A.mdi)/((A.pdi+A.mdi)||1)*Math.min(A.adx/25,1)*2:null;
+ const srkS=!fin(A.srk)?null:A.srk>80&&A.srk<A.srd?-0.6:A.srk<20&&A.srk>A.srd?0.6:(A.srk-50)/100;
+ const wrS=!fin(A.wr)?null:A.wr>-20?-0.4:A.wr<-80?0.4:(A.wr+50)/75;
+ const bbS=A.bb?(A.bb.b>1?-0.5:A.bb.b<0?0.5:(A.bb.b-0.5)*0.6):null;
+ const hourVol=E.data[k].h?K.mean(E.data[k].h.v.slice(-168)):null;
+ const rp=fin(A.realPrice)?cl(0.7-(P/A.realPrice-1)*0.7,-1,1):null;
+ const f7=(A.fc||[]).find(f=>f.lab==="7 Tage"&&f.p),projS=base?th((base.proj[base.H-1].m/P-1)*5):null;
+ const scen=A.up&&A.down?(A.up[0].p-A.down[0].p):null;const sp=A.sup[0]&&A.res[0]?(0.5-(P-A.sup[0].mid)/((A.res[0].mid-A.sup[0].mid)||1))*0.6:null;
+ const phaseS=/Markup/.test(A.phase)?0.6:/Distribution/.test(A.phase)?-0.3:/Markdown/.test(A.phase)?-0.6:0.3;
+ const divS=(A.divRsiL||A.divMacdL?0.6:0)-(A.divRsiH||A.divMacdH?0.6:0),anS=A.anom.length?Math.sign(A.r[A.r.length-1])*0.5:0;
+ const fg=G.fng,cot=G.cot;const bw=(A.wallsB||[]).reduce((s,w)=>s+w.usd,0),aw=(A.wallsA||[]).reduce((s,w)=>s+w.usd,0);
+ return[["1. Trend und Marktstruktur",[R("MA 20",usd(A.ma20),"Historisch",Dsrc,vs(A.ma20,20)),R("SMA 50",usd(A.sma50),"Historisch",Dsrc,vs(A.sma50,50)),R("EMA 50",usd(A.ema50),"Historisch",Dsrc,vs(A.ema50,50)),R("EMA 200",usd(A.ema200),"Historisch",Dsrc,vs(A.ema200,200)),
+  R("Unterstützung und Widerstand (30 Tage)",usd(A.lo30)+" / "+usd(A.hi30),"Historisch","Kurs bei "+Math.round(cl(pos30,0,1)*100)+" % der Spanne",srS),
+  R("Swing Highs / Lows",A.struct&&A.struct.seq.length?A.struct.seq.slice(-4).map(s=>s.lab+" "+usd(s.p)).join(", "):"–","Historisch","HH/HL = steigend, LH/LL = fallend",structS),
+  R("Marktstruktur (BOS / CHOCH)",lastEv?lastEv.type+" "+(lastEv.dir==="up"?"aufwärts":"abwärts")+" @ "+usd(lastEv.level):"kein Ereignis","Historisch","Tagesbasis",lastEv?(lastEv.dir==="up"?1:-1)*(lastEv.type==="BOS"?0.8:0.6):0),
+  R("Rainbow Chart",base?RN[base.band]:"–","Modell","Bewertung gegenüber Langfristtrend",base?(3-base.band)/3:null),R("ADX + DMI",num(A.adx,1)+" · +DI "+num(A.pdi,1)+" / −DI "+num(A.mdi,1),"Historisch","ADX = Trendstärke, DI = Richtung",dmiS),
+  R("Ichimoku Cloud",fin(A.ichA)?(ichS>0?"über der Wolke":ichS<0?"unter der Wolke":"in der Wolke")+" ("+usd(Math.min(A.ichA,A.ichB))+" – "+usd(Math.max(A.ichA,A.ichB))+")":"–","Historisch","9/26/52",ichS),
+  R("Volume Profile (90 Tage)",A.vp90?"POC "+usd(A.vp90.poc):"–","Historisch","Kurs "+(A.vp90&&P>A.vp90.poc?"über":"unter")+" dem Volumenschwerpunkt",A.vp90?vs(A.vp90.poc,30)*0.6:null),
+  R("Anchored VWAP",usd(A.avwapLow)+" (ab Tief) / "+usd(A.avwapHigh)+" (ab Hoch)","Historisch","Durchschnittspreis der Käufer seit dem 90-Tage-Tief bzw. -Hoch",avS)]],
+ ["2. Momentum und Überhitzung",[R("RSI (14)",num(A.rsi,1),"Historisch","über 70 überkauft, unter 30 überverkauft",rsiS(A.rsi)),R("MACD",num(A.macd,2)+" / Signal "+num(A.macds,2),"Historisch","12/26/9",fin(A.macdh)&&A.atr?th(A.macdh/(0.2*A.atr)):null),
+  R("Momentum (10 Tage)",pc(A.mom10),"Historisch",Dsrc,fin(A.mom10)?th(A.mom10/(sg*Math.sqrt(10))):null),R("Bollinger-Bänder",A.bb?usd(A.bb.l)+" – "+usd(A.bb.u)+", %b "+num(A.bb.b,2):"–","Historisch","20/2",bbS),
+  R("Stochastic RSI",num(A.srk,1)+" / "+num(A.srd,1),"Historisch","14/14/3/3",srkS),R("ROC (10)",num(A.roc,2)+" %","Historisch",Dsrc,fin(A.roc)?th(A.roc/100/(sg*Math.sqrt(10))):null),R("Williams %R (14)",num(A.wr,1),"Historisch","über −20 überkauft, unter −80 überverkauft",wrS),
+  R("RSI-Divergenzen",A.divRsiH?"bärisch":A.divRsiL?"bullisch":"keine","Historisch","letzte 2 Swings",A.divRsiH?-0.7:A.divRsiL?0.7:0),R("MACD-Divergenzen",A.divMacdH?"bärisch":A.divMacdL?"bullisch":"keine","Historisch","letzte 2 Swings",A.divMacdH?-0.7:A.divMacdL?0.7:0),
+  R("TSI",num(A.tsi,1)+" / Signal "+num(A.tsis,1),"Historisch","25/13/7",fin(A.tsi)?A.tsi/40+(fin(A.tsis)?(A.tsi>A.tsis?0.1:-0.1):0):null)]],
+ ["3. Positionierung und Squeeze-Potenzial",[fin(A.lsRatio)?R("Long/Short-Verhältnis",num(A.lsRatio,2)+" ("+A.lsN+" Börsen)","Echtzeit","viele Longs = Risiko von Long-Liquidationen",-(A.longShare-0.5)*4):X("L/S"),fin(A.funding)?R("Funding Rate",num(A.funding*100,4)+" %","Echtzeit",A.fundingN+" Börsen; hoch = überhitzt",-th(A.funding/0.0003)):X("F"),
+  fin(A.oi)?R("Open Interest (absolut + Delta)",big(A.oi)+" · 24 h "+pc(A.oiD24),"Verzögert","bewertet zusammen mit der Kursrichtung",oiS):X("OI"),(A.liqLtop||[]).length?R("Liquidation Levels",A.liqLtop.map(x=>usd(x.p)).join(", ")+" | "+A.liqStop.map(x=>usd(x.p)).join(", "),"Modell","Long-Cluster | Short-Cluster; mehr Shorts nahe = Aufwärtssog",liqS):X("LL"),
+  fin(A.basis)?R("Futures Basis",pc(A.basis,1)+" p. a.","Echtzeit","Deribit; sehr hoch = überhitzt",-th((A.basis-0.08)/0.1)*0.5):X("B"),fin(A.premium)?R("Perpetual vs. Spot",pc(A.premium,3),"Echtzeit","Binance",-th(A.premium/0.002)):X("P"),
+  fin(A.pcr)?R("Options Put/Call Ratio",num(A.pcr,2),"Echtzeit","Deribit; hoch = viel Absicherung (konträr bullisch)",cl((A.pcr-0.7),-0.5,0.5)):X("PCR"),fin(A.atmIV)?R("Options Implied Volatility",num(A.atmIV*100,1)+" %","Echtzeit","Schwankungserwartung, ohne Richtung",0):X("IV"),
+  fin(A.skew)?R("Options Skew (25-Delta)",num(A.skew*100,1)+" Punkte","Modell","positiv = Angst vor Kursrückgang",-th(A.skew/0.05)):X("S"),k==="BTC"&&cot&&cot.length>1?R("CME-Positionierung","Asset Manager netto "+num(cot[0].am,0)+" (Vorwoche "+num(cot[1].am,0)+")","Verzögert","CFTC, "+cot[0].d,th((cot[0].am-cot[1].am)/1000)):X("C")]],
+ ["4. Volumen und Orderflow",[A.cvd7?R("CVD (7 Tage)",pc(A.cvd7.delta/A.cvd7.vol,1)+" des Volumens","Echtzeit","Käufer minus Verkäufer, Binance Spot",A.cvd7.delta/A.cvd7.vol*8):X("CVD"),A.cvd24?R("Spot CVD (24 h)",pc(A.cvd24.delta/A.cvd24.vol,1),"Echtzeit","Binance Spot",A.cvd24.delta/A.cvd24.vol*8):X("SCVD"),A.fcvd24?R("Futures CVD (24 h)",pc(A.fcvd24.delta/A.fcvd24.vol,1),"Echtzeit","Binance Futures",A.fcvd24.delta/A.fcvd24.vol*8):X("FCVD"),
+  R("Volatilität (EWMA, täglich)",pc(A.ewmaVol,2).replace("+",""),"Historisch","Schwankung, ohne Richtung",0),R("ATR (14)",usd(A.atr),"Historisch","durchschnittliche Tagesspanne, ohne Richtung",0),R("OBV",A.obvTrend>0?"steigend":"fallend","Historisch","Volumen bestätigt Kurs?",A.obvTrend*0.5),
+  fin(A.vwap)?R("VWAP (Tag)",usd(A.vwap),"Echtzeit","Durchschnittspreis heute",th(Math.log(P/A.vwap)/(sg*0.5))*0.6):X("V"),fin(A.bookImb)?R("Orderbook Imbalance",pc(A.bookImb,1),"Echtzeit","±1 % um den Kurs",A.bookImb*2):X("OI"),fin(A.liq1)?R("Orderbook Depth (±1 %)",big(A.liq1),"Echtzeit",Object.keys(A.book).join(", ")+"; Liquidität, ohne Richtung",0):X("D"),
+  fin(A.vdLast)&&hourVol?R("Volume Delta (letzte Stunde)",num(A.vdLast,1),"Echtzeit","Binance Spot",th(A.vdLast/(hourVol*0.3))):X("VD"),A.vp30?R("Volume Profile / POC (30 Tage)",usd(A.vp30.poc),"Historisch","Stundenkerzen",vs(A.vp30.poc,30)*0.6):X("VP"),
+  fin(A.dexBuys)?R("DEX Käufe / Verkäufe (24 h)",A.dexBuys+" / "+A.dexSells,"Echtzeit","DexScreener",(A.dexBuys-A.dexSells)/((A.dexBuys+A.dexSells)||1)*3):X("DEX")]],
+ ["5. On-Chain-Analyse",[fin(A.mvrvZ)?R("MVRV Z-Score",num(A.mvrvZ,2),"Verzögert","unter 0 historisch günstig, über 7 überhitzt",1-A.mvrvZ/3.5):X("M"),fin(A.nupl)?R("NUPL",num(A.nupl,3),"Verzögert","unrealisierter Gewinn der Anleger",nuplS):X("N"),
+  fin(A.netflow7)?R("Exchange Netflows (7 Tage)",num(A.netflow7,0),"Verzögert","Zuflüsse zu Börsen = Verkaufsbereitschaft",-th(A.netflow7/((A.exReserve||1e6)*0.005))):X("NF"),fin(A.exReserve)?R("Exchange Reserves",num(A.exReserve,0),"Verzögert",fin(A.exReserveD30)?"30 Tage "+pc(A.exReserveD30):"",fin(A.exReserveD30)?-th(A.exReserveD30*20):0):X("ER"),
+  fin(A.realPrice)?R("Realized Price",usd(A.realPrice),"Verzögert","Durchschnittlicher Einstand aller Coins",rp):X("RP"),fin(A.realCap)?R("Realized Cap",big(A.realCap),"Verzögert","in Coins gebundenes Kapital, ohne Richtung",0):X("RC"),
+  fin(A.ssr)?R("Stablecoin Supply Ratio",num(A.ssr,2),"Echtzeit","niedrig = viel Kaufkraft in Stablecoins",cl((10-A.ssr)/8,-1,1)*0.6):X("SSR")]],
+ ["6. Volatilität und Risikomanagement",[R("Historical Volatility (30 Tage)",pc(A.hv30,1).replace("+","")+" p. a.","Historisch","ohne Richtung",0),fin(A.rv7)?R("Realized Volatility (7 Tage)",pc(A.rv7,1).replace("+","")+" p. a.","Historisch","ohne Richtung",0):X("RV"),
+  R("Bollinger Band Width",num(A.bbw*100,2)+" %"+(fin(A.bbwPct)?" ("+Math.round(A.bbwPct*100)+". Perzentil)":""),"Historisch","niedrig = großer Ausbruch wird wahrscheinlicher, Richtung offen",0),
+  R("Keltner Channels",A.kc?usd(A.kc.l)+" – "+usd(A.kc.u):"–","Historisch","EMA 20 ± 2 ATR",kcS),R("Donchian Channels (20 Tage)",A.dc?usd(A.dc.l)+" – "+usd(A.dc.u):"–","Historisch","Ausbruch über das Hoch = bullisch",dcS),
+  R("Maximum Drawdown (1 Jahr)",pc(A.mdd.dd),"Historisch","Risikokennzahl, ohne Richtung",0),R("Value at Risk 95 % / 99 % (1 Tag)",pc(-A.var95)+" / "+pc(-A.var99),"Historisch","möglicher Tagesverlust",0),R("Expected Shortfall 95 %",pc(-A.es95),"Historisch","Ø der schlechtesten 5 % Tage",0)]],
+ ["7. Gesamtmarkt und relative Stärke",[fin(G.btcDom)?R("Bitcoin-Dominanz",num(G.btcDom*100,1)+" %","Echtzeit","hoch = Geld bleibt bei Bitcoin",ab?cl(-(G.btcDom-0.55)*4,-0.5,0.5):0):X("BD"),fin(G.stable)?R("Stablecoin-Marktwert",big(G.stable),"Verzögert",fin(G.stable30)?"30 Tage "+pc(G.stable30):"",fin(G.stable30)?th(G.stable30*20)*0.6:0):X("SM"),
+  fin(G.ethbtc)?R("ETH/BTC",num(G.ethbtc,5),"Echtzeit",fin(G.ethbtc30)?"30 Tage "+pc(G.ethbtc30):"",ab&&fin(G.ethbtc30)?th(G.ethbtc30*10):0):X("EB"),fin(G.total)?R("TOTAL Market Cap",big(G.total),"Echtzeit",fin(G.mcap24)?"24 h "+pc(G.mcap24):"",fin(G.mcap24)?th(G.mcap24*15):0):X("T"),
+  fin(G.total2)?R("TOTAL2 / TOTAL3",big(G.total2)+" / "+big(G.total3),"Echtzeit","ohne BTC / ohne BTC und ETH",fin(G.mcap24)?th(G.mcap24*15):0):X("T2"),fin(G.adv)?R("Advance/Decline (Top 100)",G.adv+" / "+G.dec,"Echtzeit","steigende / fallende Coins in 24 h",(G.adv-G.dec)/((G.adv+G.dec)||1)*1.5):X("AD"),
+  fin(G.altSeason)?R("Altcoin Season Index",G.altSeason+" / 100","Echtzeit","Anteil der Top 50 besser als BTC (30 Tage)",ab?(G.altSeason-50)/50:(50-G.altSeason)/100):X("AS"),
+  k!=="BTC"&&E.res.BTC?R("Relative Stärke vs. BTC (30 Tage)",pc((1+A.ret30)/(1+E.res.BTC.ret30)-1),"Historisch","besser oder schlechter als Bitcoin",th(((1+A.ret30)/(1+E.res.BTC.ret30)-1)*5)):X("RS"),
+  G.sectors&&G.sectors.length?R("Sektorrotation","stärkster Sektor: "+esc(G.sectors[0].name),"Echtzeit","CoinGecko-Kategorien",0):X("SR")]],
+ ["8. Liquidität und Mikrostruktur",[A.book?R("Bid-Ask Spread",Object.entries(A.book).map(([n,e])=>n+" "+num(e.spread*1e4,2)+" bp").join(", "),"Echtzeit","Handelskosten, ohne Richtung",0):X("BA"),A.wallsB?R("Liquiditätswände",(A.wallsB.map(w=>usd(w.p)).join(", ")||"keine")+" | "+(A.wallsA.map(w=>usd(w.p)).join(", ")||"keine"),"Echtzeit","Kaufwände | Verkaufswände",bw+aw>0?(bw-aw)/(bw+aw)*0.6:0):X("W"),
+  A.book&&A.book.Binance&&A.book.Binance.buy1m!=null?R("Slippage / Market Impact (1 Mio. $)",num(A.book.Binance.buy1m*1e4,2)+" bp Kauf / "+num(-A.book.Binance.sell1m*1e4,2)+" bp Verkauf","Echtzeit","Binance",th((A.book.Binance.sell1m*-1-A.book.Binance.buy1m)*2000)*0.3):X("SL"),
+  fin(A.liq1)?R("Liquidität mehrerer Börsen",big(A.liq1),"Echtzeit",Object.keys(A.book).length+" Börsen, ohne Richtung",0):X("ML"),fin(G.dexRatio)?R("CEX/DEX-Verhältnis","DEX "+num(G.dexRatio*100,1)+" % von CEX","Verzögert","Näherung, ohne Richtung",0):X("CD")]],
+ ["9. Zusammenfassende Analyse",[R("Signal-Score (−6 bis +6)",base?String(base.score):"–","Modell","Basis-Analyse",base?base.score/6:null),R("Composite Score (−100 bis +100)",String(A.comp.score),"Modell","6 Indikatorgruppen",A.comp.score/100),R("Trend-Regime",A.regime,"Modell","ADX/DMI",/Aufwärts/.test(A.regime)?0.6:/Abwärts/.test(A.regime)?-0.6:0),
+  R("Marktphase",A.phase,"Modell","EMA 200 und EMA-50-Steigung",phaseS),R("Volatilitäts-Regime (HMM)",A.hmm?(A.hmm.pHigh>0.5?"unruhig":"ruhig")+" ("+Math.round(A.hmm.pHigh*100)+" % unruhig)":"–","Modell","ohne Richtung",0),
+  R("Divergenz-Scanner",[A.divRsiH&&"RSI bärisch",A.divRsiL&&"RSI bullisch",A.divMacdH&&"MACD bärisch",A.divMacdL&&"MACD bullisch"].filter(Boolean).join(", ")||"keine","Historisch","RSI und MACD",divS),R("Anomalie-Erkennung",A.anom.length?A.anom.join("; "):"keine","Historisch","ungewöhnliche Bewegungen",anS),
+  R("Support-/Resistance-Lage",A.sup[0]&&A.res[0]?usd(A.sup[0].mid)+" / "+usd(A.res[0].mid):"–","Modell","Nähe zur Unterstützung = mehr Luft nach oben",sp),R("Trendprojektion",base?usd(base.proj[base.H-1].m):"–","Modell","lineare Regression",projS),
+  R("Szenarioanalyse",A.up?"Anstieg "+Math.round(A.up[0].p*100)+" % / Rückgang "+Math.round(A.down[0].p*100)+" %":"–","Modell","Erreichen der ersten Zone in 30 Tagen",scen),f7?R("Prognose 7 Tage",Math.round(f7.p[2]*100)+" % hoch / "+Math.round(f7.p[1]*100)+" % seitwärts / "+Math.round(f7.p[0]*100)+" % runter","Modell","Confidence "+f7.conf+"/100",(f7.p[2]-f7.p[0])*3):X("F7")]],
+ ["10. Stimmung und Ereignisse",[fg?R("Fear & Greed Index",fg.v+" ("+esc(fg.c)+")","Verzögert","konträr: Angst = Kaufgelegenheit",(50-fg.v)/40):X("FG"),fin(A.funding)?R("Funding-Stimmung",A.funding>0.0003?"gierig":A.funding<0?"ängstlich":"neutral","Echtzeit","konträr",-th(A.funding/0.0003)):X("FS"),
+  ...(E.events||[]).filter(e=>e.past&&e.rx&&e.rx[k]).slice(0,3).map(e=>R("Marktreaktion: "+e.n,new Date(e.t).toLocaleDateString("de-DE")+" · "+pc(e.rx[k].r),"Historisch","Kursreaktion "+(e.rx[k].prelim?"bisher (vorläufig)":"nach 24 h"),e.rx[k].s))]]]}
+function indCount(A,G){let a=0;for(const[,rows] of indRows(A,G))for(const r of rows)if(!r.nv)a++;return a+" Indikatoren"}
+function indTable(A,G){return indRows(A,G).map(([cat,rows])=>{const ok=rows.filter(r=>!r.nv);return ok.length?`<h3>${cat}</h3><table class="tbl">${ok.map(r=>`<tr><td>${esc(r.n)}${r.src?`<div class="warn">${esc(r.src)}</div>`:""}</td><td>${r.v}${r.t==="Modell"?' <span class="kind k-mo">Modell</span>':""}<div>${rtB(r.s)}</div></td></tr>`).join("")}</table>`:""}).join("")}
+
+/* ---------- Termine: US-Zeit mit Sommerzeit, Live-Countdown, Kursreaktion ---------- */
+function nthSun(y,m,n){const w=new Date(Date.UTC(y,m,1)).getUTCDay();return 1+((7-w)%7)+7*(n-1)}
+function etToUtc(d,hm){const[y,mo,dd]=d.split("-").map(Number),[H,Mi]=hm.split(":").map(Number),day=Date.UTC(y,mo-1,dd);const dst=day>=Date.UTC(y,2,nthSun(y,2,2))&&day<Date.UTC(y,10,nthSun(y,10,1));return Date.UTC(y,mo-1,dd,H+(dst?4:5),Mi)}
+const PPI_D=["2026-09-10","2026-11-13"];
+function reaction(k,t0){const D=E.data[k];if(!D)return null;const H=D.h,now=Date.now();
+ if(H&&H.n>60&&t0>=H.t[0]+2*36e5){let iR=-1;for(let i=0;i<H.n;i++)if(H.t[i]+36e5<=t0)iR=i;if(iR<1)return null;const ref=H.c[iR],T1=t0+864e5;
+  const hv=K.ewmaVar(K.logret(H.c)),sg=Math.sqrt(hv[iR]||0);if(!sg)return null;let after,hrs,prelim=false;
+  if(T1<=now){let j=-1;for(let i=0;i<H.n;i++)if(H.t[i]+36e5<=T1)j=i;if(j<0)return null;after=H.c[j];hrs=24}else{after=(S.src[k]&&S.src[k].med)||H.c[H.n-1];hrs=(now-t0)/36e5;prelim=true;if(hrs<0.25)return{wait:true}}
+  let j1=-1;for(let i=0;i<H.n;i++)if(H.t[i]+36e5<=t0+36e5)j1=i;const r1=j1>iR?H.c[j1]/ref-1:null;const z=Math.log(after/ref)/(sg*Math.sqrt(Math.max(hrs,1)));return{r:after/ref-1,r1,z,s:K.clip(z/2.5,-1,1),prelim,hrs}}
+ const d=D.d,day=Math.floor(t0/864e5)*864e5,i=d.t.indexOf(day);if(i<2)return null;const dv=K.ewmaVar(K.logret(d.c)),sg=Math.sqrt(dv[i-1]||0);if(!sg||i>=d.n)return null;const r=d.c[i]/d.c[i-1]-1,z=Math.log(1+r)/sg;return{r,r1:null,z,s:K.clip(z/2.5,-1,1),prelim:i===d.n-1,hrs:null,daily:true}}
+function buildEvents(){const L=[],add=(arr,hm,n,typ)=>{for(const d of arr)L.push({t:etToUtc(d,hm),n,typ})};
+ add(FOMC,"14:00","Fed-Zinsentscheid (FOMC)","FOMC");add(CPI,"08:30","US-Inflation (CPI und Core CPI)","CPI");add(NFP,"08:30","US-Arbeitsmarkt (NFP und Arbeitslosenquote)","NFP");add(PPI_D,"08:30","US-Erzeugerpreise (PPI)","PPI");
+ const now=Date.now();L.sort((a,b)=>b.t-a.t);for(const e of L){e.past=e.t<=now;if(e.past){e.rx={};for(const k of KEYS){const r=safe2(()=>reaction(k,e.t));if(r)e.rx[k]=r}}}E.events=L}
+const cdStr=ms=>{if(ms<=0)return"läuft gerade";const m=Math.round(ms/6e4),d=Math.floor(m/1440),h=Math.floor((m%1440)/60),mi=m%60;return d>=1?`in ${d} T. ${h} Std.`:h>=1?`in ${h} Std. ${mi} Min.`:`in ${mi} Min.`};
+const nowStr=()=>new Date().toLocaleString("de-DE",{weekday:"short",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
+const dt=t=>new Date(t).toLocaleString("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+function eventsHtml(k){const ev=E.events||[],now=Date.now(),up=ev.filter(e=>!e.past).sort((a,b)=>a.t-b.t).slice(0,5),past=ev.filter(e=>e.past&&e.rx&&e.rx[k]).slice(0,8),base=S.res[k];
+ const fac=typ=>base&&base.ev&&base.ev[typ]&&base.ev[typ].n?"Schwankung an solchen Tagen bisher ×"+num(base.ev[typ].ratio,1):"";
+ return`<h2>Termine und Marktreaktionen</h2><div class="nowbox">Jetzt: <b id="nowClock">${nowStr()}</b> <span class="warn">(deine Zeit)</span></div>
+ <h3>Kommende Termine</h3><table class="tbl">${up.map(e=>`<tr><td>${dt(e.t)}<div class="warn" data-cd="${e.t}">${cdStr(e.t-now)}</div></td><td>${esc(e.n)}<div class="warn">${fac(e.typ)}</div><div><span class="rt rt-n">Ergebnis folgt</span></div></td></tr>`).join("")||'<tr><td colspan="2">Keine kommenden Termine hinterlegt.</td></tr>'}</table>
+ <h3>Vergangene Termine: Ergebnis für ${NAMES[k]}</h3><table class="tbl">${past.map(e=>{const r=e.rx[k];if(r.wait)return`<tr><td>${dt(e.t)}</td><td>${esc(e.n)}<div><span class="rt rt-n">Gerade veröffentlicht, Reaktion folgt</span></div></td></tr>`;
+  return`<tr><td>${dt(e.t)}</td><td>${esc(e.n)}<div class="warn">${r.daily?"Tagesbewegung "+pc(r.r):(r.r1!=null?"1 Std.: "+pc(r.r1)+" · ":"")+(r.prelim?"bisher ("+num(r.hrs,1)+" Std.): ":"24 Std.: ")+pc(r.r)}</div><div>${rtB(r.s)}${r.prelim?' <span class="warn">vorläufig</span>':""}</div></td></tr>`}).join("")||'<tr><td colspan="2">Für den Datenzeitraum sind keine vergangenen Termine auswertbar.</td></tr>'}</table>
+ <p class="warn">Uhrzeiten in deiner Zeitzone, US-Sommer- und Winterzeit berücksichtigt. Das Ergebnis ist die Kursreaktion von ${NAMES[k]} nach dem Termin, verglichen mit der üblichen Schwankung: ab 1,5-fach stark, ab 0,5-fach normal bullisch oder bärisch.</p>`}
+/* ---------- Einfacher Bericht ---------- */
+function simpleReport(A,G,rows){const k=A.k,n=NAMES[k],P=A.price;const all=rows.filter(([cat])=>!/^9\./.test(cat)).flatMap(([,r])=>r).filter(r=>!r.nv&&r.s!=null);
+ const bull=all.filter(r=>r.s>=0.2),bear=all.filter(r=>r.s<=-0.2),neu=all.length-bull.length-bear.length;const pick=(arr,dir)=>arr.slice().sort((a,b)=>dir*(b.s-a.s)).slice(0,4);
+ const f24=A.fc.find(f=>f.lab==="24 Stunden"&&f.p),f7=A.fc.find(f=>f.lab==="7 Tage"&&f.p),f30=A.fc.find(f=>f.lab==="30 Tage"&&f.p);
+ const so=K.clip(A.comp.score/100,-1,1),rt=RT(so);
+ const word=s=>s>=0.6?"klar nach oben":s>=0.2?"eher nach oben":s>-0.2?"seitwärts, ohne klare Richtung":s>-0.6?"eher nach unten":"klar nach unten";
+ const hz=(f,lab)=>{if(!f)return"";const w=["fallen","seitwärts laufen","steigen"],i=f.p.indexOf(Math.max(...f.p));return`<li><b>${lab}:</b> Am wahrscheinlichsten ${w[i]} (${Math.round(f.p[i]*100)} %). Steigen ${Math.round(f.p[2]*100)} % · seitwärts ${Math.round(f.p[1]*100)} % · fallen ${Math.round(f.p[0]*100)} %. ${f.q10!=null?"Der Kurs liegt dann mit 80 % Wahrscheinlichkeit zwischen "+usd(f.q10)+" und "+usd(f.q90)+".":""}<div class="warn">„Steigen“ heißt hier: mehr als +${num(f.tau*100,1)} %, „fallen“: mehr als −${num(f.tau*100,1)} %.</div></li>`};
+ const cf=[f24,f7].filter(Boolean).map(f=>f.conf),conf=cf.length?K.mean(cf):0;
+ const cTxt=conf<35?"<b>niedrig</b>. Die Signale sind schwach oder widersprüchlich. Nimm das als Tendenz, nicht als sichere Vorhersage.":conf<60?"<b>mittel</b>. Die Tendenz ist erkennbar, Überraschungen sind trotzdem jederzeit möglich.":"<b>hoch</b> für Krypto-Verhältnisse. Sicher ist trotzdem nichts.";
+ const s0=A.sup[0],s1=A.sup[1],r0=A.res[0],r1=A.res[1];
+ const soon=(E.events||[]).filter(e=>!e.past&&e.t-Date.now()<3*864e5);
+ const item=r=>`<li>${esc(r.n)}: ${r.v} ${rtB(r.s)}</li>`;
+ return`<div class="simple"><div class="verdict-box rt-${rt[1]}"><span>Gesamturteil für ${n}</span><b>${rt[0]}</b></div>
+ <p><b>Kurz gesagt:</b> ${n} kostet ${usd(P)} (${pc(A.ret24)} in 24 Std., ${pc(A.ret7)} in 7 Tagen). Die Indikatoren zeigen insgesamt <b>${word(so)}</b>. ${A.struct&&A.struct.trend==="bear"?"Seit einiger Zeit entstehen tiefere Hochs und Tiefs, der Trend ist also abwärts gerichtet.":A.struct&&A.struct.trend==="bull"?"Es entstehen höhere Hochs und Tiefs, der Trend ist also aufwärts gerichtet.":"Eine klare Trendrichtung gibt es gerade nicht."}</p>
+ <p><b>Die Indikatoren im Überblick:</b> Von ${all.length} Indikatoren zeigen <span class="up">${bull.length} nach oben</span>, <span class="down">${bear.length} nach unten</span> und ${neu} neutral.</p>
+ <div class="tally"><i class="pb-up" style="flex:${bull.length}"></i><i class="pb-nt" style="flex:${neu}"></i><i class="pb-dn" style="flex:${bear.length}"></i></div>
+ <div class="two"><div><b class="up">Dafür spricht (steigende Kurse)</b><ul>${pick(bull,1).map(item).join("")||"<li>keine starken Signale</li>"}</ul></div><div><b class="down">Dagegen spricht (fallende Kurse)</b><ul>${pick(bear,-1).map(item).join("")||"<li>keine starken Signale</li>"}</ul></div></div>
+ <p><b>Was wahrscheinlich passiert</b></p><ul>${hz(f24,"Nächste 24 Stunden")}${hz(f7,"Nächste 7 Tage")}${hz(f30,"Nächste 30 Tage")}</ul>
+ <p><b>Wenn – dann</b></p><ul>${r0?`<li>Steigt ${n} über <b>${usd(r0.hi)}</b>, ist ein Anstieg bis etwa <b>${usd(r1?r1.mid:r0.hi*1.05)}</b> möglich${A.up?" (diese Marke wird in 30 Tagen mit "+Math.round(A.up[1].p*100)+" % Wahrscheinlichkeit erreicht)":""}.</li>`:""}${s0?`<li>Fällt ${n} unter <b>${usd(s0.lo)}</b>, droht ein Rückgang bis etwa <b>${usd(s1?s1.mid:s0.lo*0.95)}</b>${A.down?" ("+Math.round(A.down[1].p*100)+" % Wahrscheinlichkeit in 30 Tagen)":""}.</li>`:""}${s0&&r0?`<li>Dazwischen, also von ${usd(s0.lo)} bis ${usd(r0.hi)}, ist eher Seitwärtsbewegung zu erwarten.</li>`:""}</ul>
+ <p><b>Wie sicher ist das?</b> Die Verlässlichkeit ist ${cTxt}</p>${soon.length?`<p class="down"><b>Achtung:</b> ${soon.map(e=>esc(e.n)+" ("+cdStr(e.t-Date.now())+")").join(", ")}. Rund um solche Termine schwankt der Kurs oft stärker.</p>`:""}
+ <p class="warn">Keine Anlageberatung.</p></div>`}
+setInterval(()=>{const el=document.getElementById("nowClock");if(el)el.textContent=nowStr();document.querySelectorAll("[data-cd]").forEach(x=>{x.textContent=cdStr(+x.dataset.cd-Date.now())});
+ if(E.events&&E.events.some(e=>!e.past&&e.t<=Date.now())){buildEvents();lastKey=null;render()}},15000);
+
+/* ---------- Diagramme ---------- */
+function cv(id,h){const c=$(id);if(!c)return null;return setup(c,h)}
+function drawZones(A){const r=cv("cz",260);if(!r)return;const[g,W]=r,H=260,D=E.data[A.k].d,n=Math.min(120,D.n),c=D.c.slice(-n),hi=D.h.slice(-n),lo=D.l.slice(-n),padR=56;
+ const zs=[...A.sup,...A.res];let mn=Math.min(...lo,...zs.map(z=>z.lo)),mx=Math.max(...hi,...zs.map(z=>z.hi));const pd=(mx-mn)*0.04;mn-=pd;mx+=pd;const X=i=>i/(n-1)*(W-padR),Y=v=>H-8-(v-mn)/(mx-mn)*(H-16);
+ for(const z of zs){const col=z.mid<A.price?css("--up"):css("--down");g.globalAlpha=0.1+0.3*z.str/100;g.fillStyle=col;g.fillRect(0,Y(z.hi),W-padR,Math.max(2,Y(z.lo)-Y(z.hi)));g.globalAlpha=1;g.fillStyle=col;g.font="11px sans-serif";g.fillText(fmt(z.mid),W-padR+4,Y(z.mid)+4)}
+ if(A.vp90){g.strokeStyle=css("--acc");g.setLineDash([5,4]);g.beginPath();g.moveTo(0,Y(A.vp90.poc));g.lineTo(W-padR,Y(A.vp90.poc));g.stroke();g.setLineDash([])}
+ g.strokeStyle=css("--ink");g.lineWidth=1.8;g.beginPath();c.forEach((v,i)=>i?g.lineTo(X(i),Y(v)):g.moveTo(X(i),Y(v)));g.stroke();g.fillStyle=css("--ink");g.beginPath();g.arc(X(n-1),Y(A.price),3.5,0,7);g.fill()}
+function drawLiq(A){const r=cv("cl",220);if(!r||!A.liqL)return;const[g,W]=r,H=220,P=A.price,all=[...A.liqL,...A.liqS];if(!all.length)return;const mn=P*0.8,mx=P*1.2,Y=v=>H-6-(v-mn)/(mx-mn)*(H-12),padR=56;
+ for(const x of all){if(x.p<mn||x.p>mx)continue;g.globalAlpha=0.25+0.75*x.r;g.fillStyle=x.p<P?css("--up"):css("--down");const len=(W-padR)*x.r;g.fillRect(0,Y(x.p)-2,len,4)}g.globalAlpha=1;
+ g.strokeStyle=css("--ink");g.setLineDash([4,3]);g.beginPath();g.moveTo(0,Y(P));g.lineTo(W-padR,Y(P));g.stroke();g.setLineDash([]);g.fillStyle=css("--mute");g.font="11px sans-serif";for(const v of[mn,P*0.9,P,P*1.1,mx])g.fillText(fmt(v),W-padR+4,Y(v)+4);g.fillStyle=css("--ink");g.fillText("Kurs",4,Y(P)-4)}
+function drawOI(A){const r=cv("co",160),M=E.mkt[A.k];if(!r||!M.oiH)return;const[g,W]=r,H=160,o=M.oiH.map(x=>x.usd),padR=56,mn=Math.min(...o),mx=Math.max(...o),X=i=>i/(o.length-1)*(W-padR),Y=v=>H-6-(v-mn)/((mx-mn)||1)*(H-12);
+ g.strokeStyle=css("--sma50");g.lineWidth=1.8;g.beginPath();o.forEach((v,i)=>i?g.lineTo(X(i),Y(v)):g.moveTo(X(i),Y(v)));g.stroke();g.fillStyle=css("--mute");g.font="11px sans-serif";g.fillText(big(mx),W-padR+2,Y(mx)+10);g.fillText(big(mn),W-padR+2,Y(mn))}
+function drawCVD(A){const r=cv("cc",180);if(!r)return;const[g,W]=r,H=180,padR=12;const ser=[[A.cvdSpot,css("--up")],[A.cvdFut&&A.cvdFut.slice(-168),css("--sma50")]].filter(s=>s[0]&&s[0].length>2);
+ for(const[s,col] of ser){const mn=Math.min(...s),mx=Math.max(...s),X=i=>i/(s.length-1)*(W-padR),Y=v=>H-6-(v-mn)/((mx-mn)||1)*(H-12);g.strokeStyle=col;g.lineWidth=1.8;g.beginPath();s.forEach((v,i)=>i?g.lineTo(X(i),Y(v)):g.moveTo(X(i),Y(v)));g.stroke()}
+ g.fillStyle=css("--mute");g.font="11px sans-serif";g.fillText("7 Tage, je Linie eigene Skala",4,12)}
+/* ---------- Selbsttest in der App ---------- */
+function selfTest(){const out=[],ok=(n,b,d)=>out.push(`<div class="${b?"up":"down"}">${b?"✓":"✗"} ${esc(n)}${d?" – "+esc(d):""}</div>`);
+ try{const R=K.rng(42);let p=30000;const h=[],l=[],c=[],v=[];for(let i=0;i<600;i++){const op=p,r=(R()-.5)*0.06+0.0004*Math.sin(i/40),cl=op*Math.exp(r),hi=Math.max(op,cl)*(1+R()*0.02),lo=Math.min(op,cl)*(1-R()*0.02);h.push(hi);l.push(lo);c.push(cl);v.push(1000+R()*5000);p=cl}
+  const ref=SELFREF,got={rsi:K.rsi(c)[599],adx:K.dmi(h,l,c).adx[599],macd:K.macd(c).m[599],srk:K.stochRsi(c).k[599],tsi:K.tsi(c).t[599],atr:K.atr(h,l,c)[599],wr:K.willr(h,l,c)[599],ichA:K.ichimoku(h,l,c).A[599]};
+  for(const key in ref)ok("Referenzwert "+key.toUpperCase(),Math.abs(got[key]-ref[key])<=1e-6*Math.max(1,Math.abs(ref[key])),"erwartet "+ref[key].toPrecision(8)+", berechnet "+(got[key]==null?"–":got[key].toPrecision(8)));
+  let la=true;for(const cut of[300,450]){const a=K.rsi(c.slice(0,cut)),b=K.rsi(c);for(let i=0;i<cut;i++)if(a[i]!==b[i]&&!(a[i]==null&&b[i]==null))la=false}ok("Keine Zukunftsdaten (Look-ahead)",la,"RSI auf gekürzten Reihen identisch");
+  const cm=K.composite([{name:"A",w:.5,sig:[{s:1}]},{name:"B",w:.5,sig:[]}]);ok("Fehlende Daten zählen nicht als neutral",cm.score===100&&cm.coverage===0.5,"Abdeckung "+cm.coverage);
+  const A=E.res[S.cur];if(A&&A.fc){for(const f of A.fc)if(f.p)ok("Wahrscheinlichkeiten "+f.lab+" ergeben 100 %",Math.abs(f.p.reduce((s,x)=>s+x,0)-1)<1e-9,num(f.p.reduce((s,x)=>s+x,0)*100,6)+" %");
+   ok("Zonen-Reihenfolge",A.sup.every((z,i)=>i===0||z.mid<A.sup[i-1].mid)&&A.res.every((z,i)=>i===0||z.mid>A.res[i-1].mid),"Unterstützungen absteigend, Widerstände aufsteigend");ok("Unterstützungen unter, Widerstände über dem Kurs",A.sup.every(z=>z.hi<A.price)&&A.res.every(z=>z.lo>A.price),"");
+   ok("Datenqualität ohne Fehler",A.q.every(q=>q[1]!=="fail"),A.q.filter(q=>q[1]==="fail").map(q=>q[0]).join(", "))}
+  const mc1=K.monteCarlo(c,10,500,7),mc2=K.monteCarlo(c,10,500,7);ok("Monte Carlo reproduzierbar",mc1.q(0.5)===mc2.q(0.5),"")}catch(e){ok("Selbsttest abgebrochen",false,e.message)}
+ $("stOut").innerHTML=out.join("")}
+const SELFREF={"rsi": 47.41337568349117, "adx": 11.87982041975396, "macd": -416.0396362533611, "srk": 57.87648411582345, "tsi": -15.960794629074313, "atr": 826.3192237824144, "wr": -50.097036631232605, "ichA": 25952.680377611825};
+const DOC=`<h3>Datenquellen</h3><table class="tbl"><tr><th>Bereich</th><th>Quelle</th><th>Art</th></tr>
+<tr><td>Kurse, Volumen, Käufer/Verkäufer-Volumen (BTC, ETH)</td><td>Binance Spot (Ersatz: Coinbase)</td><td>Echtzeit / historisch</td></tr><tr><td>Kurse Brett</td><td>GeckoTerminal, DexScreener, CoinGecko, KuCoin</td><td>Echtzeit / historisch</td></tr>
+<tr><td>Funding, Open Interest, Long/Short, Futures-Kerzen</td><td>Binance Futures, Bybit, OKX</td><td>Echtzeit / 5-Min.-Raster</td></tr><tr><td>Optionen (Put/Call, IV, Skew), Futures-Basis</td><td>Deribit</td><td>Echtzeit</td></tr>
+<tr><td>Orderbücher</td><td>Binance, Coinbase, Kraken</td><td>Echtzeit</td></tr><tr><td>MVRV, Marktwert, Umlauf</td><td>Coin Metrics Community API</td><td>täglich, verzögert</td></tr>
+<tr><td>Gesamtmarkt, Dominanz, Top 100, Sektoren</td><td>CoinGecko</td><td>Echtzeit (wenige Minuten)</td></tr><tr><td>Stablecoins, DEX-Volumen</td><td>DefiLlama</td><td>täglich</td></tr><tr><td>Fear & Greed</td><td>alternative.me</td><td>täglich</td></tr><tr><td>CME-Positionierung</td><td>CFTC (Commitments of Traders)</td><td>wöchentlich</td></tr></table>
+<h3>Benötigte API-Zugänge für fehlende Kennzahlen</h3><ul><li><b>Glassnode oder CryptoQuant</b>: SOPR, HODL Waves, LTH/STH Supply, Coin Days Destroyed, Exchange Flows und Reserves, Whale-Daten.</li><li><b>CoinGlass</b>: echte Liquidations-Heatmap und Liquidationsniveaus.</li><li><b>FRED (Federal Reserve Bank of St. Louis)</b>: US-Renditen, Realzinsen, Fed Funds, M2. Dazu Börsendaten für DXY, VIX, Nasdaq 100 und CME FedWatch.</li><li><b>ETF-Datenanbieter</b> (z. B. Farside, SoSoValue): Spot-ETF-Flüsse.</li><li><b>LunarCrush oder Santiment</b>: Social Volume und Social Sentiment.</li></ul>
+<p>Diese Schlüssel dürfen nicht in die öffentliche Datei auf GitHub geschrieben werden, weil jeder sie dort lesen könnte. Sicher geht das nur über einen kleinen eigenen Server, der die Schlüssel verwahrt und die Daten an die App weiterreicht.</p>
+<h3>Methodik</h3><ul><li>Alle Indikatoren sind kausal berechnet und gegen eine unabhängige Python-Referenz geprüft (RSI, ADX und ATR nach Wilder mit SMA-Startwert; Ichimoku mit Versatz 25).</li><li>Zonen: Swing-Punkte mehrerer Zeiträume, Volumenprofile (POC, Value Area 70 %), gleitende Durchschnitte, Anchored VWAPs, Vortag/Vorwoche und Orderbuch-Wände werden innerhalb von 0,35 ATR zusammengefasst; Stärke = gewichtete Summe plus Bonus für verschiedene Faktorarten und historische Reaktionen.</li><li>Prognosen: Klassen ±0,5 erwartete Schwankung; Softmax-Regression auf 11 Merkmalen; Walk-Forward mit Purge; Mischgewicht mit der Basisrate aus der ersten Testhälfte, Bewertung auf der zweiten.</li><li>Confidence = Skill-Faktor × Stichproben-Faktor × Datenabdeckung, maximal 95.</li><li>Szenario-Wahrscheinlichkeiten: Monte Carlo mit EWMA-Volatilität (λ = 0,94), 4000 Pfade, reproduzierbarer Startwert je Coin und Stunde, ohne angenommene Drift.</li></ul>`;
+window.addEventListener("resize",()=>{const A=E.res[S.cur];if(A){try{drawZones(A);drawLiq(A);drawOI(A);drawCVD(A)}catch(e){}}});
+E.render=engRender;E.refreshFast=refreshFast;E.selfTest=selfTest;
+})();
+
+</script>
+<script>
+const _coreRender=render;render=function(){_coreRender();try{KIE.refreshFast();KIE.render()}catch(e){console.error(e);const x=$("err");if(x)x.textContent="Fehler im Marktbericht: "+e.message}};
+const _coreLoad=loadAll;loadAll=async function(){await _coreLoad();try{await KIE.load()}catch(e){console.error(e)}};
+$("live").onclick=()=>loadAll();
+setInterval(()=>{if(!document.hidden&&!KIE.busy&&KIE.ts&&Date.now()-KIE.ts>15*60e3)KIE.load()},60e3);
+try{KIE.loadCache()}catch(e){}
+render();loadAll();
 </script>
 </body>
 </html>
