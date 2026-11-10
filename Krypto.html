@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Krypto">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0f1218">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEgklEQVR4nO3dPW7jRhyHYW6QPkCqbJdD5AapcxQXabJn8DYp9iipc4McIp2vkUKBIcj6UUNyODOknqczIMsG5uWfoy/q0w8//jTBPd/1/gcYlziIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImD6Pve/wD1/fz3H9c//vvr13X388n1Oc7kJotrKxIRx0nMZHFtUSL2HGdQWMaiW07iYIY4Dm/RMFh0e3EQiePYlo6NRb8lDiJxEImDSBxE4ji2da+bFP6WOIjEcXi//fP7otuXDxtxEInj2F5e36Ylw2PRHsWbfU7i0sdfv/yZbuD9HM/lMjY+uklk9TvBTI4Tej/LfPvyecv92HMcVRob7zaWMYmDGeI4pAZjYxIHM8RxPG3GxuTRShU3q1VrbbrzPMdW6TjeKZFmY2NyWtnPy+vbw4UcnMmxSeHy1zqaW46NyeRo46BTxORYb916rz64G4+NyeRo70BTxORYqcoClx/r7cfGZHKsU+vQH3yKiKO/h4l0GRuTOFbY6VgfcIp4+rym9yN49TJffvF6EvQaG5PJsdTMUl0v0rcvn7es2SBTxKOVBeYXLNWw6zLv+iKfyVHHzCJtnCIdiaPUxgGwRyJ7NyeOCsoX6VhTxJ6jSOE+tNZ9lmgQmcnx2E47yvGniDg22b666xJpU5U4HmjzfMOYU0Qc6+3x6KPkPptlZEM6Z4996Oo/3X60eG0l6vsE9iWFl9e3jqcbp5U1mi1Y342IOO4b4XWv7sSx2IAPK3Yijjs67kOHIo5bTijvxLHAU42NSRw3jI1r4ij1bGNjEsc1+9Ab4vifE8pH4njsOcfGNP5rK9cH9H6LZGzcNfTkuFmzLkv4tGNjGvkl+2bbQ/vQZNDJsfGDxbX+0JMbMY6SBWvwgcEnHxvTgHEsWvKNiRgb88aKY91q7bHGxsY01IZ0+xovWlH70IdGmRxVjv7ys4wTSokh4qi7VON/zPAo+sdRfhHgRdfem7lbY6NQ5z3HustDL1rdj0nZbRTqOTlWXzh8y8ZTGeW6TY4ql5RfOkLWXbfpafWJo+6XDTS+mPDz6HBaqf41FNZ1J60nx65fULJ6hMjrrqZxtPnqmqWJKCNpd1pp9qVGFruWRpOj8dddlf9RJc1oMTm6lDGNei2lA9k9jl5llNyzdObte1rpXsa1Nm9kP5Md4xiqDFbY67SijBPYJQ5lnEP9OJRxGpXjUMaZ1IxDGSdTLQ5lnE+dOJRxShXiUMZZVYhjqAv9U1Gd08r82ivjoKptSFMByjiumg9lN36GgNFUfhLs5iu76945jdV/+vzShDJOYKBLMDCa/h+kZljiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIPoPAVCE9jidLKMAAAAASUVORK5CYII=">
+<title>Krypto Chart-Analyse</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f5f6f8;--surface:#fff;--ink:#14181f;--mute:#667085;--line:#e2e5ea;--up:#0a8f5b;--down:#d23b3b;--acc:#2f5bea;--sma20:#e08a00;--sma50:#8a3fd1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1218;--surface:#181c25;--ink:#e8ebf0;--mute:#8d96a5;--line:#2a303c;--up:#2fcf8e;--down:#ff6b6b;--acc:#7c9bff;--sma20:#ffb23e;--sma50:#c28bff}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1218;--surface:#181c25;--ink:#e8ebf0;--mute:#8d96a5;--line:#2a303c;--up:#2fcf8e;--down:#ff6b6b;--acc:#7c9bff;--sma20:#ffb23e;--sma50:#c28bff}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Inter",system-ui,-apple-system,sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:4px 0 2px}
+p.sub{color:var(--mute);margin:0 0 14px;font-size:14px}
+section{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
+textarea,input[type=date]{width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px;font:13px ui-monospace,Menlo,monospace}
+textarea{height:84px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;align-items:center}
+button,label.btn{background:var(--acc);color:#fff;border:0;border-radius:8px;padding:10px 14px;font:600 14px inherit;cursor:pointer}
+button.alt,label.btn{background:transparent;color:var(--ink);border:1px solid var(--line)}
+button:focus-visible,label:focus-within,textarea:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.tab{background:var(--surface);color:var(--ink);border:1px solid var(--line);text-align:left;padding:10px;border-radius:10px;font-weight:600}
+.tab small{display:block;font-weight:500;color:var(--mute);font-size:12px}
+.tab.on{border:2px solid var(--acc);padding:9px}
+canvas{width:100%;display:block}
+.verdict{font-size:26px;font-weight:700}
+.up{color:var(--up)}.down{color:var(--down)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.cell{border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.cell b{display:block;font-size:17px}.cell span{color:var(--mute);font-size:12px;display:block}
+ul{margin:8px 0 0;padding-left:18px;font-size:14px}
+.leg{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--mute);margin-top:6px}
+.leg i{display:inline-block;width:10px;height:10px;margin-right:4px;vertical-align:middle;border-radius:2px}
+.tg{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:13px;margin-bottom:8px}
+.tg label{display:flex;gap:4px;align-items:center;cursor:pointer}
+.warn{font-size:12px;color:var(--mute)}
+h2{font-size:16px;margin:0 0 6px}
+#err{color:var(--down);font-size:14px}
+input[type=file]{display:none}
+.ev{display:flex;justify-content:space-between;gap:8px;font-size:14px;padding:4px 0;border-bottom:1px solid var(--line)}
+</style>
+</head>
+<body>
+<main>
+<h1>Krypto Chart-Analyse</h1>
+<p class="sub">Bitcoin, Ethereum und Brett (Base) mit Indikatoren, Rainbow Chart und US-Terminen.</p>
+<div class="tabs" id="tabs"></div>
+
+<section>
+<strong id="dtitle"></strong>
+<p class="warn" style="margin:4px 0 8px">Tageskurse als CSV mit <b>date,close</b> (älteste Zeile zuerst oder neueste, wird sortiert). Mindestens 60 Tage. Beim Öffnen holt die App den Verlauf von CoinGecko und gleicht den aktuellen Kurs mit weiteren Quellen ab (Binance, Coinbase, CoinPaprika, DexScreener). Update alle 90 Sekunden. Eigene CSV und Demo-Daten (zufällig erzeugt) gehen weiterhin.</p>
+<textarea id="inp" placeholder="date,close&#10;2026-01-01,94000&#10;2026-01-02,94500" aria-label="Kursdaten"></textarea>
+<div class="row">
+<button id="go">Analysieren</button>
+<label class="btn">CSV laden<input type="file" id="file" accept=".csv,.txt"></label>
+<button class="alt" id="live">Live aktualisieren</button>
+<button class="alt" id="diagb">Verbindungstest</button>
+<button class="alt" id="demo">Demo-Daten</button>
+</div>
+<div id="stat" class="warn" style="margin-top:6px"></div><div id="diag" class="warn" style="margin-top:6px"></div><div id="err" role="alert"></div>
+</section>
+
+<div id="out" hidden>
+<section>
+<div class="verdict" id="verdict"></div>
+<div id="vtext" class="warn" style="font-size:14px"></div>
+<div class="grid" id="stats"></div>
+<ul id="reasons"></ul>
+</section>
+
+<section>
+<h2>Datenquellen und Abgleich</h2>
+<div id="src"></div>
+</section>
+
+<section>
+<div class="tg" id="tg"></div>
+<canvas id="c1" height="300" aria-label="Preischart"></canvas>
+<div class="leg" id="leg1"></div>
+</section>
+
+<section id="secEv">
+<h2>US-Termine</h2>
+<div id="upc"></div>
+<div class="warn" style="margin:8px 0 4px">Historische Wirkung auf diesen Coin (Tagesbewegung am Termin im Vergleich zum Normaltag):</div>
+<div class="grid" id="evs"></div>
+<div class="row"><input type="date" id="cd" style="width:auto" aria-label="Eigener Termin"><button class="alt" id="cadd">Eigenen Termin hinzufügen</button></div>
+<p class="warn">Termine 2026 laut BLS-Kalender (Jobs, CPI) und Fed-Kalender (FOMC). CPI-Termine für November und Dezember sind hier nicht enthalten, bitte bei Bedarf selbst eintragen.</p>
+</section>
+
+<section id="secRain">
+<h2>Rainbow Chart</h2>
+<canvas id="c3" height="280" aria-label="Rainbow Chart"></canvas>
+<div class="leg" id="leg3"></div>
+<div id="rtext" style="font-size:14px;margin-top:8px"></div>
+</section>
+
+<section>
+<strong style="font-size:14px">RSI (14)</strong>
+<canvas id="c2" height="110" aria-label="RSI"></canvas>
+</section>
+<p class="warn">Keine Anlageberatung. Indikatoren beschreiben Vergangenes und können Kurse nicht sicher vorhersagen. Projektion und Rainbow sind statistische Modelle ohne Garantie, besonders bei jungen Coins wie Brett.</p>
+</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const KEYS=["BTC","ETH","BRETT"],NAMES={BTC:"Bitcoin",ETH:"Ethereum",BRETT:"Brett (Base)"};
+window.addEventListener("error",e=>{const x=document.getElementById("err");if(x)x.textContent="Fehler: "+(e.message||"unbekannt")+(e.lineno?" (Zeile "+e.lineno+")":"")});
+const S={src:{},hsrc:{},data:{},cur:"BTC",raw:{},res:{},custom:[],tog:{sma:1,bb:0,proj:1,rain:1,FOMC:1,CPI:1,NFP:1,Eigene:1}};
+const ts=d=>Date.parse(d+"T00:00:00Z");
+const FOMC=["2026-01-28","2026-03-18","2026-04-29","2026-06-17","2026-07-29","2026-09-16","2026-10-28","2026-12-09"];
+const NFP=["2026-01-09","2026-02-11","2026-03-06","2026-04-03","2026-05-08","2026-06-05","2026-07-02","2026-08-07","2026-09-04","2026-10-02","2026-11-06","2026-12-04"];
+const CPI=["2026-11-10","2026-01-13","2026-02-13","2026-03-11","2026-04-10","2026-06-10","2026-08-12","2026-09-11","2026-10-14"];
+const KN={FOMC:"Fed-Zinsentscheid (FOMC)",CPI:"Inflation (CPI)",NFP:"Arbeitsmarkt (Jobs-Report)",Eigene:"Eigener Termin"};
+const BASE=[...FOMC.map(d=>({d,k:"FOMC"})),...NFP.map(d=>({d,k:"NFP"})),...CPI.map(d=>({d,k:"CPI"}))];
+const evs=()=>[...BASE,...S.custom].map(e=>({...e,t:ts(e.d)})).sort((a,b)=>a.t-b.t);
+const EC=()=>({FOMC:css("--acc"),CPI:css("--sma20"),NFP:css("--sma50"),Eigene:css("--mute")});
+const RB=["#3b6df0","#16a5c8","#1fae6a","#9bc53d","#f2c230","#f08a24","#e0473d"];
+const RN=["Ausverkauf","Stark unterbewertet","Akkumulieren","Neutral","Vorsicht","Überhitzt","Blase"];
+const avg=a=>a.reduce((x,y)=>x+y,0)/a.length;
+const sd=a=>{const m=avg(a);return Math.sqrt(avg(a.map(v=>(v-m)**2)))};
+const sma=(a,n)=>a.map((_,i)=>i<n-1?null:avg(a.slice(i-n+1,i+1)));
+const ema=(a,n)=>{const k=2/(n+1);let p=a[0];return a.map((v,i)=>(p=i?v*k+p*(1-k):v))};
+const pct=(v,d=1)=>v.toFixed(d).replace(".",",")+" %";
+const fmt=v=>v>=1000?v.toLocaleString("de-DE",{maximumFractionDigits:0}):v>=1?v.toLocaleString("de-DE",{maximumFractionDigits:2}):v.toLocaleString("de-DE",{maximumSignificantDigits:4});
+function rsi(a,n=14){const o=Array(a.length).fill(null);let g=0,l=0;
+for(let i=1;i<a.length;i++){const d=a[i]-a[i-1],G=Math.max(d,0),L=Math.max(-d,0);
+if(i<=n){g+=G;l+=L;if(i==n){g/=n;l/=n;o[i]=100-100/(1+g/(l||1e-9))}}
+else{g=(g*(n-1)+G)/n;l=(l*(n-1)+L)/n;o[i]=100-100/(1+g/(l||1e-9))}}return o}
+
+function pNum(s){s=String(s).replace(/\s|"|\$|€/g,"");if(s.includes(",")&&s.includes("."))s=s.replace(/\./g,"").replace(",",".");else if(s.includes(","))s=s.replace(",",".");return parseFloat(s)}
+function pDate(s){s=(s||"").trim().replace(/"/g,"");let m;
+if(/^\d{10,13}$/.test(s)){const n=+s;return Math.floor((n<1e12?n*1000:n)/864e5)*864e5}
+if(m=s.match(/^(\d{4})-(\d{2})-(\d{2})/))return Date.UTC(+m[1],m[2]-1,+m[3]);
+if(m=s.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})/))return Date.UTC(+m[3],m[2]-1,+m[1]);
+if(m=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/))return Date.UTC(+m[3],m[1]-1,+m[2]);return null}
+function parse(txt){
+ const L=txt.trim().split(/\r?\n/).filter(x=>x.trim());if(!L.length)return{c:[],t:null};
+ const sep=L[0].includes(";")?";":L[0].includes("\t")?"\t":",";
+ const cells=l=>l.split(sep).map(s=>s.trim().replace(/^"|"$/g,""));
+ const f=cells(L[0]);let ci,di=-1,body=L;
+ if(f.some(x=>/[a-z]/i.test(x)&&isNaN(pNum(x)))){const h=f.map(x=>x.toLowerCase());
+  di=h.findIndex(x=>/date|datum|time|zeit/.test(x));ci=h.findIndex(x=>/^(close|schluss|price|preis|kurs|adj)/.test(x));
+  if(ci<0)ci=h.length>1?h.length-1:0;if(di==ci)di=-1;body=L.slice(1)}
+ else{ci=f.length-1;if(f.length>1)di=0}
+ const rows=body.map(l=>{const x=cells(l);return{c:pNum(x[ci]),t:di>=0?pDate(x[di]):null}}).filter(r=>isFinite(r.c)&&r.c>0);
+ const dated=rows.length>0&&rows.every(r=>r.t!=null);if(dated)rows.sort((a,b)=>a.t-b.t);
+ return{c:rows.map(r=>r.c),t:dated?rows.map(r=>r.t):null}}
+
+function analyze(c,t){
+ const n=c.length,last=c[n-1],dated=!!t;t=t||c.map((_,i)=>i*864e5);
+ const s20=sma(c,20),s50=sma(c,50),R=rsi(c);
+ const e12=ema(c,12),e26=ema(c,26),macd=e12.map((v,i)=>v-e26[i]),sig=ema(macd,9),hist=macd[n-1]-sig[n-1];
+ const bb=c.map((_,i)=>i<19?null:{m:s20[i],s:sd(c.slice(i-19,i+1))});
+ const r=R[n-1],mom=last/c[n-11]-1;let score=0;const why=[];
+ const add=(p,x)=>{score+=p;why.push([p,x])};
+ if(s50[n-1]!=null){add(last>s50[n-1]?1:-1,last>s50[n-1]?"Kurs über SMA 50 (Aufwärtstrend)":"Kurs unter SMA 50 (Abwärtstrend)");add(s20[n-1]>s50[n-1]?1:-1,s20[n-1]>s50[n-1]?"SMA 20 über SMA 50":"SMA 20 unter SMA 50")}
+ add(hist>0?1:-1,hist>0?"MACD-Histogramm positiv":"MACD-Histogramm negativ");
+ if(r<30)add(1,"RSI "+r.toFixed(0)+": überverkauft, Erholung möglich");else if(r>70)add(-1,"RSI "+r.toFixed(0)+": überkauft, Rücksetzer möglich");else add(0,"RSI "+r.toFixed(0)+": neutraler Bereich");
+ add(mom>0.02?1:mom<-0.02?-1:0,"Momentum 10 Perioden: "+pct(mom*100));
+ const b=bb[n-1];if(last<b.m-2*b.s)add(1,"Kurs am unteren Bollinger-Band");else if(last>b.m+2*b.s)add(-1,"Kurs am oberen Bollinger-Band");
+ // Projektion
+ const w=Math.min(30,n),y=c.slice(-w).map(Math.log),mx=(w-1)/2,my=avg(y);let sxy=0,sxx=0;y.forEach((v,i)=>{sxy+=(i-mx)*(v-my);sxx+=(i-mx)**2});
+ const sl=sxy/sxx,ic=my-sl*mx,res=sd(y.map((v,i)=>v-(ic+sl*i))),H=Math.max(5,Math.round(n*0.1)),proj=[];
+ for(let h=1;h<=H;h++){const m=ic+sl*(w-1+h),sp=res*Math.sqrt(1+h/w)*1.5;proj.push({m:Math.exp(m),lo:Math.exp(m-sp),hi:Math.exp(m+sp)})}
+ const lr=c.slice(1).map((v,i)=>Math.log(v/c[i])),vol=sd(lr.slice(-30));
+ // Rainbow: Log-Regression auf Zeit
+ const day=i=>(t[i]-t[0])/864e5+30,xs=t.map((_,i)=>Math.log(day(i))),ys=c.map(Math.log10),mX=avg(xs),mY=avg(ys);
+ let a1=0,a2=0;xs.forEach((v,i)=>{a1+=(v-mX)*(ys[i]-mY);a2+=(v-mX)**2});
+ const rb=a1/a2,ra=mY-rb*mX,rs=sd(ys.map((v,i)=>v-(ra+rb*xs[i]))),z=(ys[n-1]-(ra+rb*xs[n-1]))/rs;
+ const band=Math.max(0,Math.min(6,Math.floor((z+2.1)/0.6)));
+ // Events
+ const map=new Map(t.map((v,i)=>[v,i])),base=avg(lr.map(Math.abs)),ev={};
+ if(dated)["FOMC","CPI","NFP","Eigene"].forEach(k=>{const ids=evs().filter(e=>e.k==k&&map.has(e.t)).map(e=>map.get(e.t)).filter(i=>i>=1&&i<n-1);
+  if(!ids.length){ev[k]={n:0};return}
+  const m0=avg(ids.map(i=>Math.abs(lr[i-1]))),m1=avg(ids.map(i=>Math.abs(lr[i])));
+  ev[k]={n:ids.length,m0,m1,ratio:m0/base,sign:avg(ids.map(i=>lr[i-1]))}});
+ return{c,t,dated,n,last,s20,s50,R,bb,score,why,proj,H,vol,hi:Math.max(...c.slice(-30)),lo:Math.min(...c.slice(-30)),ra,rb,rs,z,band,map,ev,base,day}
+}
+
+function setup(cv,h){const d=devicePixelRatio||1,W=cv.clientWidth;cv.width=W*d;cv.height=h*d;const g=cv.getContext("2d");g.scale(d,d);return[g,W]}
+function drawMain(a){
+ const[g,W]=setup($("c1"),300),Hh=300,padR=46,show=Math.min(a.n,120),st=a.n-show,tot=show+a.H,T=S.tog;
+ const vals=[...a.c.slice(st)];if(T.proj)a.proj.forEach(p=>vals.push(p.lo,p.hi));
+ let mn=Math.min(...vals),mxv=Math.max(...vals);const pd=(mxv-mn)*.06;mn-=pd;mxv+=pd;
+ const X=i=>(i/((T.proj?tot:show)-1))*(W-padR),Y=v=>Hh-10-(v-mn)/(mxv-mn)*(Hh-20);
+ g.font="11px sans-serif";g.fillStyle=css("--mute");g.strokeStyle=css("--line");g.lineWidth=1;
+ for(let k=0;k<5;k++){const v=mn+(mxv-mn)*k/4,y=Y(v);g.beginPath();g.moveTo(0,y);g.lineTo(W-padR,y);g.stroke();g.fillText(fmt(v),W-padR+4,y+4)}
+ const line=(arr,col,wd,dash)=>{g.beginPath();g.strokeStyle=col;g.lineWidth=wd;g.setLineDash(dash||[]);let on=0;
+  arr.forEach((v,i)=>{if(v==null||i<st)return;const x=X(i-st),y=Y(v);on?g.lineTo(x,y):g.moveTo(x,y);on=1});g.stroke();g.setLineDash([])};
+ if(T.bb){line(a.bb.map(b=>b&&b.m+2*b.s),css("--mute"),1,[3,3]);line(a.bb.map(b=>b&&b.m-2*b.s),css("--mute"),1,[3,3])}
+ if(T.sma){line(a.s50,css("--sma50"),1.5);line(a.s20,css("--sma20"),1.5)}
+ line(a.c,css("--ink"),2);
+ if(T.proj){const px=i=>X(show-1+i);
+  g.beginPath();g.moveTo(px(0),Y(a.last));a.proj.forEach((p,i)=>g.lineTo(px(i+1),Y(p.hi)));for(let i=a.H-1;i>=0;i--)g.lineTo(px(i+1),Y(a.proj[i].lo));g.closePath();
+  g.globalAlpha=.15;g.fillStyle=css("--acc");g.fill();g.globalAlpha=1;
+  g.beginPath();g.strokeStyle=css("--acc");g.lineWidth=2;g.setLineDash([6,4]);g.moveTo(px(0),Y(a.last));a.proj.forEach((p,i)=>g.lineTo(px(i+1),Y(p.m)));g.stroke();g.setLineDash([])}
+ if(a.dated){const col=EC(),tl=a.t[a.n-1];
+  evs().forEach(e=>{if(!T[e.k])return;let xi,i=a.map.get(e.t);
+   if(i!=null){if(i<st)return;xi=i-st}else if(e.t>tl){const dd=(e.t-tl)/864e5;if(!T.proj||dd>a.H)return;xi=show-1+dd}else return;
+   const x=X(xi);g.strokeStyle=col[e.k];g.globalAlpha=.6;g.lineWidth=1;g.beginPath();g.moveTo(x,14);g.lineTo(x,Hh);g.stroke();g.globalAlpha=1;g.fillStyle=col[e.k];g.font="bold 11px sans-serif";g.fillText(e.k[0],x-3,11)})}
+ // RSI
+ const[q,W2]=setup($("c2"),110),h2=110,Y2=v=>h2-8-(v/100)*(h2-16);
+ [30,70].forEach(v=>{q.strokeStyle=css("--line");q.setLineDash([4,4]);q.beginPath();q.moveTo(0,Y2(v));q.lineTo(W2-padR,Y2(v));q.stroke();q.fillStyle=css("--mute");q.font="11px sans-serif";q.fillText(v,W2-padR+4,Y2(v)+4)});
+ q.setLineDash([]);q.beginPath();q.strokeStyle=css("--acc");q.lineWidth=2;let on=0;
+ a.R.forEach((v,i)=>{if(v==null||i<st)return;const x=(i-st)/(show-1)*(W2-padR),y=Y2(v);on?q.lineTo(x,y):q.moveTo(x,y);on=1});q.stroke()}
+
+function drawRain(a){
+ if(!S.tog.rain)return;const[g,W]=setup($("c3"),280),Hh=280,padR=46,span=(a.t[a.n-1]-a.t[0])/864e5,ext=Math.round(span*.15),D=span+ext;
+ const ys=a.c.map(Math.log10);const ymn=Math.min(...ys)-.3,ymx=Math.max(...ys)+.4;
+ const X=d=>d/D*(W-padR),Y=v=>Hh-8-(v-ymn)/(ymx-ymn)*(Hh-16),cen=d=>a.ra+a.rb*Math.log(d+30);
+ g.save();g.beginPath();g.rect(0,0,W-padR,Hh);g.clip();
+ const N=60;for(let k=0;k<7;k++){const lo=-2.1+.6*k,hi=lo+.6;g.beginPath();
+  for(let j=0;j<=N;j++){const d=D*j/N;j?g.lineTo(X(d),Y(cen(d)+hi*a.rs)):g.moveTo(X(d),Y(cen(d)+hi*a.rs))}
+  for(let j=N;j>=0;j--){const d=D*j/N;g.lineTo(X(d),Y(cen(d)+lo*a.rs))}
+  g.closePath();g.fillStyle=RB[k];g.globalAlpha=.55;g.fill()}
+ g.globalAlpha=1;g.beginPath();g.strokeStyle=css("--ink");g.lineWidth=2;ys.forEach((v,i)=>{const x=X((a.t[i]-a.t[0])/864e5),y=Y(v);i?g.lineTo(x,y):g.moveTo(x,y)});g.stroke();g.restore();
+ g.font="11px sans-serif";g.fillStyle=css("--mute");for(let k=0;k<5;k++){const v=ymn+(ymx-ymn)*k/4;g.fillText(fmt(10**v),W-padR+4,Y(v)+4)}
+ $("leg3").innerHTML=RN.map((n,i)=>`<span><i style="background:${RB[i]}"></i>${n}</span>`).join("");
+ let tx=`Aktuell im Band <b style="color:${RB[a.band]}">${RN[a.band]}</b> (${a.z>0?"+":""}${a.z.toFixed(1).replace(".",",")} Standardabweichungen vom Log-Trend). Die Bänder werden aus dem Verlauf deiner eigenen Daten berechnet.`;
+ if(S.cur=="BTC"){const d=(Date.now()-Date.UTC(2009,0,3))/864e5,fv=10**(-17.016+5.82*Math.log10(d)),off=Math.log10(a.last/fv),bi=Math.max(0,Math.min(6,Math.floor((off+.7)/.2)));
+  tx+=`<br>Klassisches Bitcoin-Potenzgesetz seit 2009 (grobe Näherung): Mittellinie ca. ${fmt(fv)}, Kurs ${pct(Math.abs(a.last/fv-1)*100,0)} ${a.last>fv?"darüber":"darunter"}, Band „${RN[bi]}“.`}
+ $("rtext").innerHTML=tx}
+
+function render(){
+ KEYS.forEach(k=>{});
+ $("tabs").innerHTML=KEYS.map(k=>{const r=S.res[k],v=r?(r.score>=2?"Eher bullisch":r.score<=-2?"Eher bärisch":"Neutral"):"Keine Daten";
+  return`<button class="tab ${k==S.cur?"on":""}" data-k="${k}">${NAMES[k]}<small>${r?fmt(r.last)+" · "+v:v}</small></button>`}).join("");
+ document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{S.cur=b.dataset.k;$("err").textContent="";$("inp").value=S.raw[S.cur]||"";render()});
+ $("dtitle").textContent="Kursdaten "+NAMES[S.cur];if(document.activeElement!==$("inp"))$("inp").value=S.raw[S.cur]||"";
+ const a=S.res[S.cur];$("out").hidden=!a;if(!a)return;
+ const bull=a.score>=2,bear=a.score<=-2;
+ $("verdict").textContent=NAMES[S.cur]+": "+(bull?"eher bullisch":bear?"eher bärisch":"neutral");$("verdict").className="verdict "+(bull?"up":bear?"down":"");
+ $("vtext").textContent="Signal-Score "+(a.score>0?"+":"")+a.score+" von ±6 · geringe statistische Aussagekraft";
+ const p=a.proj[a.H-1],ch=(p.m/a.last-1)*100;
+ $("stats").innerHTML=[["Letzter Kurs",fmt(a.last)],["Projektion in "+a.H+" Perioden",fmt(p.m)+" ("+(ch>0?"+":"")+pct(ch)+")"],["Spanne (Unsicherheit)",fmt(p.lo)+" – "+fmt(p.hi)],["Volatilität pro Periode",pct(a.vol*100,2)],["Unterstützung (30)",fmt(a.lo)],["Widerstand (30)",fmt(a.hi)]].map(([k,v])=>`<div class="cell"><span>${k}</span><b>${v}</b></div>`).join("");
+ const now=Date.UTC(...(d=>[d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate()])(new Date())),up=evs().filter(e=>e.t>=now).slice(0,5);
+ const why=a.why.map(([s,t])=>`<li class="${s>0?"up":s<0?"down":""}">${t}</li>`);
+ const soon=up.filter(e=>(e.t-now)/864e5<=3);
+ if(soon.length)why.push(`<li>Termin in den nächsten 3 Tagen: ${soon.map(e=>KN[e.k]).join(", ")}. Mit erhöhter Schwankung rechnen, Signale sind dann unzuverlässiger.</li>`);
+ $("reasons").innerHTML=why.join("");
+ const T=S.tog,col=EC();
+ $("tg").innerHTML=[["sma","SMA 20/50"],["bb","Bollinger"],["proj","Projektion"],["rain","Rainbow"],["FOMC","FOMC"],["CPI","CPI"],["NFP","Jobs"],["Eigene","Eigene"]].map(([k,l])=>`<label><input type="checkbox" data-t="${k}" ${T[k]?"checked":""}>${l}</label>`).join("");
+ document.querySelectorAll("[data-t]").forEach(c=>c.onchange=()=>{T[c.dataset.t]=c.checked?1:0;render()});
+ $("leg1").innerHTML=`<span><i style="background:var(--ink)"></i>Kurs</span><span><i style="background:var(--sma20)"></i>SMA 20</span><span><i style="background:var(--sma50)"></i>SMA 50</span><span><i style="background:var(--acc)"></i>Projektion</span><span>Linien: F = FOMC, C = CPI, J = Jobs</span>`;
+ $("secRain").hidden=!T.rain;
+ $("secEv").hidden=false;renderSrc();
+ $("upc").innerHTML=up.length?up.map(e=>{const dd=Math.round((e.t-now)/864e5);return`<div class="ev"><span>${new Date(e.t).toLocaleDateString("de-DE",{weekday:"short",day:"numeric",month:"short",timeZone:"UTC"})} · ${KN[e.k]}</span><span style="color:var(--mute)">${dd==0?"heute":"in "+dd+" T."}</span></div>`}).join(""):`<div class="warn">Keine anstehenden Termine hinterlegt. Trage eigene ein.</div>`;
+ $("evs").innerHTML=!a.dated?`<div class="warn" style="grid-column:1/-1">Für die Auswertung brauchen die Daten eine Datumsspalte.</div>`:["FOMC","CPI","NFP","Eigene"].map(k=>{const e=a.ev[k];
+  return e.n?`<div class="cell"><span>${KN[k]} · ${e.n} Termine</span><b>×${e.ratio.toFixed(1).replace(".",",")}</b><span>Ø ${pct(e.m0*100)} am Tag (normal ${pct(a.base*100)}), Tag danach ${pct(e.m1*100)}</span></div>`:`<div class="cell"><span>${KN[k]}</span><b>–</b><span>keine Termine im Datenzeitraum</span></div>`}).join("");
+ drawMain(a);drawRain(a)}
+
+function run(){
+ const err=$("err");err.textContent="";const raw=$("inp").value,P=parse(raw);
+ if(P.c.length<60){err.textContent="Zu wenige Daten: "+P.c.length+" Werte gefunden, mindestens 60 nötig.";return}
+ S.raw[S.cur]=raw;try{localStorage.setItem("kc_"+S.cur,raw)}catch(e){}
+ delete S.data[S.cur];S.res[S.cur]=analyze(P.c,P.t);render()}
+$("go").onclick=run;
+$("demo").onclick=()=>{const cfg={BTC:[74100,.03],ETH:[2107,.04],BRETT:[.0041,.07]}[S.cur],N=400,day=864e5,end=Math.floor(Date.now()/day)*day;
+ let p=1;const arr=[];for(let i=0;i<N;i++){p*=Math.exp(.0015*Math.sin(i/40)+(Math.random()-.5)*cfg[1]);arr.push(p)}
+ const k=cfg[0]/arr[N-1],o=["date,close"];arr.forEach((v,i)=>o.push(new Date(end-(N-1-i)*day).toISOString().slice(0,10)+","+(v*k).toPrecision(6)));
+ $("inp").value=o.join("\n");run()};
+$("file").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{$("inp").value=r.result;run()};r.readAsText(f)};
+$("cadd").onclick=()=>{const v=$("cd").value;if(!v)return;S.custom.push({d:v,k:"Eigene"});render()};
+addEventListener("resize",()=>{const a=S.res[S.cur];if(a){drawMain(a);drawRain(a)}});
+try{KEYS.forEach(k=>{S.raw[k]=localStorage.getItem("kc_"+k)||"";const P=parse(S.raw[k]);if(P.c.length>=60)S.res[k]=analyze(P.c,P.t)})}catch(e){}
+render();
+const CG={BTC:"bitcoin",ETH:"ethereum",BRETT:"based-brett"},BR="0x532f27101965dd16442e59d40670faf5ebb142e4",API="https://api.coingecko.com/api/v3";
+let PAIR=null;
+async function jget(u){const r=await Promise.race([fetch(u),new Promise((_,x)=>setTimeout(()=>x(new Error("Zeitüberschreitung")),12000))]);if(!r.ok)throw new Error(r.status==429?"Limit erreicht":"HTTP "+r.status);return await r.json()}
+async function dex(){if(PAIR)return PAIR;const d=await jget("https://api.dexscreener.com/latest/dex/tokens/"+BR),ps=(d.pairs||[]).filter(p=>p.chainId=="base"&&p.baseToken&&p.baseToken.address.toLowerCase()==BR).sort((a,b)=>((b.liquidity&&b.liquidity.usd)||0)-((a.liquidity&&a.liquidity.usd)||0));if(!ps.length)throw new Error("kein Paar");PAIR=ps[0];return PAIR}
+const mk=(id,bn,cb,pp)=>[["CoinGecko",async()=>(await jget(`${API}/simple/price?ids=${id}&vs_currencies=usd`))[id].usd],["Binance",async()=>+(await jget("https://data-api.binance.vision/api/v3/ticker/price?symbol="+bn+"USDT")).price],["Coinbase",async()=>+(await jget(`https://api.exchange.coinbase.com/products/${cb}-USD/ticker`)).price],["CoinPaprika",async()=>(await jget("https://api.coinpaprika.com/v1/tickers/"+pp)).quotes.USD.price]];
+const SRC={BTC:mk("bitcoin","BTC","BTC","btc-bitcoin"),ETH:mk("ethereum","ETH","ETH","eth-ethereum"),
+ BRETT:[["CoinGecko",async()=>(await jget(`${API}/simple/token_price/base?contract_addresses=${BR}&vs_currencies=usd`))[BR].usd],["DexScreener",async()=>{PAIR=null;return +(await dex()).priceUsd}],["KuCoin",async()=>+(await jget("https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BRETT-USDT")).data.price]]};
+async function prices(k){const out=await Promise.all(SRC[k].map(async([n,f])=>{try{const p=await f();if(!(p>0))throw 0;return{n,p}}catch(e){return{n,p:null}}}));
+ const v=out.filter(o=>o.p).map(o=>o.p).sort((a,b)=>a-b),m=v.length?(v.length%2?v[(v.length-1)/2]:(v[v.length/2-1]+v[v.length/2])/2):null;return{out,med:m}}
+const series=arr=>{const m=new Map();arr.forEach(([ms,p])=>{if(p>0)m.set(Math.floor(ms/864e5)*864e5,p)});const t=[...m.keys()].sort((a,b)=>a-b);return{t,c:t.map(x=>m.get(x))}};
+async function histCG(k){let d;
+ if(k=="BRETT"){try{d=await jget(`${API}/coins/base/contract/${BR}/market_chart?vs_currency=usd&days=365&interval=daily`)}catch(e){d=await jget(`${API}/coins/based-brett/market_chart?vs_currency=usd&days=365&interval=daily`)}}
+ else d=await jget(`${API}/coins/${CG[k]}/market_chart?vs_currency=usd&days=365&interval=daily`);
+ return series(d.prices)}
+async function histAlt(k){
+ if(k=="BRETT"){const p=await dex(),d=await jget(`https://api.geckoterminal.com/api/v2/networks/base/pools/${p.pairAddress}/ohlcv/day?limit=365`);return series(d.data.attributes.ohlcv_list.map(r=>[r[0]*1000,+r[4]]))}
+ const d=await jget(`https://data-api.binance.vision/api/v3/klines?symbol=${k}USDT&interval=1d&limit=1000`);return series(d.map(r=>[r[0],+r[4]]))}
+async function loadHist(k){try{const D=await histCG(k);if(D.c.length<60)throw new Error("zu kurz");S.hsrc[k]="CoinGecko";return D}catch(e){const D=await histAlt(k);if(D.c.length<60)throw new Error("zu wenig Daten");S.hsrc[k]=(k=="BRETT"?"GeckoTerminal":"Binance")+" (CoinGecko nicht erreichbar)";return D}}
+function setLast(k,p){const D=S.data[k],td=Math.floor(Date.now()/864e5)*864e5;if(D.t[D.t.length-1]<td){D.t.push(td);D.c.push(p)}else D.c[D.c.length-1]=p}
+function renderSrc(){const s=S.src[S.cur],el=$("src");
+ if(!s||!S.data[S.cur]){el.innerHTML=`<div class="warn">Eigene oder Demo-Daten: keine Quellen abgeglichen.</div>`;return}
+ const tol=S.cur=="BRETT"?5:1,n=s.out.filter(o=>o.p).length;let off=false;
+ const rows=s.out.map(o=>{const dv=o.p&&s.med?(o.p/s.med-1)*100:null;if(dv!=null&&Math.abs(dv)>tol)off=true;
+  return`<div class="ev"><span>${o.n}</span><span>${o.p?fmt(o.p)+" $ ("+(dv>0?"+":"")+pct(dv,2)+")":"nicht erreichbar"}</span></div>`}).join("");
+ const msg=n<1?["down","Keine Quelle erreichbar, Kurs ist veraltet."]:n<2?["down","Nur eine Quelle erreichbar, der Kurs ist nicht abgesichert."]:off?["down","Quellen weichen um mehr als "+tol+" % ab. Kurs mit Vorsicht nutzen."]:["up","Quellen stimmen überein (Abweichung unter "+tol+" %)."];
+ el.innerHTML=(s.med?`<div style="font-size:14px;margin-bottom:6px">Verwendeter Kurs (Median aus ${n} Quellen): <b>${fmt(s.med)} $</b></div>`:"")+rows+`<div class="${msg[0]}" style="font-size:13px;margin-top:6px">${msg[1]}</div><div class="warn" style="margin-top:4px">Kursverlauf: ${S.hsrc[S.cur]||"unbekannt"}.${S.cur=="BRETT"?" Brett wird über die Base-Vertragsadresse gesucht, damit keine andere Brett-Version verwechselt wird.":""}</div>`}
+const stamp=()=>{$("stat").textContent="Stand "+new Date().toLocaleTimeString("de-DE")+" · Aktualisierung alle 90 Sekunden"};
+async function loadAll(){const st=$("stat");st.textContent="Lade Live-Daten…";const bad=[];
+ for(const k of KEYS){try{const D=await loadHist(k);S.data[k]=D;const P=await prices(k);S.src[k]=P;if(P.med)setLast(k,P.med);S.res[k]=analyze(D.c,D.t);
+  S.raw[k]="date,close\n"+D.t.map((x,i)=>new Date(x).toISOString().slice(0,10)+","+D.c[i]).join("\n")}catch(e){bad.push(NAMES[k]+": "+(e.message||"Abruf fehlgeschlagen"))}
+  render();await new Promise(r=>setTimeout(r,1200))}
+ if(Object.keys(S.data).length&&!WS)startWS();
+ if(S.data.BRETT&&!KW)startKW();
+ if(bad.length)st.textContent="Nicht geladen: "+bad.join(" | ")+". Eigene CSV geht weiterhin.";else stamp()}
+async function tick(){if(document.hidden||!Object.keys(S.data).length)return;
+ for(const k of KEYS){if(!S.data[k])continue;try{const P=await prices(k);S.src[k]=P;if(P.med){setLast(k,P.med);S.res[k]=analyze(S.data[k].c,S.data[k].t)}}catch(e){}}
+ render();stamp()}
+$("live").onclick=loadAll;setInterval(tick,90000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)tick()});
+
+let WS=null,wsT=0;
+function startWS(){try{if(typeof WebSocket=="undefined")return;WS=new WebSocket("wss://ws-feed.exchange.coinbase.com");
+ WS.onopen=()=>WS.send(JSON.stringify({type:"subscribe",product_ids:["BTC-USD","ETH-USD"],channels:["ticker"]}));
+ WS.onmessage=e=>{try{const m=JSON.parse(e.data);if(m.type!="ticker"||!m.price)return;const k=m.product_id=="BTC-USD"?"BTC":"ETH";if(!S.data[k])return;setLast(k,+m.price);const n=Date.now();
+  refreshLive()}catch(x){}};
+ WS.onclose=()=>{WS=null;setTimeout(()=>{if(!WS&&Object.keys(S.data).length)startWS()},5000)};WS.onerror=()=>{try{WS.close()}catch(x){}}}catch(e){WS=null}}
+async function diag(){const d=$("diag");d.textContent="Teste Verbindungen…";const L=[];let ok=0;
+ const T=[["CoinGecko",API+"/ping"],["Binance","https://data-api.binance.vision/api/v3/ping"],["Coinbase","https://api.exchange.coinbase.com/time"],["CoinPaprika","https://api.coinpaprika.com/v1/global"],["DexScreener","https://api.dexscreener.com/latest/dex/tokens/"+BR],["KuCoin","https://api.kucoin.com/api/v1/timestamp"]];
+ for(const [n,u] of T){try{const r=await Promise.race([fetch(u),new Promise((_,x)=>setTimeout(()=>x(new Error("Zeitüberschreitung")),8000))]);if(r.ok)ok++;L.push(n+": "+(r.ok?"erreichbar":"HTTP "+r.status))}catch(e){L.push(n+": "+(e.message||"Fehler"))}}
+ let emb="nein";try{emb=window.top!==window?"ja":"nein"}catch(e){emb="ja"}
+ const hint=ok==0?"Keine Quelle erreichbar. Öffne die App direkt in Safari über ihre Netlify- oder GitHub-Adresse, nicht aus der Dateien-App, einer Vorschau oder der Claude-App. Prüfe außerdem Inhaltsblocker, VPN und den Blockier-Modus.":ok<T.length?"Ein Teil der Quellen ist erreichbar, die App nutzt diese als Absicherung.":"Alle Quellen erreichbar.";
+ d.innerHTML="Adresse: "+location.protocol+"//"+(location.host||"lokal")+" · eingebettet: "+emb+" · online: "+(navigator.onLine?"ja":"nein")+"<br>"+L.join("<br>")+"<br><b>"+hint+"</b>"}
+
+let KW=null;
+function refreshLive(){const n=Date.now();if(n-wsT<3000)return;wsT=n;KEYS.forEach(q=>{if(S.data[q])S.res[q]=analyze(S.data[q].c,S.data[q].t)});render();$("stat").textContent="Echtzeit-Ticker (Coinbase für Bitcoin und Ethereum, KuCoin für Brett) · "+new Date().toLocaleTimeString("de-DE")}
+async function startKW(){try{if(typeof WebSocket=="undefined")return;const r=await fetch("https://api.kucoin.com/api/v1/bullet-public",{method:"POST"}),j=await r.json(),sv=j.data.instanceServers[0];let pi=null;
+ KW=new WebSocket(sv.endpoint+"?token="+j.data.token);
+ KW.onopen=()=>{KW.send(JSON.stringify({id:Date.now(),type:"subscribe",topic:"/market/ticker:BRETT-USDT",privateChannel:false,response:true}));pi=setInterval(()=>{try{KW.send(JSON.stringify({id:Date.now(),type:"ping"}))}catch(x){}},Math.max(5000,(sv.pingInterval||18000)-2000))};
+ KW.onmessage=e=>{try{const m=JSON.parse(e.data);if(m.type!="message"||!m.data||!m.data.price||!S.data.BRETT)return;setLast("BRETT",+m.data.price);refreshLive()}catch(x){}};
+ KW.onclose=()=>{clearInterval(pi);KW=null;setTimeout(()=>{if(!KW&&S.data.BRETT)startKW()},5000)};KW.onerror=()=>{try{KW.close()}catch(x){}}}catch(e){KW=null}}
+$("diagb").onclick=diag;
+loadAll();
+</script>
+</body>
+</html>
