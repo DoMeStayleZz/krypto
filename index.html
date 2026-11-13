@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' blob:; worker-src blob:; child-src blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://coin-images.coingecko.com https://assets.coingecko.com; connect-src https://api.alternative.me https://api.bybit.com https://api.coingecko.com https://api.coinpaprika.com https://api.dexscreener.com https://api.exchange.coinbase.com https://api.geckoterminal.com https://api.kraken.com https://api.kucoin.com https://api.llama.fi https://community-api.coinmetrics.io https://data-api.binance.vision https://fapi.binance.com https://publicreporting.cftc.gov https://stablecoins.llama.fi https://www.deribit.com https://www.okx.com wss://ws-feed.exchange.coinbase.com wss://fstream.binance.com wss://*.kucoin.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' blob:; worker-src blob:; child-src blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://coin-images.coingecko.com https://assets.coingecko.com; connect-src https://api.alternative.me https://api.bybit.com https://api.coingecko.com https://api.coinpaprika.com https://api.dexscreener.com https://api.exchange.coinbase.com https://api.geckoterminal.com https://api.kraken.com https://api.kucoin.com https://api.llama.fi https://community-api.coinmetrics.io https://data-api.binance.vision https://fapi.binance.com https://publicreporting.cftc.gov https://stablecoins.llama.fi https://www.deribit.com https://www.okx.com https://api.anthropic.com https://*.workers.dev wss://ws-feed.exchange.coinbase.com wss://fstream.binance.com wss://*.kucoin.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -247,6 +247,57 @@ details.more>summary{display:block;text-align:left;cursor:pointer}details.more>s
 .ta-box{background:var(--well);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;margin:8px 0}.ta-box h3{margin:0 0 6px}
 .ta-list{margin:0;padding-left:18px;font-size:14.5px;line-height:1.55;color:var(--ink2)}.ta-list li{margin:7px 0}.ta-list b{color:var(--ink)}.ta-list b.up{color:var(--up)}.ta-list b.down{color:var(--down)}.ta-list li:last-child{color:var(--ink)}
 @media (max-width:400px){.tab-b{font-size:12px}}
+/* Version 14: KI-Assistent */
+.ai-fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:6px;padding:12px 16px;border-radius:99px;font-weight:700;font-size:14.5px;background:linear-gradient(135deg,#22D3EE,#A78BFA);color:#07101F;box-shadow:0 10px 30px -8px rgba(34,211,238,.6),0 0 0 1px rgba(255,255,255,.15) inset}
+.ai-fab span{font-size:16px}
+.ai-panel{position:fixed;inset:auto 0 0 0;z-index:70;height:min(82vh,720px);display:flex;flex-direction:column;background:rgba(8,12,24,.98);border:1px solid rgba(34,211,238,.3);border-bottom:0;border-radius:20px 20px 0 0;box-shadow:0 -20px 60px -10px rgba(0,0,0,.8),0 0 40px -16px rgba(34,211,238,.5);padding-bottom:env(safe-area-inset-bottom,0px)}
+.ai-panel[hidden]{display:none}@media (min-width:760px){.ai-panel{inset:auto 20px 20px auto;width:420px;border-radius:20px;border-bottom:1px solid rgba(34,211,238,.3)}}
+.ai-head{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line)}.ai-head b{font-size:16px}.ai-head .warn{flex:1;font-size:12.5px}
+.ai-ic{background:var(--well);border:1px solid var(--line2);box-shadow:none;color:var(--ink);width:34px;height:34px;padding:0;border-radius:10px;font-size:16px}
+#aiBody{display:flex;flex-direction:column;flex:1;min-height:0}.ai-msgs{flex:1;overflow-y:auto;padding:12px 14px;display:flex;flex-direction:column;gap:10px;-webkit-overflow-scrolling:touch}
+.ai-m{max-width:88%;padding:10px 12px;border-radius:14px;font-size:14.5px;line-height:1.5}.ai-m p{margin:0 0 6px}.ai-m p:last-child{margin:0}.ai-m ul{margin:4px 0;padding-left:18px}.ai-m b{color:#fff}
+.ai-u{align-self:flex-end;background:rgba(34,211,238,.16);border:1px solid rgba(34,211,238,.35);color:var(--ink)}.ai-a{align-self:flex-start;background:var(--well);border:1px solid var(--line);color:var(--ink2)}.ai-err{border-color:rgba(255,92,122,.4);color:#FFC2CD}
+.ai-think{display:flex;gap:5px;padding:14px}.ai-think i{width:7px;height:7px;border-radius:50%;background:var(--acc);animation:aid 1.2s infinite ease-in-out}.ai-think i:nth-child(2){animation-delay:.15s}.ai-think i:nth-child(3){animation-delay:.3s}
+@keyframes aid{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+.ai-hello p{color:var(--ink2);font-size:14.5px;margin:4px 0 10px}.ai-sug{display:flex;flex-wrap:wrap;gap:6px}.ai-q{background:rgba(12,19,36,.8);border:1px solid var(--line2);box-shadow:none;color:var(--ink);font-weight:500;font-size:13.5px;padding:8px 11px;border-radius:12px;text-align:left}
+.ai-in{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}.ai-in textarea{flex:1;resize:none;background:var(--well);border:1px solid var(--line2);border-radius:12px;color:var(--ink);font:16px -apple-system,BlinkMacSystemFont,sans-serif;padding:10px 12px;max-height:120px}
+.ai-in button{width:46px;padding:0;border-radius:12px;font-size:18px}.ai-foot{margin:0;padding:0 14px 8px;font-size:11.5px;color:var(--mute);text-align:center}
+.ai-set{display:flex;flex-direction:column;gap:8px}.ai-set input[type=url],.ai-set input[type=password],.ai-set select{background:var(--well);border:1px solid var(--line2);border-radius:10px;color:var(--ink);font:15px -apple-system,BlinkMacSystemFont,sans-serif;padding:10px;width:100%}.ai-set label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--ink2)}.ai-set label.ai-r{flex-direction:row;align-items:center;gap:8px;font-size:14px;color:var(--ink)}.ai-row{display:flex;gap:8px;margin-top:4px}
+@media (prefers-reduced-motion:reduce){.ai-think i{animation:none}}
+main{padding-bottom:80px}
+/* Version 15: Für Claude kopieren */
+.cp{display:flex;flex-direction:column;gap:10px}.cp-intro{font-size:14.5px;color:var(--ink2);margin:2px 0}.cp-intro b{color:var(--ink)}
+.cp-modes{display:flex;flex-direction:column;gap:6px}.cp-m{display:flex;align-items:flex-start;gap:10px;background:var(--well);border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer}.cp-m:has(input:checked){border-color:rgba(34,211,238,.6);background:rgba(34,211,238,.08)}
+.cp-m input{margin-top:3px;accent-color:#22D3EE}.cp-m span{display:flex;flex-direction:column;gap:1px}.cp-m b{font-size:14.5px;color:var(--ink)}.cp-m small{font-size:12.5px;color:var(--mute)}
+#cpQ,.cp-raw{background:var(--well);border:1px solid var(--line2);border-radius:12px;color:var(--ink);font:15px -apple-system,BlinkMacSystemFont,sans-serif;padding:10px;width:100%;resize:vertical}
+.cp-go{padding:13px;font-size:15.5px}.cp-done{background:rgba(59,232,176,.08);border:1px solid rgba(59,232,176,.35);border-radius:12px;padding:10px 12px;font-size:14px;color:var(--ink2)}.cp-done p{margin:0 0 8px}
+.cp-open{display:block;text-align:center;padding:11px;border-radius:12px;background:linear-gradient(135deg,#22D3EE,#A78BFA);color:#07101F;font-weight:700;text-decoration:none}.cp-chat{font-size:13.5px}.cp-alt{margin:0}
+.cp-btn{width:100%;margin:10px 0 4px;font-size:14px;padding:11px;border-color:rgba(167,139,250,.45)!important;color:#D9CCFF!important}.tp-reset.cp-btn{width:auto;margin:0 0 10px}
+.ai-panel.cp-mode .ai-in,.ai-panel.cp-mode .ai-foot{display:none}
+.wk-sel{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--mute);margin:4px 0 8px}.wk-sel select{background:var(--well);color:var(--ink);border:1px solid var(--line2);border-radius:10px;padding:8px 10px;font:500 14px -apple-system,BlinkMacSystemFont,sans-serif}
+/* v17 6-Wochen-Ausblick */
+.wko{margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.wko-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 0 10px}
+.wko-v{font-weight:800;font-size:17px;padding:5px 12px;border-radius:999px;border:1px solid currentColor;background:rgba(255,255,255,.03)}
+.wko-v.up{color:var(--up)}.wko-v.down{color:var(--down)}.wko-v.neu{color:var(--ink2)}
+.wko-c{font-size:13px;color:var(--mute)}
+.wko-path{font-size:16px;line-height:1.6;margin:0 0 6px;padding:10px 12px;border-radius:12px;background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.28);color:var(--ink)}
+.wko-d{font-size:12.5px;color:var(--mute);font-weight:500;white-space:nowrap}
+.wko-why li{list-style:none;margin-left:-18px}
+.wko-why .up,.wko-why .down{font-size:11px}
+.wko-how{margin-top:10px;font-size:14px;color:var(--ink2)}
+.wko-how summary{cursor:pointer;color:var(--acc);font-weight:600;padding:6px 0}
+.wko-how ol{padding-left:20px;line-height:1.55;margin:6px 0 0}
+.wko-how li{margin:6px 0}
+.wk-h2{margin-top:4px}
+.ta-fazit{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:rgba(34,211,238,.07);border:1px solid rgba(34,211,238,.25);font-size:14.5px;line-height:1.55;color:var(--ink2)}
+.ta-fazit b{color:var(--ink)}
+.ol-chart{position:relative}
+.wk-zoom{position:absolute;top:8px;left:8px;z-index:2;display:flex;gap:2px;padding:2px;border-radius:9px;background:rgba(8,12,22,.82);border:1px solid var(--line)}
+.wk-zoom button{font:600 12px -apple-system,system-ui,sans-serif;color:var(--mute);background:none;border:0;padding:6px 10px;border-radius:7px;min-height:30px}
+.wk-zoom button.on{color:var(--ink);background:rgba(34,211,238,.16)}
+.wk-zoom button:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.wko-sub{font-size:12.5px;color:var(--mute);margin:2px 0 10px;line-height:1.45}
 </style>
 </head>
 <body>
@@ -819,10 +870,10 @@ const bnRow=r=>({t:r[0],o:+r[1],h:+r[2],l:+r[3],c:+r[4],v:+r[5],tb:+r[9],ct:r[6]
 const toCols=rows=>{rows=rows.filter(r=>r.c>0&&r.h>0&&r.l>0).sort((a,b)=>a.t-b.t);const u=[];for(const r of rows)if(!u.length||u[u.length-1].t!==r.t)u.push(r);const o={};for(const k of["t","o","h","l","c","v","tb","ct"])o[k]=u.map(r=>r[k]==null?null:r[k]);o.n=u.length;return o};
 let brettPair=null;async function ohlc(k,iv){const s=SYM[k];
  if(k!=="BRETT"){try{const d=await kget(`https://data-api.binance.vision/api/v3/klines?symbol=${s.bn}&interval=${iv}&limit=1000`,"Binance Spot "+iv);return{...toCols(d.map(bnRow)),src:"Binance Spot",taker:true}}catch(e){}
-  if(iv==="4h")throw new Error("Keine 4-Std.-Kerzen");const g=iv==="1d"?86400:3600,d=await kget(`https://api.exchange.coinbase.com/products/${s.cb}/candles?granularity=${g}`,"Coinbase Kerzen "+iv);return{...toCols(d.map(r=>({t:r[0]*1000,o:+r[3],h:+r[2],l:+r[1],c:+r[4],v:+r[5],tb:null}))),src:"Coinbase (Ersatz, ohne Käufer/Verkäufer-Aufteilung)",taker:false}}
+  if(iv==="4h"||iv==="1w")throw new Error("Keine "+iv+"-Kerzen");const g=iv==="1d"?86400:3600,d=await kget(`https://api.exchange.coinbase.com/products/${s.cb}/candles?granularity=${g}`,"Coinbase Kerzen "+iv);return{...toCols(d.map(r=>({t:r[0]*1000,o:+r[3],h:+r[2],l:+r[1],c:+r[4],v:+r[5],tb:null}))),src:"Coinbase (Ersatz, ohne Käufer/Verkäufer-Aufteilung)",taker:false}}
  if(!brettPair)brettPair=kget("https://api.dexscreener.com/latest/dex/tokens/0x532f27101965dd16442e59d40670faf5ebb142e4","DexScreener").catch(e=>{brettPair=null;throw e});const pair=await brettPair;const ps=(pair.pairs||[]).filter(p=>p.chainId==="base"&&p.baseToken&&p.baseToken.address.toLowerCase()==="0x532f27101965dd16442e59d40670faf5ebb142e4").sort((a,b)=>((b.liquidity&&b.liquidity.usd)||0)-((a.liquidity&&a.liquidity.usd)||0));
  if(!ps.length)throw new Error("Kein Brett-Pool gefunden");E.mkt.BRETT=E.mkt.BRETT||{};E.mkt.BRETT.dex=ps[0];E.mkt.BRETT.dexAll=ps;
- const tf=iv==="1d"?"day":"hour",d=await kget(`https://api.geckoterminal.com/api/v2/networks/base/pools/${ps[0].pairAddress}/ohlcv/${tf}?limit=1000&currency=usd${iv==="4h"?"&aggregate=4":""}`,"GeckoTerminal "+iv);
+ if(iv==="1w")throw new Error("Wochenkerzen werden aus Tageskerzen gebildet");const tf=iv==="1d"?"day":"hour",d=await kget(`https://api.geckoterminal.com/api/v2/networks/base/pools/${ps[0].pairAddress}/ohlcv/${tf}?limit=1000&currency=usd${iv==="4h"?"&aggregate=4":""}`,"GeckoTerminal "+iv);
  return{...toCols(d.data.attributes.ohlcv_list.map(r=>({t:r[0]*1000,o:+r[1],h:+r[2],l:+r[3],c:+r[4],v:+r[5],tb:null}))),src:"GeckoTerminal (größter Base-Pool)",taker:false}}
 /* ---------- Derivate ---------- */
 async function derivs(k){const s=SYM[k],fs=s.fut||s.bn,fm=s.fm||1,F="https://fapi.binance.com",M={};
@@ -1128,6 +1179,147 @@ function lqHtml(k){const s1=lqSum(k,36e5),s24=lqSum(k,864e5),live=LQ.state==="li
  return head+`<div class="grid">${cell("Long-Liquidationen 1 Std.",big(s1.L),"24 Std.: "+big(s24.L))}${cell("Short-Liquidationen 1 Std.",big(s1.S),"24 Std.: "+big(s24.S))}</div>
  <div class="lq-bar" role="img" aria-label="Anteil Long ${Math.round(lp*100)} Prozent, Short ${Math.round((1-lp)*100)} Prozent"><i class="lq-l" style="width:${(lp*100).toFixed(1)}%"></i><i class="lq-s" style="width:${((1-lp)*100).toFixed(1)}%"></i></div><div class="leg"><span><i style="background:var(--down)"></i>Longs liquidiert (Zwangsverkäufe) ${Math.round(lp*100)} %</span><span><i style="background:var(--up)"></i>Shorts liquidiert (Zwangskäufe) ${Math.round((1-lp)*100)} %</span></div>
  <h3>Größte Liquidationen (24 Std.)</h3><table class="tbl">${top.map(e=>`<tr><td>${t(e[0])} Uhr</td><td><b class="${e[2]>0?"down":"up"}">${e[2]>0?"Long":"Short"}</b> ${big(e[3])} bei ${usd(e[4])}</td></tr>`).join("")}</table>`+foot}
+/* ---------- KI-Assistent ---------- */
+const AIK="kie_ai",AI={msgs:[],busy:false,open:false};
+function aiCfg(){try{return Object.assign({mode:"proxy",key:"",url:"",model:"claude-haiku-5-5"},JSON.parse(localStorage.getItem(AIK)||"{}"))}catch(e){return{mode:"proxy",key:"",url:"",model:"claude-haiku-5-5"}}}
+function aiSave(c){try{localStorage.setItem(AIK,JSON.stringify(c))}catch(e){}}
+const stripH=x=>String(x==null?"":x).replace(/<[^>]+>/g,"").replace(/&nbsp;/g," ").replace(/\s+/g," ").trim();
+const rnd=x=>x==null||!isFinite(x)?null:+(+x).toPrecision(6);
+/* Kompakter Datenauszug je Coin für die KI */
+function aiSnap(k){const A=E.res[k];if(!A)return{coin:NAMES[k],status:"keine Analyse verfügbar"};const v=verdictOf(k),T=A.ta;
+ const side=t=>t&&{stopp:rnd(t.stop),ziel1:rnd(t.t1),ziel2:rnd(t.t2),chance_risiko:rnd(t.crv),p_ziel1_vor_stopp_pct:t.pT!=null?Math.round(t.pT*100):null,p_stopp_zuerst_pct:t.pS!=null?Math.round(t.pS*100):null,erwartungswert_R:rnd(t.ev),besserer_einstieg:t.alt?rnd(t.alt.entry):null};
+ const q=lqSum(k,864e5);
+ return{coin:NAMES[k],kuerzel:SHORT[k],stand:new Date(E.ts||Date.now()).toISOString(),kurs_usd:rnd(A.price),aenderung_24h_pct:rnd(A.ret24*100),
+  gesamtbewertung:A.comp?{score:Math.round(A.comp.score),urteil:v&&v[0],variante:A.compMode,bereiche:A.comp.groups.map(g=>({bereich:GN[g.name]||g.name,wert:+g.s.toFixed(2),urteil:RT(g.s)&&RT(g.s)[0],signale:g.sig.slice().sort((a,b)=>Math.abs(b.s)-Math.abs(a.s)).slice(0,4).map(x=>stripH(x.lab)+": "+x.s.toFixed(2))}))}:null,
+  rueckblick_test_bewertung:A.st&&A.st.ok?{tage:A.st.n,variante:A.st.chosen,rangkorrelation:rnd(A.st.res[A.st.chosen].b.ic),t_wert:rnd(A.st.res[A.st.chosen].b.t),richtung_getroffen_pct:A.st.res[A.st.chosen].b.hit!=null?Math.round(A.st.res[A.st.chosen].b.hit*100):null}:null,
+  trendqualitaet:A.tq?{wert:A.tq.q,phase:A.tqPhase}:null,trend_zeitraeume:A.tf?Object.fromEntries(A.tf.map(([l,t])=>[l,t.dir>0?"aufwärts":t.dir<0?"abwärts":"seitwärts"])):null,
+  hebel_hitze:A.heat?{wert:A.heat.heat,stufe:A.heat.label,ueberfuellt:A.heat.side>0?"Longs":A.heat.side<0?"Shorts":"keine Seite"}:null,
+  volumen_24h_usd:rnd(A.vol24),schwankung_pro_tag_pct:rnd(A.volDay*100),schwankung_jahresvergleich:A.volLab,beta_zu_bitcoin:A.beta?rnd(A.beta.beta):null,
+  rsi:rnd(A.rsi),funding_pct:rnd(A.funding*100),open_interest_usd:rnd(A.oi),long_anteil_pct:A.longShare!=null?Math.round(A.longShare*100):null,coinbase_praemie_24h_pct:A.cbp?rnd(A.cbp.avg24*100):null,
+  liquidationen_24h_binance:q.n?{longs_usd:Math.round(q.L),shorts_usd:Math.round(q.S),erfasste_stunden:rnd(q.cov/36e5)}:null,
+  unterstuetzungen:(A.sup||[]).slice(0,3).map(z=>[rnd(z.lo),rnd(z.hi)]),widerstaende:(A.res||[]).slice(0,3).map(z=>[rnd(z.lo),rnd(z.hi)]),
+  kurzfristige_marken:T?{unterstuetzung:T.sup1&&rnd(T.sup1.p),cluster_darunter:T.sup2&&rnd(T.sup2.p),widerstand:T.res1&&rnd(T.res1.p),widerstand2:T.res2&&rnd(T.res2.p)}:null,
+  chart_analyse:T?taText(A).map(stripH):null,
+  wochen_ausblick_6w:(()=>{try{const O=wkOut(k,wkCalc(k));return O?{einschaetzung:O.verd,zuversicht:O.conf,lage_farbband:O.zn,mittellinie_4w_pct:rnd(O.slope*100),wochen_schwung:Math.round(O.o0),szenario_pfad:O.wp.map(w=>({kurs:rnd(w.p),bis_ca:new Date(w.t).toISOString().slice(0,10)})),ungueltig_bei_wochenschluss:(O.sd0>0?"unter ":"über ")+rnd(O.inv),spanne_6w_2von3:[rnd(O.lo6),rnd(O.hi6)],p_ziel_vor_ungueltig_pct:O.pT!=null?Math.round(O.pT*100):null,p_zuerst_ungueltig_pct:O.pI!=null?Math.round(O.pI*100):null,frueher_aehnlich:O.hist?{faelle:O.hist.n,hoeher_nach_6w_pct:Math.round(O.hist.up*100),median_pct:rnd(O.hist.med*100)}:null,vorlage:O.t?O.t.label:null,widerspruch_vorlage_indikatoren:O.conflict}:null}catch(e){return null}})(),
+  prognose:(A.fc||[]).filter(f=>f.q10!=null).map(f=>({zeitraum:f.lab,bereich_80pct:[rnd(f.q10),rnd(f.q90)],steigt_pct:Math.round(f.p[2]*100),seitwaerts_pct:Math.round(f.p[1]*100),faellt_pct:Math.round(f.p[0]*100),richtung_belastbar:!f.usedBase})),
+  bereichspruefung_80pct:A.cov?Object.fromEntries(Object.entries(A.cov).filter(([,c])=>c&&c.inside!=null).map(([h,c])=>[h+" Tage",Math.round(c.inside*100)+" % getroffen"])):null,
+  trade_plan:A.tp?{long:side(A.tp.long),short:side(A.tp.short)}:null,
+  kerzenmuster:(A.candles||[]).slice(0,3).map(c=>c.n+(c.age?" (vor "+c.age+" Tagen)":" (gestern)"))}}
+function aiOverview(){return KEYS.map(k=>{const A=E.res[k],v=verdictOf(k),b=bestTp(A);return{coin:NAMES[k],kurs_usd:rnd(livePrice(k)),aenderung_24h_pct:rnd((chg24(k)||0)*100),urteil:v&&v[0],score:A&&A.comp?Math.round(A.comp.score):null,trendqualitaet:A&&A.tq?A.tq.q:null,hebel_hitze:A&&A.heat?A.heat.heat:null,bestes_chance_risiko:b?b[0]+" 1:"+num(b[1].crv,1):null}})}
+function aiIndicators(k){const A=E.res[k];if(!A)return{fehler:"keine Analyse"};return indRows(A,E.g||{}).map(([cat,rows])=>({kategorie:cat,indikatoren:rows.filter(r=>!r.nv).map(r=>({name:r.n,wert:stripH(r.v),bewertung:RT(r.s)?RT(r.s)[0]:null,hinweis:r.src||undefined}))})).filter(x=>x.indikatoren.length)}
+function aiEvents(){const now=Date.now();return(E.events||[]).filter(e=>e.t>now-864e5).sort((a,b)=>a.t-b.t).slice(0,10).map(e=>({termin:e.n,zeit:new Date(e.t).toLocaleString("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"}),schon_vorbei:e.t<now}))}
+const AI_TOOLS=[{name:"coin_analyse",description:"Liefert die komplette aktuelle Analyse eines Coins: Kurs, Gesamtbewertung mit sechs Bereichen, Trendqualität, Zeitraum-Trends, Hebel-Hitze, Futures-Daten, Liquidationen, Zonen, kurzfristige Marken, Chart-Analyse, Prognosebereiche, Rückblick-Tests und Trade-Plan.",input_schema:{type:"object",properties:{coin:{type:"string",enum:KEYS,description:"Kürzel des Coins"}},required:["coin"]}},
+ {name:"alle_indikatoren",description:"Liefert die vollständige Indikatorliste eines Coins (rund 90 Indikatoren mit Wert und Bewertung von stark bärisch bis stark bullisch).",input_schema:{type:"object",properties:{coin:{type:"string",enum:KEYS}},required:["coin"]}},
+ {name:"termine",description:"Liefert die nächsten wichtigen US-Wirtschaftstermine (Inflation, Arbeitsmarkt, Fed).",input_schema:{type:"object",properties:{}}}];
+function aiTool(n,inp){try{if(n==="coin_analyse")return aiSnap(inp.coin);if(n==="alle_indikatoren")return aiIndicators(inp.coin);if(n==="termine")return aiEvents();return{fehler:"unbekanntes Werkzeug"}}catch(e){return{fehler:e.message}}}
+const AI_NAMES={BTC:/bitcoin|\bbtc\b/i,ETH:/ethereum|etherium|\beth\b/i,SOL:/solana|\bsol\b/i,XRP:/\bxrp\b|ripple/i,BRETT:/brett/i,PEPE:/\bpepe\b/i};
+function aiExtra(){const k=S.view==="detail"?S.cur:null,last=[...AI.msgs].reverse().find(m=>m.role==="user"&&typeof m.content==="string"),q=last?last.content:"",ks=KEYS.filter(x=>x!==k&&AI_NAMES[x].test(q)).slice(0,3);let t="";
+ if(aiCfg().mode==="proxy"){if(k)t+=`\nAlle Indikatoren von ${NAMES[k]}: ${JSON.stringify(aiIndicators(k).map(c=>({k:c.kategorie,i:c.indikatoren.map(x=>x.name+": "+x.wert+(x.bewertung?" ("+x.bewertung+")":""))})))}`;t+=`\nNächste Termine: ${JSON.stringify(aiEvents())}`}
+ for(const x of ks)t+=`\nAnalyse ${NAMES[x]}: ${JSON.stringify(aiSnap(x))}`;return t}
+function aiSystem(){const k=S.view==="detail"?S.cur:null;return`Du bist der Analyse-Assistent der App „Krypto Chart-Analyse“. Du antwortest auf Deutsch, freundlich, klar und anfängerfreundlich, wie ein erfahrener Trader, der es einem Einsteiger erklärt.
+Regeln:
+- Stütze dich ausschließlich auf die Daten der App (unten und über die Werkzeuge). Erfinde keine Zahlen, Kurse oder Nachrichten. Wenn Daten fehlen, sag das.
+- Unterscheide klar zwischen gemessenen Marktdaten, Indikatoren, Einschätzungen und Wahrscheinlichkeiten. Stelle Prognosen nie als sicher dar. Die Rückblick-Tests der App zeigen, dass die Richtung kurzfristig kaum vorhersagbar ist – erwähne das, wenn jemand nach „wird es steigen?“ fragt, und nenne stattdessen Bereiche, Marken und Szenarien („Wenn … hält, dann …; fällt er unter …, dann …“).
+- Keine persönliche Anlageberatung: Du sagst nicht „kauf“ oder „verkauf“. Du kannst erklären, wie ein Profi Stopp, Ziel und Positionsgröße berechnen würde, und auf den Trade-Plan der App verweisen.
+- Halte Antworten kurz (meist 4–10 Sätze oder eine kurze Liste). Nutze **fett** für wichtige Zahlen. Kurse in US-Dollar mit deutschem Zahlenformat.
+- Für Details zu anderen Coins oder einzelnen Indikatoren nutze die Werkzeuge.
+Aktuelle Uhrzeit: ${new Date().toLocaleString("de-DE")}.
+Übersicht aller Coins: ${JSON.stringify(aiOverview())}
+${k?`Der Nutzer schaut gerade auf ${NAMES[k]}. Analyse: ${JSON.stringify(aiSnap(k))}`:"Der Nutzer ist in der Übersicht."}${aiExtra()}`}
+async function aiCall(body){const c=aiCfg();let url,headers={"content-type":"application/json"};
+ if(c.mode==="key"){if(!c.key)throw new Error("Bitte zuerst einen API-Schlüssel in den KI-Einstellungen eintragen.");url="https://api.anthropic.com/v1/messages";headers["x-api-key"]=c.key;headers["anthropic-version"]="2023-06-01";headers["anthropic-dangerous-direct-browser-access"]="true"}
+ else{if(!/^https:\/\/[^\s"'<>]+$/i.test(c.url||""))throw new Error("Bitte zuerst die Adresse deines KI-Servers in den Einstellungen eintragen.");url=c.url}
+ let r;try{r=await fetch(url,{method:"POST",headers,body:JSON.stringify(body)})}catch(e){throw new Error("Keine Verbindung zum KI-Dienst. Prüfe Internet und Einstellungen.")}
+ const j=await r.json().catch(()=>null);if(!r.ok){const m=j&&j.error&&(j.error.message||j.error);throw new Error(r.status===401?"Der API-Schlüssel ist ungültig.":r.status===429?"Zu viele Anfragen – bitte kurz warten.":r.status===529||r.status===503?"Der KI-Dienst ist gerade überlastet – bitte gleich noch einmal versuchen.":"Fehler vom KI-Dienst ("+r.status+")"+(m?": "+String(m).slice(0,160):""))}return j}
+async function aiAsk(text){if(AI.busy||!text.trim())return;AI.busy=true;const start=AI.msgs.length;AI.msgs.push({role:"user",content:text.trim()});aiDraw(true);
+ try{const c=aiCfg();let rounds=0;while(true){const res=await aiCall({model:c.model,max_tokens:1200,system:aiSystem(),tools:AI_TOOLS,messages:AI.msgs.filter(m=>!m.err).map(m=>({role:m.role,content:m.content}))});AI.msgs.push({role:"assistant",content:res.content});
+   const tu=(res.content||[]).filter(x=>x.type==="tool_use");if(res.stop_reason!=="tool_use"||!tu.length||rounds>=4)break;rounds++;AI.msgs.push({role:"user",content:tu.map(t=>({type:"tool_result",tool_use_id:t.id,content:JSON.stringify(aiTool(t.name,t.input||{}))}))});aiDraw(true)}}
+ catch(e){for(let i=start;i<AI.msgs.length;i++)AI.msgs[i].err=true;AI.msgs.push({role:"assistant",content:[{type:"text",text:"⚠️ "+e.message}],err:true})}AI.busy=false;aiDraw(false)}
+function aiMd(t){const lines=esc(t).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").split(/\n/);let h="",ul=false;for(const l of lines){const m=l.match(/^\s*(?:[-•*]|\d+\.)\s+(.*)/);if(m){if(!ul){h+="<ul>";ul=true}h+="<li>"+m[1]+"</li>"}else{if(ul){h+="</ul>";ul=false}if(l.trim())h+="<p>"+l.replace(/^#+\s*/,"")+"</p>"}}if(ul)h+="</ul>";return h}
+const AI_SUG=()=>{const n=S.view==="detail"?NAMES[S.cur]:"Bitcoin";return[`Wie ist die Lage bei ${n}?`,`Wo liegen bei ${n} wichtige Marken?`,"Welcher Coin hat gerade den stärksten Trend?","Erkläre mir die Hebel-Hitze einfach.",`Wie würde ein Profi bei ${n} Stopp und Ziel setzen?`]};
+function aiDraw(thinking){const box=$("aiMsgs");if(!box)return;$("aiPanel").classList.remove("cp-mode");const items=[];for(const m of AI.msgs){if(m.role==="user"&&typeof m.content==="string")items.push(`<div class="ai-m ai-u">${esc(m.content)}</div>`);else if(m.role==="assistant"){const t=(m.content||[]).filter(x=>x.type==="text").map(x=>x.text).join("\n").trim();if(t)items.push(`<div class="ai-m ai-a${m.err?" ai-err":""}">${aiMd(t)}</div>`)}}
+ if(!AI.msgs.length)items.push(`<div class="ai-hello"><p>Frag mich alles zu deinen Coins – ich kenne alle Indikatoren, Zonen, Prognosen und den Trade-Plan der App.</p><div class="ai-sug">${AI_SUG().map(q=>`<button type="button" class="ai-q">${esc(q)}</button>`).join("")}</div></div>`);
+ if(thinking)items.push(`<div class="ai-m ai-a ai-think"><i></i><i></i><i></i></div>`);box.innerHTML=items.join("");box.scrollTop=box.scrollHeight;box.querySelectorAll(".ai-q").forEach(b=>b.onclick=()=>aiAsk(b.textContent));const sb=$("aiSend");if(sb)sb.disabled=AI.busy}
+function aiSettingsHtml(){const c=aiCfg();return`<form id="aiSet" class="ai-set"><p class="warn">Die KI läuft über Claude von Anthropic. Wähle, wie die App sie erreicht:</p>
+ <label class="ai-r"><input type="radio" name="aimode" value="proxy"${c.mode==="proxy"?" checked":""}> Eigener KI-Server bei Cloudflare (kostenlos möglich)</label><input type="url" id="aiUrl" placeholder="https://….workers.dev" value="${esc(c.url)}" autocomplete="off">
+ <label class="ai-r"><input type="radio" name="aimode" value="key"${c.mode==="key"?" checked":""}> Eigener API-Schlüssel (nur für dich)</label><input type="password" id="aiKey" placeholder="sk-ant-…" value="${esc(c.key)}" autocomplete="off"><p class="warn">Der Schlüssel bleibt nur auf diesem Gerät gespeichert und geht direkt an Anthropic. Gib ihn nie an andere weiter.</p>
+ <label>Modell<select id="aiModel"><option value="claude-haiku-5-5"${c.model==="claude-haiku-5-5"?" selected":""}>Claude Haiku 5.5 – schnell, günstig</option><option value="claude-sonnet-5-5"${c.model==="claude-sonnet-5-5"?" selected":""}>Claude Sonnet 5.5 – gründlicher</option></select></label>
+ <div class="ai-row"><button type="submit">Speichern</button><button type="button" class="alt" id="aiSetX">Abbrechen</button></div></form>`}
+function aiOpen(){if(!$("aiPanel")){document.body.insertAdjacentHTML("beforeend",`<div id="aiPanel" class="ai-panel" role="dialog" aria-modal="true" aria-label="KI-Assistent" hidden><div class="ai-head"><b>KI-Assistent</b><span class="warn" id="aiCtx"></span><button type="button" class="ai-ic" id="aiCp" aria-label="Für Claude kopieren" title="Für Claude kopieren">⧉</button><button type="button" class="ai-ic" id="aiNew" aria-label="Neues Gespräch" title="Neues Gespräch">↺</button><button type="button" class="ai-ic" id="aiGear" aria-label="Einstellungen" title="Einstellungen">⚙</button><button type="button" class="ai-ic" id="aiClose" aria-label="Schließen">✕</button></div><div id="aiBody"><div class="ai-msgs" id="aiMsgs" aria-live="polite"></div><form class="ai-in" id="aiForm"><textarea id="aiText" rows="1" placeholder="Frage stellen …" maxlength="1500"></textarea><button type="submit" id="aiSend" aria-label="Senden">➤</button></form><p class="ai-foot">KI kann sich irren. Keine Anlageberatung.</p></div></div>`);
+  $("aiClose").onclick=aiClose;$("aiCp").onclick=cpView;$("aiNew").onclick=()=>{AI.msgs=[];aiDraw(false)};$("aiGear").onclick=aiSettings;$("aiForm").onsubmit=e=>{e.preventDefault();const t=$("aiText");const v=t.value;t.value="";aiAsk(v)};$("aiText").onkeydown=e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();$("aiForm").requestSubmit()}}}
+ const p=$("aiPanel");p.hidden=false;AI.open=true;$("aiCtx").textContent=S.view==="detail"?NAMES[S.cur]:"Übersicht";const c=aiCfg();if(c.mode==="key"?!c.key:!c.url)cpView();else{aiDraw(AI.busy);setTimeout(()=>{try{$("aiText").focus()}catch(e){}},50)}}
+function aiClose(){const p=$("aiPanel");if(p)p.hidden=true;AI.open=false}
+function aiSettings(){const b=$("aiMsgs");if(!b)return;$("aiPanel").classList.add("cp-mode");b.innerHTML=aiSettingsHtml();$("aiSetX").onclick=()=>{const c2=aiCfg();if(c2.mode==="key"?c2.key:c2.url)aiDraw(false);else cpView()};$("aiSet").onsubmit=e=>{e.preventDefault();const mode=(document.querySelector('input[name="aimode"]:checked')||{}).value||"proxy";aiSave({mode,key:$("aiKey").value.trim(),url:$("aiUrl").value.trim(),model:$("aiModel").value});const c2=aiCfg();if(c2.mode==="key"?c2.key:c2.url)aiDraw(false);else cpView()}}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&AI.open)aiClose()});
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest(".cp-btn");if(!b)return;e.preventDefault();aiOpen();cpView();const r=document.querySelector(`input[name="cpm"][value="${b.dataset.cp}"]`);if(r)r.checked=true});
+/* ---------- Für Claude kopieren ---------- */
+const CP_MODES=[["analyse","Komplette Analyse","Lage, Marken, Szenarien und Risiken auf einen Blick"],["chart","Chart-Analyse wie ein Trader","Bänder, 8-Std.-Boxen, Muster und Wenn-dann-Szenarien"],["trade","Trade-Setup prüfen","Stopp, Ziele, Chance-Risiko und Positionsgröße"],["vergleich","Alle 6 Coins vergleichen","Welcher Coin hat gerade das beste Setup?"],["frage","Eigene Frage","Du schreibst deine Frage selbst"]];
+function cpPrompt(mode,q){const k=S.view==="detail"?S.cur:"BTC",n=NAMES[k],tp=(()=>{try{return JSON.parse(localStorage.getItem("kie_tp")||"{}")}catch(e){return{}}})(),acct=+tp.acct>0?+tp.acct:1000,risk=+tp.risk>0?+tp.risk:1,now=new Date().toLocaleString("de-DE",{weekday:"long",day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"});
+ const data={stand:now,uebersicht_alle_coins:aiOverview(),termine:aiEvents()};if(mode==="vergleich"){data.analysen=Object.fromEntries(KEYS.map(x=>[SHORT[x],aiSnap(x)]))}else{data.analyse=aiSnap(k);data.alle_indikatoren=aiIndicators(k)}
+ const task={analyse:`Erstelle eine vollständige, professionelle Analyse für **${n}**.`,
+  chart:`Erstelle eine Chart-Analyse für **${n}** im Stil eines erfahrenen Traders: Wo steht der Kurs in den Farbbändern (gelbe Mittellinie), was zeigen die 8-Stunden-Boxen der erwarteten Bewegung, wie ist der Schwung, welches 8-Std.-Muster läuft und was passiert, wenn es sich wiederholt? Nutze außerdem den Wochen-Ausblick (wochen_ausblick_6w) für einen Ausblick auf die nächsten 6 Wochen: Kurspfad mit ungefähren Daten, Ungültig-Marke und wie wahrscheinlich das ist. Formuliere klare Wenn-dann-Szenarien mit Kursmarken („Bricht X, öffnet das die Tür zu Y“) und sag, worauf ich in den nächsten Tagen besonders achten sollte.`,
+  trade:`Prüfe das Trade-Setup für **${n}** wie ein Profi-Trader. Bewerte Long und Short: Sind Einstieg, Stopp und Ziele sinnvoll gewählt? Wie gut ist das Chance-Risiko-Verhältnis und die Trefferwahrscheinlichkeit? Gibt es einen besseren Einstieg? Berechne die Positionsgröße für ein Konto von ${acct} $ bei ${risk} % Risiko pro Trade. Sag klar, ob ein Profi das Setup so eingehen oder lieber abwarten würde – als Einschätzung, nicht als Anlageberatung.`,
+  vergleich:`Vergleiche alle 6 Coins. Welcher hat gerade das sauberste Setup (Trend, Chance-Risiko, Hebel-Risiko), welcher ist am riskantesten, und welche Coins sollte man im Moment eher meiden? Erstelle eine kurze Rangliste mit Begründung.`,
+  frage:`Beantworte meine Frage zu **${n}**: ${q||"(Frage hier einfügen)"}`}[mode];
+ const fmt={analyse:`1. **Kurzfazit** (2–3 Sätze, die wichtigste Aussage zuerst)
+2. **Lage im Chart** (Trend auf mehreren Zeiträumen, Trendqualität, Farbbänder, Schwung)
+3. **Wichtige Kursmarken** (Unterstützungen und Widerstände mit Kursen)
+4. **Szenarien** – bullisch und bärisch, jeweils mit Auslöser, Ziel und grober Wahrscheinlichkeit aus den Daten
+5. **Hebel und Stimmung** (Funding, Open Interest, Liquidationen, Hebel-Hitze, Angst und Gier)
+6. **Trade-Setup als Rechenbeispiel** (Einstieg, Stopp, Ziele, Chance-Risiko)
+7. **Risiken und Termine** der nächsten Tage
+8. **Worauf ich jetzt achten sollte** (3 Punkte)`,
+  chart:`1. **Kurzfazit**
+2. **Bänder und Mittellinie**
+3. **8-Std.-Boxen**
+4. **Muster und Wiederholung** (inkl. Rückblick-Trefferquote)
+5. **Wenn-dann-Szenarien** mit konkreten Kursmarken
+6. **Bis wann genau beobachten** (Termine)`,
+  trade:`1. **Urteil** (eingehen / abwarten / meiden – mit Begründung)
+2. **Long-Setup** bewertet
+3. **Short-Setup** bewertet
+4. **Besserer Einstieg?**
+5. **Positionsgröße** (Rechnung zeigen)
+6. **Was das Setup ungültig macht**`,
+  vergleich:`1. **Rangliste** (Tabelle: Coin, Trend, Chance-Risiko, Hebel-Hitze, Urteil)
+2. **Bestes Setup** mit Begründung
+3. **Riskantester Coin** mit Begründung
+4. **Gesamtmarkt-Einschätzung**`,
+  frage:`Antworte direkt auf die Frage, danach kurz die passenden Zahlen aus den Daten.`}[mode];
+ return`# Rolle
+Du bist ein erfahrener Krypto-Trader und Marktanalyst. Du erklärst verständlich für Einsteiger, aber mit der Präzision eines Profis.
+
+# Aufgabe
+${task}
+
+# Regeln
+- Nutze die Daten unten aus meiner App „Krypto Chart-Analyse“ (Stand: ${now}). Erfinde keine Kurse oder Zahlen. Wenn etwas fehlt, sag das.
+- Wenn du im Internet suchen kannst, prüfe zusätzlich aktuelle Nachrichten der letzten 48 Stunden zu ${mode==="vergleich"?"den Coins":n} und zum Gesamtmarkt und kennzeichne sie klar als „aus dem Web“.
+- Unterscheide deutlich zwischen gemessenen Marktdaten, Indikatoren, Einschätzungen und Wahrscheinlichkeiten. Stelle nichts als sicher dar.
+- Beachte die Rückblick-Tests in den Daten: Sie zeigen, wie verlässlich Bewertung, Prognosebereiche und Musterwiederholung früher waren. Wenn eine Methode nicht besser als Zufall war, gewichte sie entsprechend schwach.
+- Denke in Szenarien mit Kursmarken statt in festen Vorhersagen.
+- Keine persönliche Anlageberatung. Trade-Setups sind Rechenbeispiele.
+- Schreibe auf Deutsch, Kurse in US-Dollar im deutschen Zahlenformat, wichtige Zahlen **fett**.
+
+# Antwortformat
+${fmt}
+
+# Daten aus der App
+<daten>
+${JSON.stringify(data)}
+</daten>`}
+async function cpCopy(txt){try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(txt);return true}}catch(e){}try{const t=document.createElement("textarea");t.value=txt;t.setAttribute("readonly","");t.style.cssText="position:fixed;top:0;left:0;opacity:0";document.body.appendChild(t);t.select();t.setSelectionRange(0,t.value.length);const ok=document.execCommand("copy");t.remove();return ok}catch(e){return false}}
+function cpView(){const b=$("aiMsgs");if(!b)return;$("aiPanel").classList.add("cp-mode");const n=S.view==="detail"?NAMES[S.cur]:"Bitcoin",c=aiCfg(),ready=c.mode==="key"?!!c.key:!!c.url;
+ b.innerHTML=`<div class="cp"><p class="cp-intro"><b>Analyse für Claude kopieren</b> – kostenlos über deine Claude-App. Die App erstellt einen fertigen Profi-Befehl mit allen aktuellen Daten${S.view==="detail"?" zu "+esc(n):""}. Du musst ihn nur noch in Claude einfügen.</p>
+ <div class="cp-modes" role="radiogroup" aria-label="Art der Analyse">${CP_MODES.map(([id,l,d],i)=>`<label class="cp-m"><input type="radio" name="cpm" value="${id}"${i===0?" checked":""}><span><b>${l}</b><small>${d}</small></span></label>`).join("")}</div>
+ <textarea id="cpQ" rows="2" placeholder="Deine Frage (nur bei „Eigene Frage“)" maxlength="800" hidden></textarea>
+ <button type="button" id="cpGo" class="cp-go">Befehl kopieren</button><div id="cpDone" class="cp-done" hidden></div>
+ ${ready?`<button type="button" class="alt cp-chat" id="cpChat">Stattdessen direkt hier in der App fragen</button>`:`<p class="warn cp-alt">Lieber direkt in der App chatten? Das geht mit einem eigenen API-Schlüssel – über das Zahnrad oben.</p>`}</div>`;
+ b.querySelectorAll('input[name="cpm"]').forEach(r=>r.onchange=()=>{$("cpQ").hidden=r.value!=="frage"||!r.checked;if(r.value==="frage"&&r.checked)$("cpQ").focus()});
+ $("cpGo").onclick=async()=>{const mode=(b.querySelector('input[name="cpm"]:checked')||{}).value||"analyse";if(mode==="frage"&&!$("cpQ").value.trim()){$("cpQ").focus();return}const txt=cpPrompt(mode,$("cpQ").value.trim()),ok=await cpCopy(txt),d=$("cpDone");d.hidden=false;
+  d.innerHTML=ok?`<p>✓ Kopiert (${Math.round(txt.length/1000)} Tsd. Zeichen). Öffne jetzt Claude, tippe in das Eingabefeld, wähle <b>Einsetzen</b> und sende.</p><a class="cp-open" href="https://claude.ai/new" target="_blank" rel="noopener">Claude öffnen</a>`:`<p>Kopieren hat nicht geklappt. Markiere den Text unten, kopiere ihn und füge ihn in Claude ein.</p><textarea class="cp-raw" readonly rows="6">${esc(txt)}</textarea>`;d.scrollIntoView({block:"nearest"})};
+ const ch=$("cpChat");if(ch)ch.onclick=()=>aiDraw(false)}
+function aiFab(){if(!$("aiFab")){document.body.insertAdjacentHTML("beforeend",`<button type="button" id="aiFab" class="ai-fab" aria-label="KI-Assistent öffnen"><span>✦</span> KI fragen</button>`);$("aiFab").onclick=aiOpen}}
 /* ---------- Gesamtmarkt ---------- */
 function globalCalc(){const G=E.glob||{},o={};if(G.global){o.total=G.global.total_market_cap.usd;o.btcDom=G.global.market_cap_percentage.btc/100;o.ethDom=G.global.market_cap_percentage.eth/100;o.mcap24=G.global.market_cap_change_percentage_24h_usd/100;o.vol=G.global.total_volume&&G.global.total_volume.usd;
   o.total2=o.total*(1-o.btcDom);o.total3=o.total*(1-o.btcDom-o.ethDom)}
@@ -1140,11 +1332,11 @@ function globalCalc(){const G=E.glob||{},o={};if(G.global){o.total=G.global.tota
  const b=E.res.BTC&&E.res.BTC.comp.score,e=E.res.ETH&&E.res.ETH.comp.score;if(K.fin(b)||K.fin(e)){const parts=[[b,0.65],[e,0.35]].filter(x=>K.fin(x[0]));o.overall=Math.round(parts.reduce((s,x)=>s+x[0]*x[1],0)/parts.reduce((s,x)=>s+x[1],0))}
  E.g=o;return o}
 /* ---------- Ablauf ---------- */
-async function fetchCoin(k){const [d,h,h4]=await Promise.all([safe(()=>ohlc(k,"1d")),safe(()=>ohlc(k,"1h")),safe(()=>ohlc(k,"4h"))]);const m=Object.assign({},await safe(()=>derivs(k))||{});const [op,bk,cbd]=await Promise.all([safe(()=>options(k)),safe(()=>book(k)),safe(()=>cbData(k))]);m.opt=op;m.book=bk;if(cbd&&h){const r6=a=>a?a.map(x=>[x[0],+x[1].toFixed(6)]):null;m.cbp={h:r6(K.premSeries(cbd.h,cbd.uh,h.t,h.c)),d:d?r6(K.premSeries(cbd.d,cbd.ud,d.t,d.c)):null,usdt:cbd.uh&&cbd.uh.length?cbd.uh[cbd.uh.length-1][1]:null}}if(SYM[k].cm)m.chain=await safe(()=>onchain(k));if(k==="BRETT"&&E.mkt.BRETT&&E.mkt.BRETT.dex){m.dex=E.mkt.BRETT.dex;m.dexAll=E.mkt.BRETT.dexAll}return{k,d,h,h4,m}}
+async function fetchCoin(k){const [d,h,h4,w]=await Promise.all([safe(()=>ohlc(k,"1d")),safe(()=>ohlc(k,"1h")),safe(()=>ohlc(k,"4h")),safe(()=>ohlc(k,"1w"))]);const m=Object.assign({},await safe(()=>derivs(k))||{});const [op,bk,cbd]=await Promise.all([safe(()=>options(k)),safe(()=>book(k)),safe(()=>cbData(k))]);m.opt=op;m.book=bk;if(cbd&&h){const r6=a=>a?a.map(x=>[x[0],+x[1].toFixed(6)]):null;m.cbp={h:r6(K.premSeries(cbd.h,cbd.uh,h.t,h.c)),d:d?r6(K.premSeries(cbd.d,cbd.ud,d.t,d.c)):null,usdt:cbd.uh&&cbd.uh.length?cbd.uh[cbd.uh.length-1][1]:null}}if(SYM[k].cm)m.chain=await safe(()=>onchain(k));if(k==="BRETT"&&E.mkt.BRETT&&E.mkt.BRETT.dex){m.dex=E.mkt.BRETT.dex;m.dexAll=E.mkt.BRETT.dexAll}return{k,d,h,h4,w,m}}
 async function loadEngine(){if(E.busy)return;E.busy=true;E.log=[];brettPair=null;usdtP=null;setEng("Lade erweiterte Marktdaten…");
  const snap={data:E.data,mkt:E.mkt,glob:E.glob,res:E.res,ts:E.ts,cached:E.cached};let fresh=0;const ND={},NM={};
  try{setEng("Lade Marktdaten für "+KEYS.length+" Coins…");const got=await Promise.all([S.cur,...KEYS.filter(x=>x!==S.cur)].map(k=>fetchCoin(k)));
-  for(const r of got){if(r.d||r.h){ND[r.k]={d:r.d,h:r.h,h4:r.h4};NM[r.k]=r.m;fresh++}else{if(snap.data[r.k])ND[r.k]=snap.data[r.k];if(snap.mkt[r.k])NM[r.k]=snap.mkt[r.k]}}
+  for(const r of got){if(r.d||r.h){ND[r.k]={d:r.d,h:r.h,h4:r.h4,w:r.w};NM[r.k]=r.m;fresh++}else{if(snap.data[r.k])ND[r.k]=snap.data[r.k];if(snap.mkt[r.k])NM[r.k]=snap.mkt[r.k]}}
   if(!fresh&&snap.ts){Object.assign(E,snap);E.cached=true;setEng("Keine neuen Daten erreichbar. Angezeigt wird der zwischengespeicherte Stand.");E.busy=false;lastKey=null;render();return}
   E.data=ND;E.mkt=NM;setEng("Lade Gesamtmarkt und Stimmung…");E.glob=await safe(globalData)||{};
   buildEvents();E.liveAnalysis=true;for(const k of [S.cur,...KEYS.filter(x=>x!==S.cur)]){setEng("Berechne Analyse und Prognosemodelle: "+NAMES[k]+"…");const A=await analyzeAsync(k);if(A){E.res[k]=A;try{track(A)}catch(e){}globalCalc();lastKey=null;render()}else if(!E.data[k])delete E.res[k]}
@@ -1187,15 +1379,107 @@ function taText(A){const T=A.ta,n=NAMES[A.k],P=A.price,o=[];if(!T)return o;const
 function taFazit(A){const T=A.ta||{},u=x=>`<b>${usd(x)}</b>`,s=T.sup1?T.sup1.p:A.sup&&A.sup[0]&&A.sup[0].lo,s2=T.sup2?T.sup2.p:A.sup&&A.sup[1]&&A.sup[1].mid,r=T.res1?T.res1.p:A.res&&A.res[0]&&A.res[0].mid;if(!s||!r)return"";return`<b>Fazit:</b> Solange ${u(s)} hält, bleibt ein Anstieg Richtung ${u(r)} möglich. Fällt der Kurs darunter, wird ${s2?u(s2):"ein tieferer Bereich"} wahrscheinlicher.`}
 function taHtml(A){const T=A.ta;if(!T)return"";const has4=!!(E.data[A.k]&&E.data[A.k].h4&&E.data[A.k].h4.n>150);if(!has4)TAV.tf="1h";
  return`<section class="keep tasec"><h2>Chart-Analyse ${dtag("ind")}</h2><p class="warn">So liest ein Trader den Chart: Farbbänder, Boxen der erwarteten Bewegung, Schwung und Musterwiederholung – automatisch nach festen Regeln ausgewertet.</p>
- <div class="seg" role="tablist" aria-label="Zeitraum"><button type="button" role="tab" class="seg-b ta-tf${TAV.tf==="1h"?" on":""}" data-tf="1h">1 Std. · 8-Std.-Boxen</button>${has4?`<button type="button" role="tab" class="seg-b ta-tf${TAV.tf==="4h"?" on":""}" data-tf="4h">4 Std. · Tages-Boxen</button>`:""}</div>
- <div class="ol-chart"><canvas id="tac" height="320" aria-label="Kurschart mit Farbbändern, Boxen und Musterprojektion"></canvas><canvas id="tao" height="84" aria-label="Schwung-Oszillator"></canvas></div>
- <div class="leg ta-leg"><span><i class="tl-band"></i>Farbbänder: blau = weit unten, rot = weit oben</span><span><i style="background:#FACC15"></i>gelbe Mittellinie</span><span><i class="tl-box"></i>Box der erwarteten Bewegung</span><span><i style="background:var(--vio)"></i>Musterprojektion</span></div>
- <div class="ta-box"><h3>Analyse</h3><ul class="ta-list">${taText(A).map(x=>`<li>${x}</li>`).join("")}</ul></div>
+ <div class="seg" role="tablist" aria-label="Zeitraum"><button type="button" role="tab" class="seg-b ta-tf${TAV.tf==="1h"?" on":""}" data-tf="1h">1 Std.</button>${has4?`<button type="button" role="tab" class="seg-b ta-tf${TAV.tf==="4h"?" on":""}" data-tf="4h">4 Std.</button>`:""}${wkData(A.k)?`<button type="button" role="tab" class="seg-b ta-tf${TAV.tf==="1w"?" on":""}" data-tf="1w">Woche · Jahre</button>`:""}</div>
+ <div class="ol-chart"><div class="wk-zoom" id="wkZoom" hidden role="tablist" aria-label="Zeitraum"><button type="button" data-z="1">Ausblick</button><button type="button" data-z="0">4 Jahre</button></div><canvas id="tac" height="320" aria-label="Kurschart mit Farbbändern, Boxen und Musterprojektion"></canvas><canvas id="tao" height="84" aria-label="Schwung-Oszillator"></canvas></div>
+ <div id="taWk" class="ta-box" hidden></div><div class="leg ta-leg"><span><i class="tl-band"></i>Farbbänder: blau = weit unten, rot = weit oben</span><span><i style="background:#FACC15"></i>gelbe Mittellinie</span><span><i class="tl-box"></i>Box der erwarteten Bewegung</span><span><i style="background:var(--vio)"></i>Musterprojektion</span></div>
+ <button type="button" class="alt cp-btn" data-cp="chart">✦ Chart-Analyse für Claude kopieren</button><div class="ta-box"><h3>Analyse</h3><ul class="ta-list">${taText(A).map(x=>`<li>${x}</li>`).join("")}</ul></div>
  <details class="more"><summary>So funktionieren die Werkzeuge</summary><p class="warn"><b>Farbbänder:</b> Die gelbe Linie ist der Durchschnitt der letzten 50 Kerzen (EMA). Die Bänder liegen je eine, zwei und drei Standardabweichungen darüber (orange, rot) und darunter (grün, türkis, blau). Rund zwei Drittel der Zeit bleibt der Kurs zwischen den inneren Bändern; in den äußeren ist er überdehnt.<br><b>Boxen der erwarteten Bewegung:</b> Zu Beginn jedes 8-Stunden-Blocks (bzw. Tages) zeigt die Box, wie weit der Kurs bei normaler Schwankung laufen dürfte (± eine Standardabweichung). Obere Hälfte grün, untere rot. Ein Schluss außerhalb der Box ist eine ungewöhnlich starke Bewegung.<br><b>Oszillator:</b> geglätteter RSI von 0 bis 100. Über 50 grün (Käufer stärker), darunter rot; über 70 überhitzt, unter 30 überverkauft.<br><b>Muster:</b> Das Zickzack misst die großen Auf- und Abbewegungen auf 8-Stunden-Basis. Die Musterwiederholung sucht die ähnlichsten Verläufe der Vergangenheit und zeigt, was danach passiert ist (violett).</p></details>
  <p class="warn">Automatische Auswertung, keine Anlageberatung. Muster wiederholen sich nicht zuverlässig – die Rückblick-Tests zeigen, wie oft es geklappt hätte.</p></section>`}
-const TAV={tf:"1h"};
+const TAV={tf:"1h",tpl:null,wz:1};
+function wkData(k){const Dd=E.data[k]||{};if(Dd.w&&Dd.w.n>=60)return Dd.w;const D=Dd.d;if(!D||D.n<200)return null;const b=K.bucketize(D.t,D.o,D.h,D.l,D.c,K.keyWeek);b.n=b.c.length;return b.n>=40?b:null}
+/* Große Bewegungen auf Wochenbasis, Vorlagen (Bewegung + Gegenbewegung) und wie oft so etwas früher eintrat */
+function wkCalc(k){const W=wkData(k);if(!W)return null;const r=K.logret(W.c).filter(x=>x!=null),sw=K.sdp(r.slice(-104)),thr=K.clip(3*sw,0.12,0.35),piv=K.zigzag(W.h,W.l,thr),legs=[];
+ for(let i=1;i<piv.length;i++)legs.push({i0:piv[i-1].i,i1:piv[i].i,a:piv[i-1].p,b:piv[i].p,pct:piv[i].p/piv[i-1].p-1,wk:piv[i].i-piv[i-1].i,open:!!piv[i].open});
+ const done=legs.filter(x=>!x.open),cur=legs[legs.length-1];if(!cur||done.length<2)return{W,legs,thr,tpls:[],cur};
+ // Vorlagen: zwei aufeinanderfolgende abgeschlossene Bewegungen; die erste in Richtung der laufenden Bewegung
+ const L=v=>Math.log(1+Math.abs(v)),cm=L(cur.pct),tpls=[];for(let i=0;i+1<done.length;i++){const x=done[i],y=done[i+1];if(Math.sign(x.pct)!==Math.sign(cur.pct))continue;const ahead=Math.abs(x.pct)>=Math.abs(cur.pct)*0.9,d=Math.abs(L(x.pct)-cm)+(ahead?0:0.5);if(L(x.pct)>Math.max(3*cm,cm+1.1))continue;tpls.push({i,x,y,d,label:new Date(W.t[x.i0]).getFullYear()+": "+(x.pct>0?"+":"")+num(x.pct*100,1)+" % → "+(y.pct>0?"+":"")+num(y.pct*100,1)+" %"})}
+ tpls.sort((a,b)=>a.d-b.d);tpls.splice(8);if(tpls.length)tpls[0].label+=" · ähnlichste";return{W,legs,thr,tpls,cur}}
+function wkStats(wc,t){const same=wc.legs.filter(x=>!x.open);let n=0,hit=0;for(let i=0;i+1<same.length;i++){const x=same[i],y=same[i+1];if(i===t.i||Math.sign(x.pct)!==Math.sign(t.x.pct)||Math.abs(x.pct)<Math.abs(t.x.pct)*0.6)continue;n++;if(Math.abs(y.pct)>=Math.abs(t.y.pct)*0.8)hit++}return{n,hit}}
+function wkProj(wc,t){const c=wc.cur,start=c.a,t1=start*(1+t.x.pct),t2=t1*(1+t.y.pct);const reached=c.pct/t.x.pct;return{start,t1,t2,reached}}
+const WKO={};
+function wkOut(k,wc){if(!wc)return null;const ti=TAV.tplK===k?(TAV.tpl||0):0,t=wc.tpls.length?wc.tpls[Math.min(ti,wc.tpls.length-1)]:null,key=(E.ts||0)+"|"+(t?t.i:-1)+"|"+wc.W.c.length;if(WKO[k]&&WKO[k].key===key)return WKO[k];
+ const W=wc.W,n=W.c.length,c=W.c,P=(E.res[k]&&E.res[k].price)||c[n-1],B=K.devBands(c,20),mid=B.mid[n-1],sd=B.sd[n-1];if(!(mid>0)||!(sd>0)||!B.mid[n-5])return null;
+ const z=(P-mid)/sd,slope=mid/B.mid[n-5]-1,rs=K.rsi(c,14),os=K.ema(rs.map(x=>x==null?50:x),3),o0=os[n-1],o2=os[n-3],D=(E.data[k]||{}).d,WK=6048e5,now=Date.now();
+ let sw=null;if(D&&D.n>150){const V=K.ewmaVar(K.logret(D.c)),v=V[V.length-1];if(v>0)sw=Math.sqrt(v*7)}if(!sw){sw=K.sdp(K.logret(c).filter(x=>x!=null).slice(-26))}
+ const s6=sw*Math.sqrt(6),lo6=P*Math.exp(-s6),hi6=P*Math.exp(s6);
+ // Früher in ähnlicher Lage: gleicher Bereich im Farbband und gleiche Trendrichtung der Mittellinie
+ const fw=[];for(let i=25;i<=n-7;i++){if(!B.sd[i]||!B.mid[i-4])continue;const zi=(c[i]-B.mid[i])/B.sd[i],si=B.mid[i]/B.mid[i-4]-1;if(Math.abs(zi-z)<=0.6&&Math.sign(si)===Math.sign(slope))fw.push(c[i+6]/c[i]-1)}
+ const hist=fw.length>=5?{n:fw.length,up:fw.filter(x=>x>0).length/fw.length,med:K.quantile(fw,0.5)}:null;
+ // Einschätzung aus Trend, Lage im Farbband, Schwung und Vergangenheit
+ const why=[];let sc=0;
+ if(slope>0.02){sc+=1;why.push(["up",`Die gelbe Mittellinie steigt (${pc(slope)} in 4 Wochen) – der große Trend zeigt nach oben.`])}else if(slope<-0.02){sc-=1;why.push(["down",`Die gelbe Mittellinie fällt (${pc(slope)} in 4 Wochen) – der große Trend zeigt nach unten.`])}else why.push(["",`Die gelbe Mittellinie verläuft flach – es gibt keinen klaren großen Trend.`]);
+ const zn=z>=2?"im roten Bereich":z>=1?"im orangen Bereich":z>=0?"im gelben Bereich knapp über der Mittellinie":z>-1?"im grünen Bereich knapp unter der Mittellinie":z>-2?"im türkisen Bereich":"im blauen Bereich";
+ if(z>=2){sc-=1;why.push(["down",`Der Kurs steht ${zn} – das ist überhitzt. Von hier gab es öfter Rücksetzer als weitere Anstiege.`])}else if(z<=-2){sc+=1;why.push(["up",`Der Kurs steht ${zn} – das ist stark überverkauft. Von hier gab es öfter Erholungen.`])}else{sc+=z>0?0.5:-0.5;why.push([z>0?"up":"down",`Der Kurs steht ${zn}${z>0?" – die Käufer haben auf Wochenbasis leicht die Oberhand.":" – die Verkäufer haben auf Wochenbasis leicht die Oberhand."}`])}
+ if(o0>50&&o0>o2){sc+=1;why.push(["up",`Der Wochen-Schwung steigt (${Math.round(o2)} → ${Math.round(o0)}).`])}else if(o0<50&&o0<o2){sc-=1;why.push(["down",`Der Wochen-Schwung fällt (${Math.round(o2)} → ${Math.round(o0)}).`])}else why.push(["",`Der Wochen-Schwung ist gemischt (${Math.round(o2)} → ${Math.round(o0)}).`]);
+ if(hist&&hist.n>=10){if(hist.up>=0.6)sc+=1;else if(hist.up<=0.4)sc-=1}
+ const dir=sc>=1?1:sc<=-1?-1:0,verd=sc>=2?"Bullisch":sc>=1?"Leicht bullisch":sc<=-2?"Bärisch":sc<=-1?"Leicht bärisch":"Neutral",
+  conf=Math.abs(sc)>=2.5&&hist&&hist.n>=15&&((dir>0&&hist.up>=0.6)||(dir<0&&hist.up<=0.4))?"mittel":"gering";
+ // Szenario-Pfad: aus der gewählten Vorlage, sonst aus den Farbbändern
+ const wp=[];if(t){const pj=wkProj(wc,t),el=Math.max(0,Math.round((W.t[n-1]-W.t[wc.cur.i0])/WK));if(pj.reached<1){const d1=now+Math.max(1,t.x.wk-el)*WK;wp.push({p:pj.t1,t:d1},{p:pj.t2,t:d1+t.y.wk*WK})}else wp.push({p:pj.t2,t:now+Math.max(1,t.y.wk)*WK})}
+ if(!wp.length||Math.abs(wp[0].p/P-1)<0.01){wp.length=0;wp.push({p:dir>=0?Math.max(P*1.03,Math.min(hi6,mid+2*sd)):Math.min(P*0.97,Math.max(lo6,mid-2*sd)),t:now+6*WK,band:1})}
+ const sd0=wp[0].p>P?1:-1,tg=wp[0].p,conflict=dir!==0&&sd0!==dir;
+ const lw=Math.min(...W.l.slice(-3)),hw=Math.max(...W.h.slice(-3));
+ const inv=sd0>0?K.clip(lw*0.995,P*Math.exp(-0.8*s6),P*Math.exp(-0.3*sw)):K.clip(hw*1.005,P*Math.exp(0.3*sw),P*Math.exp(0.8*s6)),box=sd0>0?[inv,inv*Math.exp(0.5*sw)]:[inv*Math.exp(-0.5*sw),inv];
+ let fp=null;try{const src=D&&D.n>200?D.c.slice(-900):c,steps=D&&D.n>200?42:6;fp=K.firstPassage(src,steps,2000,K.hashSeed(k+"wk"),sd0>0?tg:inv,sd0>0?inv:tg)}catch(e){}
+ const pT=fp?(sd0>0?fp.pUp:fp.pDn):null,pI=fp?(sd0>0?fp.pDn:fp.pUp):null;
+ const fall=sd0>0?Math.min(lo6,inv*Math.exp(-sw)):Math.max(hi6,inv*Math.exp(sw));
+ return WKO[k]={key,fall,P,z,zn,slope,o0,sw,s6,lo6,hi6,hist,why,sc,dir,verd,conf,wp,sd0,tg,inv,box,pT,pI,pN:fp?fp.pNone:null,conflict,hz:now+42*864e5,t}}
+function wkOutHtml(A,wc){const O=wkOut(A.k,wc);if(!O)return"";const u=x=>`<b>${usd(x)}</b>`,dd=x=>new Date(x).toLocaleDateString("de-DE",{day:"numeric",month:"short"}),nm=esc(NAMES[A.k]),cls=O.dir>0?"up":O.dir<0?"down":"neu",
+ path=`${usd(O.P)} → `+O.wp.map(w=>`<b class="${w.p>O.P?"up":"down"}">${usd(w.p)}</b> <span class="wko-d">(bis ca. ${dd(w.t)})</span>`).join(" → ")+" ⏳",
+ boxName=O.sd0>0?"grünen Box":"roten Box",pct=x=>Math.round(x*100)+" %";
+ const lines=O.why.map(([c,x])=>`<li><span class="${c}">${c==="up"?"▲":c==="down"?"▼":"■"}</span> ${x}</li>`).join("");
+ const hist=O.hist?`Früher in ähnlicher Lage (gleicher Bereich im Farbband, gleiche Trendrichtung) stand ${nm} 6 Wochen später in <b>${pct(O.hist.up)}</b> der Fälle höher, im Mittel ${pc(O.hist.med)} (${O.hist.n} Wochen${O.hist.n<15?" – wenige Fälle, nur grober Anhaltspunkt":""}).`:`Für einen Vergleich mit früheren, ähnlichen Lagen gibt es bei ${nm} noch zu wenig Wochenverlauf.`;
+ const prob=O.pT!=null?`Modell-Rechnung für die nächsten 6 Wochen: <b>${usd(O.tg)}</b> wird vor ${usd(O.inv)} erreicht in <b>${pct(O.pT)}</b> der simulierten Verläufe, zuerst ungültig in <b>${pct(O.pI)}</b>, keins von beiden in ${pct(O.pN)}.`:"";
+ const likely=O.pT!=null&&O.pT>O.pI;
+ const fz=`<b>Einschätzung:</b> ${O.sd0>0?`Solange die Wochenkerzen über ${u(O.inv)} schließen, ist ein Anstieg Richtung ${u(O.tg)} bis ca. ${dd(O.wp[0].t)} ${likely?"das wahrscheinlichere Szenario":"möglich – laut Rechnung aber nicht wahrscheinlicher als ein Bruch nach unten"}. Ein Wochenschluss unter ${u(O.inv)} macht das Szenario ungültig – dann rückt ${u(O.fall)} in den Blick.`:`Solange die Wochenkerzen unter ${u(O.inv)} schließen, ist ein Rückgang Richtung ${u(O.tg)} bis ca. ${dd(O.wp[0].t)} ${likely?"das wahrscheinlichere Szenario":"möglich – laut Rechnung aber nicht wahrscheinlicher als ein Ausbruch nach oben"}. Ein Wochenschluss über ${u(O.inv)} macht das Szenario ungültig – dann rückt ${u(O.fall)} in den Blick.`}${O.conflict?` <span class="warn">Achtung: Die Vorlage zeigt ${O.sd0>0?"nach oben":"nach unten"}, die Indikatoren sind aber eher ${O.dir>0?"bullisch":"bärisch"} – das Szenario ist deshalb besonders unsicher.</span>`:""}`;
+ return`<div class="wko"><h3>6-Wochen-Ausblick</h3><div class="wko-head"><span class="wko-v ${cls}">${O.verd}</span><span class="wko-c">Zuversicht: ${O.conf}</span></div>
+ <p class="wko-path">${path}</p><p class="wko-sub">Pfad aus der Vorlage „${O.t?esc(O.t.label.replace(" · ähnlichste","")):"Farbbänder"}“ · Ausblick-Zeitraum: 6 Wochen bis ca. ${dd(O.hz)}</p>
+ <ul class="ta-list wko-why">${lines}</ul>
+ <ul class="ta-list"><li>Ungültig: Schließt eine Wochenkerze ${O.sd0>0?"unter":"über"} ${u(O.inv)} (${O.sd0>0?"unter":"über"} der ${boxName} im Chart), ist das Szenario hinfällig. Die Wochenkerze schließt montags gegen 01:00 Uhr.</li>
+ <li>Normale Schwankung in 6 Wochen (etwa 2 von 3 Fällen): ${u(O.lo6)} bis ${u(O.hi6)}.</li>
+ ${prob?`<li>${prob}</li>`:""}<li>${hist}</li></ul>
+ <p class="ta-fazit">${fz}</p>
+ <details class="wko-how"><summary>Wie entsteht so ein Ausblick?</summary><ol>
+ <li><b>Farbbänder:</b> Wo steht der Kurs im Vergleich zu seinem Durchschnitt der letzten 20 Wochen? Rot = teuer, blau = günstig.</li>
+ <li><b>Trend und Schwung:</b> Steigt die gelbe Linie? Nimmt der Wochen-Schwung zu?</li>
+ <li><b>Vorlage:</b> Eine frühere große Bewegung wird ab dem letzten Wendepunkt erneut angelegt. Daraus entstehen der Kurspfad und die Daten – so machen es auch viele Trader auf X.</li>
+ <li><b>Ungültig-Marke:</b> Knapp unter dem letzten Wochentief (bei einem Abwärts-Szenario über dem Hoch). Wird sie gebrochen, war das Szenario falsch – Trader nennen das „Invalidierung“.</li>
+ <li><b>Ehrlichkeit:</b> Anders als in vielen Posts rechnet die App aus, wie oft so etwas früher wirklich klappte und wie wahrscheinlich das Ziel vor der Ungültig-Marke erreicht wird.</li></ol></details></div>`}
+function wkPanel(A){const el=$("taWk");if(!el)return;if(TAV.tf!=="1w"){el.hidden=true;return}el.hidden=false;const wc=wkCalc(A.k);if(!wc||!wc.tpls.length){el.innerHTML=(wc?wkOutHtml(A,wc):"")+`<p class="warn">Für ${esc(NAMES[A.k])} gibt es noch zu wenig Wochenverlauf für eine Muster-Projektion.</p>`;return}
+ if(TAV.tplK!==A.k||TAV.tpl==null||TAV.tpl>=wc.tpls.length){TAV.tpl=0;TAV.tplK=A.k}const t=wc.tpls[TAV.tpl],pj=wkProj(wc,t),st=wkStats(wc,t),u=x=>`<b>${usd(x)}</b>`,c=wc.cur,dir=t.x.pct<0?"Rückgang":"Anstieg",dir2=t.y.pct<0?"Rückgang":"Anstieg";
+ el.innerHTML=wkOutHtml(A,wc)+`<h3 class="wk-h2">Vergangene Bewegung erneut anlegen</h3><label class="wk-sel">Vorlage<select id="wkTpl">${wc.tpls.map((x,i)=>`<option value="${i}"${i===TAV.tpl?" selected":""}>${esc(x.label)} (${x.x.wk}+${x.y.wk} Wochen)</option>`).join("")}</select></label>
+ <ul class="ta-list"><li>Die laufende Bewegung begann bei ${u(pj.start)} (${new Date(wc.W.t[c.i0]).toLocaleDateString("de-DE",{month:"short",year:"numeric"})}) und liegt bisher bei <b class="${c.pct>0?"up":"down"}">${c.pct>0?"+":""}${num(c.pct*100,1)} %</b>.</li>
+ <li>Wiederholt sich die Bewegung von ${esc(t.label.split(":")[0])}: ${dir} um ${num(Math.abs(t.x.pct)*100,1)} % bis etwa ${u(pj.t1)}${pj.reached>=1?" (bereits erreicht)":` (davon bisher ${Math.round(Math.max(0,pj.reached)*100)} % geschafft)`}, danach ${dir2} um ${num(Math.abs(t.y.pct)*100,1)} % bis etwa ${u(pj.t2)}.</li>
+ <li><span class="warn">Wie oft trat so etwas früher ein? ${st.n?`Nach ${st.n} weiteren vergleichbaren ${dir==="Rückgang"?"Rückgängen":"Anstiegen"} bei ${esc(NAMES[A.k])} folgte in <b>${st.hit} von ${st.n}</b> Fällen eine ähnlich große Gegenbewegung.${st.n<5?" Das sind sehr wenige Fälle – die Statistik ist kaum belastbar.":""}`:`Außer dieser Vorlage gab es bei ${esc(NAMES[A.k])} keinen weiteren vergleichbaren Fall – das ist ein Einzelfall, keine Statistik.`}</span></li></ul>
+ <p class="warn">So arbeiten auch viele Trader auf X und Discord: Sie legen eine frühere Bewegung erneut an. Das ist ein Szenario, keine Berechnung – Märkte wiederholen sich nicht verlässlich. Große Bewegungen = mindestens ${Math.round(wc.thr*100)} % auf Wochenbasis.</p>`;
+ $("wkTpl").onchange=e=>{TAV.tpl=+e.target.value;wkPanel(A);drawTA(A)}}
+function drawWk(A){const wc=wkCalc(A.k),r=cv("tac",320);if(!r||!wc)return;const[g,W0]=r,HH=320,Dt=wc.W,n=Dt.c.length,show=Math.min(TAV.wz?40:210,n),st=n-show,top=8,bot=HH-14;g.font="bold 10px -apple-system,sans-serif";const padR=Math.max(62,Math.ceil(g.measureText(fmt(Dt.c[n-1])).width)+12);
+ const t=wc.tpls.length?wc.tpls[Math.min(TAV.tpl||0,wc.tpls.length-1)]:null,pj=t?wkProj(wc,t):null,futW=TAV.wz?Math.max(16,Math.round(show*0.3)):t?Math.max(Math.round(show*0.12),wc.cur.i0+t.x.wk+t.y.wk-(n-1)+3):Math.round(show*0.06),B=K.devBands(Dt.c,20);
+ let mn=Infinity,mx=-Infinity;for(let i=st;i<n;i++){mn=Math.min(mn,Dt.l[i]);mx=Math.max(mx,Dt.h[i]);if(B.sd[i]){const kb=TAV.wz?1.0:2.6;mn=Math.min(mn,B.mid[i]-kb*B.sd[i]);mx=Math.max(mx,B.mid[i]+kb*B.sd[i])}}if(pj){mn=Math.min(mn,pj.t1,pj.t2);mx=Math.max(mx,pj.t1,pj.t2)}const O=wkOut(A.k,wc);if(O){mn=Math.min(mn,O.lo6,O.box[0]);mx=Math.max(mx,O.hi6,O.box[1])}
+ mn=Math.max(mn,Math.min(...Dt.l.slice(st))*0.5);const lg=v=>Math.log(Math.max(v,1e-12)),pd=(lg(mx)-lg(mn))*0.07,L0=lg(mn)-pd,L1=lg(mx)+pd,cw=(W0-padR)/(show+futW),X=i=>(i-st+0.5)*cw,Y=v=>bot-(lg(v)-L0)/(L1-L0)*(bot-top);
+ g.save();g.beginPath();g.rect(0,top,W0-padR,bot-top);g.clip();const ks=[-3,-2,-1,0,1,2,3],cols=["37,99,235","6,182,212","16,185,129","234,179,8","249,115,22","239,68,68"],al=[.26,.18,.15,.12,.16,.24],pts=[];for(let i=st;i<n;i++)if(B.sd[i])pts.push(i);
+ if(pts.length>1)for(let b=0;b<6;b++){g.beginPath();pts.forEach((i,j)=>{const y=Y(Math.max(B.mid[i]+ks[b]*B.sd[i],mn*0.3));j?g.lineTo(X(i),y):g.moveTo(X(i),y)});for(let j=pts.length-1;j>=0;j--){const i=pts[j];g.lineTo(X(i),Y(Math.max(B.mid[i]+ks[b+1]*B.sd[i],mn*0.3)))}g.closePath();g.fillStyle=`rgba(${cols[b]},${al[b]})`;g.fill()}
+ g.strokeStyle="#FACC15";g.lineWidth=1.5;g.beginPath();pts.forEach((i,j)=>{const y=Y(B.mid[i]);j?g.lineTo(X(i),y):g.moveTo(X(i),y)});g.stroke();
+ const bw=Math.max(1.2,cw*0.62);for(let i=st;i<n;i++){const col=Dt.c[i]>=Dt.o[i]?css("--up"):css("--down");g.strokeStyle=col;g.fillStyle=col;g.lineWidth=1;g.beginPath();g.moveTo(X(i),Y(Dt.h[i]));g.lineTo(X(i),Y(Dt.l[i]));g.stroke();const y1=Y(Math.max(Dt.o[i],Dt.c[i])),y2=Y(Math.min(Dt.o[i],Dt.c[i]));g.fillRect(X(i)-bw/2,y1,bw,Math.max(1,y2-y1))}
+ // große Bewegungen beschriften, Vorlage hervorheben
+ g.font="bold 10px -apple-system,sans-serif";const labs=[],placed=[],PW=W0-padR,put=(txt,x,y,col,bg,force)=>{const w=g.measureText(txt).width+6,h=13;let x0=Math.max(2,Math.min(x-w/2,PW-w-2)),y0=Math.max(top+1,Math.min(y-10,bot-h-1));if(!force&&placed.some(q=>x0<q[0]+q[2]&&q[0]<x0+w&&y0<q[1]+q[3]&&q[1]<y0+h))return 0;placed.push([x0,y0,w,h]);if(bg){g.fillStyle="rgba(8,12,22,.78)";g.fillRect(x0,y0,w,h)}g.fillStyle=col;g.textAlign="left";g.fillText(txt,x0+3,y0+10);return 1};for(const x of wc.legs){if(x.i1<st)continue;const tp=t&&(x===t.x||x===t.y);g.strokeStyle=tp?"rgba(167,139,250,.9)":"rgba(231,238,250,.28)";g.lineWidth=tp?2:1;g.setLineDash(tp?[]:[4,3]);g.beginPath();g.moveTo(X(Math.max(x.i0,st)),Y(x.i0>=st?x.a:Dt.c[st]));g.lineTo(X(x.i1),Y(x.b));g.stroke();g.setLineDash([]);
+  if(tp){const x0=X(x.i0),x1=X(x.i1),y0=Y(Math.max(x.a,x.b)),y1=Y(Math.min(x.a,x.b));g.fillStyle=x.pct>0?"rgba(59,232,176,.12)":"rgba(255,92,122,.14)";g.fillRect(x0,y0,x1-x0,y1-y0)}
+  labs.push([(x.pct>0?"+":"")+num(x.pct*100,1)+"%",X(x.i1),x.pct>0?Y(x.b)-4:Y(x.b)+14,x.pct>0?css("--up"):css("--down")])}
+ // Projektion als Boxen nach rechts
+ if(pj&&t){const xs=X(wc.cur.i0),wx=t.x.wk*cw,wy=t.y.wk*cw,xa=Math.max(xs,X(wc.cur.i0)),xb=xa+wx,xc=xb+wy;g.fillStyle="rgba(255,92,122,.14)";if(t.x.pct<0){g.fillStyle="rgba(255,92,122,.16)"}else g.fillStyle="rgba(59,232,176,.14)";g.fillRect(xa,Y(Math.max(pj.start,pj.t1)),xb-xa,Y(Math.min(pj.start,pj.t1))-Y(Math.max(pj.start,pj.t1)));
+  g.fillStyle=t.y.pct>0?"rgba(59,232,176,.16)":"rgba(255,92,122,.16)";g.fillRect(xb,Y(Math.max(pj.t1,pj.t2)),xc-xb,Y(Math.min(pj.t1,pj.t2))-Y(Math.max(pj.t1,pj.t2)));g.strokeStyle=css("--vio");g.lineWidth=2;g.setLineDash([6,4]);g.beginPath();g.moveTo(xa,Y(pj.start));g.lineTo(xb,Y(pj.t1));g.lineTo(xc,Y(pj.t2));g.stroke();g.setLineDash([]);
+  g.font="bold 10px -apple-system,sans-serif";put((t.x.pct>0?"+":"")+num(t.x.pct*100,1)+"% → "+fmt(pj.t1),xb,Y(pj.t1)+(t.x.pct<0?16:-4),t.x.pct>0?css("--up"):css("--down"),1,1);put((t.y.pct>0?"+":"")+num(t.y.pct*100,1)+"% → "+fmt(pj.t2),xc,Y(pj.t2)+(t.y.pct<0?16:-4),t.y.pct>0?css("--up"):css("--down"),1,1)}
+ if(O){const x0=X(n-1)+cw/2,x6=X(n-1+6),gr=O.sd0>0,y0=Y(O.box[1]),y1=Y(O.box[0]);g.fillStyle=gr?"rgba(59,232,176,.30)":"rgba(255,92,122,.30)";const xr=W0-padR-2;g.fillRect(x0,y0,xr-x0,Math.max(4,y1-y0));g.strokeStyle=gr?"rgba(59,232,176,.9)":"rgba(255,92,122,.9)";g.lineWidth=1;g.strokeRect(x0+.5,y0+.5,xr-x0-1,Math.max(4,y1-y0)-1);
+  g.strokeStyle="rgba(231,238,250,.45)";g.setLineDash([2,3]);g.beginPath();g.moveTo(x6,top);g.lineTo(x6,bot);g.stroke();g.setLineDash([]);g.strokeStyle="rgba(231,238,250,.55)";g.lineWidth=1.5;g.beginPath();g.moveTo(x6+4,Y(O.hi6));g.lineTo(x6+4,Y(O.lo6));g.moveTo(x6+1,Y(O.hi6));g.lineTo(x6+7,Y(O.hi6));g.moveTo(x6+1,Y(O.lo6));g.lineTo(x6+7,Y(O.lo6));g.stroke();
+  g.font="bold 9px -apple-system,sans-serif";put("6 Wo.",x6,bot-2,"rgba(231,238,250,.7)",1,1);const il=(gr?"ungültig unter ":"ungültig über ")+fmt(O.inv),ic=gr?css("--up"):css("--down");put(il,(x0+xr)/2,gr?y1+14:y0-4,ic,1)||put(il,(x0+xr)/2,gr?y0-4:y1+14,ic,1)||put(il,(x0+xr)/2-60,gr?y1+14:y0-4,ic,1);g.font="bold 10px -apple-system,sans-serif"}
+ for(let j=labs.length-1;j>=0;j--)put(...labs[j]);
+ g.restore();const xn=X(n-1)+cw/2;g.strokeStyle=css("--line");g.setLineDash([3,3]);g.beginPath();g.moveTo(xn,top);g.lineTo(xn,bot);g.stroke();g.setLineDash([]);
+ g.font="10px -apple-system,sans-serif";g.fillStyle=css("--mute");const P0=Dt.c[n-1];for(let q=0;q<6;q++){const v=Math.exp(L0+(L1-L0)*(q+0.5)/6);if(Math.abs(Y(v)-Y(P0))<15)continue;g.fillText(fmt(v),W0-padR+4,Y(v)+3)}g.fillStyle=css("--acc");g.fillRect(W0-padR+1,Y(P0)-8,padR-2,16);g.fillStyle="#03141B";g.font="bold 10px -apple-system,sans-serif";g.fillText(fmt(P0),W0-padR+4,Y(P0)+4);
+ g.fillStyle=css("--mute");g.font="10px -apple-system,sans-serif";for(let i=st;i<n;i++){const d=new Date(Dt.t[i]),m=d.getUTCMonth();if(d.getUTCDate()<=7&&(TAV.wz?m%3===0:m===0)){g.fillText(TAV.wz?d.toLocaleDateString("de-DE",{month:"short",year:"2-digit",timeZone:"UTC"}):String(d.getUTCFullYear()),X(i)-10,HH-2)}}
+ const osr=r&&cv("tao",84);if(osr){const[g2,W2]=osr,H2=84,rs=K.rsi(Dt.c,14),os=K.ema(rs.map(x=>x==null?50:x),3),Y2=v=>H2-6-v/100*(H2-12);g2.strokeStyle=css("--line");for(const v of[30,50,70]){g2.globalAlpha=v===50?0.9:0.5;g2.beginPath();g2.moveTo(0,Y2(v));g2.lineTo(W2-padR,Y2(v));g2.stroke()}g2.globalAlpha=1;
+  for(let i=st;i<n;i++){const v=os[i];g2.fillStyle=v>=50?css("--up"):css("--down");g2.globalAlpha=0.35+0.65*Math.min(1,Math.abs(v-50)/30);g2.fillRect((i-st)*cw+cw*0.15,Y2(v),Math.max(1,cw*0.7),Y2(0)-Y2(v))}g2.globalAlpha=1;g2.fillStyle=css("--mute");g2.fillText("Schwung (Wochen-RSI)",4,11);const v=os[n-1];g2.fillStyle=v>=50?css("--up"):css("--down");g2.font="bold 11px -apple-system,sans-serif";g2.fillText(Math.round(v),W2-padR+28,Y2(v)+4)}}
 function taBind(A){const box=document.querySelector(".tasec");if(!box)return;box.querySelectorAll(".ta-tf").forEach(b=>b.onclick=()=>{TAV.tf=b.dataset.tf;box.querySelectorAll(".ta-tf").forEach(x=>{x.classList.toggle("on",x===b);x.setAttribute("aria-selected",x===b)});drawTA(A)});const go=document.querySelector(".to-chart");if(go)go.onclick=()=>setTab("ch",true)}
-function drawTA(A){const Dd=E.data[A.k]||{},tf=TAV.tf,Dt=tf==="4h"&&Dd.h4?Dd.h4:Dd.h;const r=cv("tac",320);if(!r||!Dt||Dt.n<120)return;const[g,W]=r,HH=320,n=Dt.n,show=Math.min(120,n),st=n-show,barMs=tf==="4h"?144e5:36e5,blockMs=tf==="4h"?864e5:288e5,fut=tf==="4h"?12:48,top=8,bot=HH-14,T=A.ta;g.font="bold 10px -apple-system,sans-serif";const padR=Math.max(62,Math.ceil(g.measureText(fmt(Dt.c[n-1])).width)+12);
+function drawTA(A){const wz=$("wkZoom");if(wz){wz.hidden=TAV.tf!=="1w";wz.querySelectorAll("button").forEach(b=>{const on=+b.dataset.z===TAV.wz;b.classList.toggle("on",on);b.setAttribute("aria-selected",on);b.onclick=()=>{TAV.wz=+b.dataset.z;drawTA(A)}})}if(TAV.tf==="1w"){drawWk(A);wkPanel(A);return}{const wp=$("taWk");if(wp)wp.hidden=true}const Dd=E.data[A.k]||{},tf=TAV.tf,Dt=tf==="4h"&&Dd.h4?Dd.h4:Dd.h;const r=cv("tac",320);if(!r||!Dt||Dt.n<120)return;const[g,W]=r,HH=320,n=Dt.n,show=Math.min(120,n),st=n-show,barMs=tf==="4h"?144e5:36e5,blockMs=tf==="4h"?864e5:288e5,fut=tf==="4h"?12:48,top=8,bot=HH-14,T=A.ta;g.font="bold 10px -apple-system,sans-serif";const padR=Math.max(62,Math.ceil(g.measureText(fmt(Dt.c[n-1])).width)+12);
  const B=K.devBands(Dt.c,50),bxAll=K.emBoxes(Dt.t,Dt.o,Dt.h,Dt.l,Dt.c,blockMs,barMs).boxes,bx=bxAll.filter(b=>b.i1>=st),cbx=bx[bx.length-1],P0=Dt.c[n-1],stepB=288e5/barMs;
  let mn=Infinity,mx=-Infinity;for(let i=st;i<n;i++){mn=Math.min(mn,Dt.l[i]);mx=Math.max(mx,Dt.h[i]);if(B.sd[i]){mn=Math.min(mn,B.mid[i]-2.3*B.sd[i]);mx=Math.max(mx,B.mid[i]+2.3*B.sd[i])}}if(cbx){mn=Math.min(mn,cbx.dn);mx=Math.max(mx,cbx.up)}
  const paths=T&&T.an?T.an.matches.map(m=>m.path):null,qa=(f,q)=>{const v=paths.map(pa=>pa[f]).sort((a,b)=>a-b),p=(v.length-1)*q,lo=Math.floor(p),hi=Math.ceil(p);return v[lo]+(v[hi]-v[lo])*(p-lo)};if(paths&&paths.length>=3){for(let f=0;f<paths[0].length;f++){mn=Math.min(mn,P0*Math.exp(qa(f,0.2)));mx=Math.max(mx,P0*Math.exp(qa(f,0.8)))}}
@@ -1227,7 +1511,7 @@ function tpHtml(A,k){const T=A.tp;if(!T||!T.long||!T.short)return"";const side=(
  <div class="seg" role="tablist" aria-label="Richtung"><button type="button" role="tab" class="seg-b${side==="long"?" on":""}" data-side="long" aria-selected="${side==="long"}">Kauf (Long)</button><button type="button" role="tab" class="seg-b${side==="short"?" on":""}" data-side="short" aria-selected="${side==="short"}">Verkauf (Short)</button></div>
  <div class="ol-chart"><canvas id="tpc" height="200" aria-label="Kursverlauf der letzten 7 Tage mit Einstieg, Stopp und Zielen"></canvas></div>
  <div class="tp-in2"><label>Einstieg ($)<input type="number" inputmode="decimal" min="0" step="any" id="tpEntry"></label><label>Stopp ($)<input type="number" inputmode="decimal" min="0" step="any" id="tpStop"></label><label>Kontogröße ($)<input type="number" inputmode="decimal" min="0" step="any" id="tpAcct" value="${acct}"></label><label>Risiko pro Trade (%)<input type="number" inputmode="decimal" min="0.1" max="10" step="0.1" id="tpRisk" value="${riskP}"></label></div>
- <button type="button" class="alt tp-reset" id="tpReset">Vorschlag der App wiederherstellen</button>
+ <button type="button" class="alt tp-reset" id="tpReset">Vorschlag der App wiederherstellen</button> <button type="button" class="alt tp-reset cp-btn" data-cp="trade">✦ Für Claude kopieren</button>
  <div id="tpBody"></div>
  ${A.fpv?`<p class="warn">Rückblick-Prüfung der Ziel-vor-Stopp-Rechnung mit derselben Methode auf Tageskerzen (${A.fpv.n} Fälle, Ziel +1 und Stopp −0,6 Schwankungseinheiten): vorhergesagt im Schnitt ${Math.round(A.fpv.pred*100)} %, eingetreten ${Math.round(A.fpv.real*100)} %. ${Math.abs(A.fpv.pred-A.fpv.real)<=0.07?"Die Wahrscheinlichkeiten sind damit gut kalibriert.":A.fpv.real>A.fpv.pred?"Ziele wurden etwas häufiger erreicht als berechnet.":"Ziele wurden etwas seltener erreicht als berechnet – sei vorsichtiger."}</p>`:""}
  <p class="warn">Profi-Regel: pro Trade höchstens 1–2 % des Kontos riskieren und nur Trades mit einem Chance-Risiko von mindestens 1 : 2 eingehen. Gebühren, Slippage und Nachrichten können das Ergebnis verschlechtern. Keine Anlageberatung.</p></section>`}
@@ -1558,7 +1842,7 @@ function simpleReport(A,G,rows){const k=A.k,n=NAMES[k],P=A.price;const all=rows.
  <p><b>Kurz gesagt:</b> ${n} kostet ${usd(P)} (${pc(A.ret24)} in 24 Std., ${pc(A.ret7)} in 7 Tagen). Die Indikatoren zeigen insgesamt <b>${word(so)}</b>. ${A.struct&&A.struct.trend==="bear"?"Seit einiger Zeit entstehen tiefere Hochs und Tiefs, der Trend ist also abwärts gerichtet.":A.struct&&A.struct.trend==="bull"?"Es entstehen höhere Hochs und Tiefs, der Trend ist also aufwärts gerichtet.":"Eine klare Trendrichtung gibt es gerade nicht."}</p>${outlook}${A.cBest&&Math.abs(A.cBest.v)>=0.4?`<p><b>Kerzen-Signal:</b> ${A.cBest.age===0?"Die letzte abgeschlossene Tageskerze":"Die Tageskerze von vor "+A.cBest.age+(A.cBest.age>1?" Tagen":" Tag")} bildet einen <b>${esc(A.cBest.n)}</b> ${rtB(A.cBest.v)}. ${esc(A.cBest.d)}</p>`:""}
  <p><b>Die sechs Bereiche im Überblick</b> ${tip("Statt alle Indikatoren einzeln zu zählen, fasst die App sie in sechs Bereiche zusammen. Viele Indikatoren messen dasselbe – fünf gleiche Signale sind kein fünffacher Beweis.")}</p>
  <div class="themes">${A.comp.groups.map(g=>{const top=g.sig.slice().sort((a,b)=>Math.abs(b.s)-Math.abs(a.s))[0];return`<div class="theme"><span>${GN[g.name]||g.name}</span>${rtB(g.s)}<small>${top?esc(friendly(top.lab)):""}</small></div>`}).join("")}</div>
- ${stLine(A,n)}${A.ta&&taFazit(A)?`<p class="ol-check">${taFazit(A)} <button type="button" class="linkb to-chart">Zur Chart-Analyse</button></p>`:""}
+ <button type="button" class="alt cp-btn" data-cp="analyse">✦ Analyse für Claude kopieren</button>${stLine(A,n)}${A.ta&&taFazit(A)?`<p class="ol-check">${taFazit(A)} <button type="button" class="linkb to-chart">Zur Chart-Analyse</button></p>`:""}
  <div class="two"><div><b class="up">Dafür spricht (steigende Kurse)</b><ul>${pick(bull,1).map(item).join("")||"<li>keine starken Signale</li>"}</ul></div><div><b class="down">Dagegen spricht (fallende Kurse)</b><ul>${pick(bear,-1).map(item).join("")||"<li>keine starken Signale</li>"}</ul></div></div>
  <p><b>Wo der Kurs wahrscheinlich landet</b> ${tip("Die Bereiche stammen aus 3000 Simulationen mit der aktuellen Schwankung und sind im Rückblick geprüft. Eine Richtung nennt die App nur, wenn ihr Modell im Test besser war als die reine Statistik.")}</p><ul>${hz(f24,"Nächste 24 Stunden")}${hz(f7,"Nächste 7 Tage")}${hz(f30,"Nächste 30 Tage")}</ul>
  <p><b>Wenn – dann</b></p><ul>${r0?`<li>Steigt ${n} über <b>${usd(r0.hi)}</b>, ist ein Anstieg bis etwa <b>${usd(r1?r1.mid:r0.hi*1.05)}</b> möglich${A.up?" (diese Marke wird in 30 Tagen mit "+Math.round(A.up[1].p*100)+" % Wahrscheinlichkeit erreicht)":""}.</li>`:""}${s0?`<li>Fällt ${n} unter <b>${usd(s0.lo)}</b>, droht ein Rückgang bis etwa <b>${usd(s1?s1.mid:s0.lo*0.95)}</b>${A.down?" ("+Math.round(A.down[1].p*100)+" % Wahrscheinlichkeit in 30 Tagen)":""}.</li>`:""}${s0&&r0?`<li>Dazwischen, also von ${usd(s0.lo)} bis ${usd(r0.hi)}, ist eher Seitwärtsbewegung zu erwarten.</li>`:""}</ul>
@@ -1709,7 +1993,7 @@ function uiRender(force){const box=$("eng");if(!box)return;const view=S.view||"l
   uiView=key;uiT=Date.now();box.innerHTML=overviewHtml();drawSparks();const so=$("ovSort");if(so)so.onchange=()=>{ovSort=so.value;try{localStorage.setItem("kie_sort",ovSort)}catch(e){}uiRender(true)};const rb=$("retry");if(rb)rb.onclick=()=>{rb.disabled=true;rb.textContent="Lädt …";loadAll()};return}
  const vk="detail|"+S.cur;const f=force||uiView!==vk;uiView=vk;engRender(f);if(!box.querySelector(".topbar"))box.insertAdjacentHTML("afterbegin",topBar());tabAssign(box);setTab(curTab,false)}
 function route(){const h=decodeURIComponent(location.hash.slice(1));if(KEYS.includes(h)){S.cur=h;S.view="detail"}else S.view="list";window.scrollTo(0,0);render()}
-window.addEventListener("hashchange",route);E.route=route;E.lqStart=lqStart;E.tradePlan=tradePlan;E.lqSum=lqSum;
+window.addEventListener("hashchange",route);E.route=route;E.lqStart=lqStart;E.cpPrompt=cpPrompt;E.aiFab=aiFab;E.aiSnap=aiSnap;E.aiTool=aiTool;E.aiSystem=aiSystem;E.aiMd=aiMd;E.tradePlan=tradePlan;E.lqSum=lqSum;
 
 E.render=uiRender;E.refreshFast=refreshFast;E.selfTest=selfTest;
 })();
@@ -1727,7 +2011,7 @@ try{KIE.loadCache()}catch(e){}
  const s1=document.createElement("section");s1.className="advsec";s1.appendChild(a1);const s2=document.createElement("section");s2.className="advsec";s2.appendChild(a2);cw.append(s1,s2);$("eng").after(cw);
  a1.addEventListener("toggle",()=>{const a=S.res[S.cur];if(a1.open&&a){try{drawMain(a);drawRain(a)}catch(e){}}})})();
 document.body.classList.add("intro");setTimeout(()=>document.body.classList.remove("intro"),1500);
-KIE.route();loadAll();try{KIE.lqStart()}catch(e){console.error(e)}
+KIE.route();loadAll();try{KIE.lqStart()}catch(e){console.error(e)}try{KIE.aiFab()}catch(e){console.error(e)}
 </script>
 </body>
 </html>
